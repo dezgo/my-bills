@@ -1,4 +1,10 @@
-<div id="container">
+   <!-- Content
+   ================================================== -->
+   <div id="content-wrap">  
+
+      <div class="row section-head">
+
+      	<div class="twelve columns">
 
 	<h1>Accounts</h1>
 	
@@ -35,4 +41,8 @@
 	$('tr:odd').css('background', '#e3e3e3');
 </script>
 
-</div>
+   		</div> <!-- end accounts list -->
+
+   	</div> <!-- end row -->
+   	
+   </div> <!-- end content-wrap -->

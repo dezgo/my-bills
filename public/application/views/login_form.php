@@ -1,4 +1,11 @@
-<div id="login_form">
+   <!-- Content
+   ================================================== -->
+   <div id="content-wrap">  
+
+      <div class="row section-head">
+
+      	<div class="twelve columns">
+
 	<?php if (isset($account_created)) {?>
 		<h3><?php echo $account_created; ?></h3>
 	<?php } else { ?>
@@ -13,4 +20,9 @@
 	echo anchor('login/signup', 'Create Account');	
 	echo form_close();
 	?>
-</div>
+
+	  		</div> <!-- end login form -->
+
+   	</div> <!-- end row -->
+   	
+   </div> <!-- end content-wrap -->
