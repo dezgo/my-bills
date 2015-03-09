@@ -1,3 +1,7 @@
+      <div class="row">
+
+      	<div class="twelve columns">
+
 <h1>Create an Account</h1>
 
 <fieldset>
@@ -16,12 +20,17 @@
 	<legend>Login Info</legend>
 	
 	<?php 
-	echo form_input('username', set_value('username', 'Usename'));
+	echo form_input('username', set_value('username', 'Username'));
 	echo form_input('password', set_value('password', 'Password'));
-	echo form_input('password2', set_value('password2', 'Password Confirm'));
+	echo form_input('password2', set_value('password2', 'Confirm Password'));
 	
 	echo form_submit('submit', 'Create Account');
 	?>
 
 	<?php echo validation_errors('<p class="error">'); ?>
 </fieldset>
+
+	  		</div> <!-- end login form -->
+
+   	</div> <!-- end row -->
+ 

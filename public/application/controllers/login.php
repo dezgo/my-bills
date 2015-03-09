@@ -2,9 +2,12 @@
 
 class Login extends CI_Controller {
 	
+	private $failed = 0;
+	
 	function index()
 	{
 		$data['main_content'] = 'login_form';
+		$data['failed'] = $this->failed;
 		$this->load->view('includes/template', $data);
 	}
 	
@@ -26,6 +29,7 @@ class Login extends CI_Controller {
 		
 		else
 		{
+			$this->failed++;
 			$this->index();
 		}
 	}

@@ -18,15 +18,13 @@
       	
          <div class="six columns info">
 
-            <h3>About Keep It Simple</h3> 
+            <h3>About my-bills</h3> 
 
-            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. 
-            </p>
-
-            <p>Lorem ipsum Sed nulla deserunt voluptate elit occaecat culpa cupidatat sit irure sint 
-            sint incididunt cupidatat esse in Ut sed commodo tempor consequat culpa fugiat incididunt.</p>
+            <p>my-bills is a simple web-based reminder system for your regular bills. Use it to 
+            ensure you never forget a bill again. Once entered, you can set my-bills to send reminder
+            emails when a bill is due. You can then pay the bill, inform my-bills that the bill is paid
+            and my-bills will automatically re-schedule the bill for it's next due date based on it's 
+            frequency.</p>
 
          </div>
 
@@ -70,7 +68,6 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
    <script src="js/main.js"></script>

@@ -783,3 +783,9 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
+
+p.error {
+	color: red;
+	font-size: 15px;
+}
+

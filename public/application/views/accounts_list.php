@@ -1,7 +1,3 @@
-   <!-- Content
-   ================================================== -->
-   <div id="content-wrap">  
-
       <div class="row section-head add-bottom">
 
       	<div class="twelve columns">
@@ -62,5 +58,3 @@
    		</div> <!-- end accounts list -->
 
    	</div> <!-- end row -->
-   	
-   </div> <!-- end content-wrap -->

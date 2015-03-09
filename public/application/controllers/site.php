@@ -51,8 +51,8 @@ class Site extends CI_Controller {
 		
 		if(!isset($is_logged_in) || $is_logged_in != true)
 		{
-			echo 'You don\'t have permission to access this page. <a href="../login">Login</a>';
-			die();
+			// redirect back to the login page if no longer logged in
+			redirect('');
 		}
 	}
 	

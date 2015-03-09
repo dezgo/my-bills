@@ -21,6 +21,7 @@
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -29,7 +30,6 @@
 </head>
 
 <body>
-
    <!-- Header
    ================================================== -->
    <header id="top">
@@ -51,25 +51,19 @@
 		   <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 
 	   	<div class="row">    		            
-
+<?php 
+function addCurrent($class, $pagename)
+{
+	if ($pagename == $class)
+		return ' class="current"';
+	else
+		return '';
+}
+?>
 			   	<ul id="nav" class="nav">
-			      	<li class="current"><a href="index.html">Home</a></li>
-			      	<li class="has-children"><a href="#">Dropdown</a>
-	                  <ul>
-	                     <li><a href="#">Submenu 01</a></li>
-	                     <li><a href="#">Submenu 02</a></li>
-	                     <li><a href="#">Submenu 03</a></li>
-	                  </ul>
-	               </li>
-	               <li><a href="demo.html">Demo</a></li>	
-	               <li><a href="archives.html">Archives</a></li>
-			      	<li class="has-children"><a href="single.html">Blog</a>
-							<ul>
-	                     <li><a href="blog.html">Blog Entries</a></li>
-	                     <li><a href="single.html">Single Blog</a></li>	                     
-	                  </ul>
-			      	</li>		      	
-			      	<li><a href="page.html">Page</a></li>
+			      	<li<?php echo addCurrent($this->router->class, "login"); ?>><a href="<?php echo base_url();?>">Home</a></li>
+			      	<li<?php echo addCurrent($this->router->class, "site"); ?>><a href="<?php echo base_url();?>site/members_area">Accounts</a></li>
+			      	<li<?php echo addCurrent($this->router->class, "contact"); ?>><a href="<?php echo base_url();?>contact">Contact Us</a></li>
 			   	</ul> <!-- end #nav -->			   	 
 
 	   	</div> 
@@ -77,3 +71,4 @@
 	   </nav> <!-- end #nav-wrap --> 	     
 
    </header> <!-- Header End -->
+   
