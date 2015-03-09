@@ -2,7 +2,7 @@
    ================================================== -->
    <div id="content-wrap">  
 
-      <div class="row section-head">
+      <div class="row section-head add-bottom">
 
       	<div class="twelve columns">
 
@@ -17,6 +17,9 @@
 				$field_display); ?>
 			</th>
 			<?php  endforeach; ?>
+			<th>
+				<?php echo anchor("","Actions"); ?>
+			</th>
 		</thead>
 		
 		<tbody>
@@ -27,6 +30,9 @@
 					<?php echo $record->$field_name; ?>
 				</td>
 				<?php endforeach; ?>
+				<td>
+					<?php echo form_button('name','Del'); ?>
+				</td>
 			</tr>
 			<?php endforeach; ?>
 		</tbody>
@@ -39,7 +45,19 @@
 
 <script type="text/javascript" charset="utf-8">
 	$('tr:odd').css('background', '#e3e3e3');
+
+	
 </script>
+
+<style>
+.sort_asc:after {
+	content: "^";
+}
+
+.sort_desc:after {
+	content: "v";
+}
+</style>
 
    		</div> <!-- end accounts list -->
 
