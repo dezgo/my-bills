@@ -1,2 +1,6 @@
 app/core/config.php
 .DS_Store
+.buildpath
+.project
+.vagrant/*
+.settings/*
