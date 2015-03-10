@@ -16,7 +16,7 @@
             </ul>			
       	</div>
       	
-         <div class="six columns info">
+         <div class="eight columns info">
 
             <h3>About my-bills</h3> 
 
@@ -29,35 +29,16 @@
          </div>
 
          <div class="four columns">
-
-            <h3>Photostream</h3>
-            
-            <ul class="photostream group">
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-            </ul>           
-
-         </div>
-
-         <div class="two columns">
             <h3 class="social">Navigate</h3>
 
             <ul class="navigate group">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="#">Demo</a></li>
-               <li><a href="#">Archives</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="<?php echo base_url();?>">Home</a></li>
+               <li><a href="<?php echo base_url();?>site/members_area">Accounts</a></li>
+               <li><a href="<?php echo base_url();?>contact">Contact Us</a></li>
             </ul>
          </div>
 
-         <p class="copyright">&copy; Copyright 2014 Keep It Simple. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
+         <p class="copyright">&copy; Copyright 2015 my-bills. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
         
       </div> <!-- End row -->
 
