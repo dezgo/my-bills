@@ -2,13 +2,19 @@
 
 class Login extends CI_Controller {
 	
-	private $failed = 0;
+	private $data;
+	//private $failed = 0;
+	
+	function __construct() {
+		parent::__construct();
+		$this->data['failed'] = 0;
+	}
 	
 	function index()
 	{
-		$data['main_content'] = 'login_form';
-		$data['failed'] = $this->failed;
-		$this->load->view('includes/template', $data);
+		$this->data['main_content'] = 'login_form';
+		//$data['failed'] = $this->failed;
+		$this->load->view('includes/template', $this->data);
 	}
 	
 	function validate_credentials()
@@ -18,26 +24,29 @@ class Login extends CI_Controller {
 		
 		if($query) // if the user's credentials validated...
 		{
-			$data = array(
-				'username' => $this->input->post('username'),
-				'is_logged_in' => true
-			);
+			$this->data['username'] = $this->input->post('username');
+			$this->data['is_logged_in'] = true;
+//			$data = array(
+//				'username' => $this->input->post('username'),
+//				'is_logged_in' => true
+//			);
 			
-			$this->session->set_userdata($data);
+			$this->session->set_userdata($this->data);
 			redirect('site/members_area');
 		}
 		
 		else
 		{
-			$this->failed++;
+			$this->data['failed']++;
 			$this->index();
 		}
 	}
 	
 	function signup()
 	{
-		$data['main_content'] = 'signup_form';
-		$this->load->view('includes/template', $data);
+		$this->data['main_content'] = 'signup_form';
+		//$data['failed'] = $this->failed;
+		$this->load->view('includes/template', $this->data);
 	}
 	
 	function create_member()
@@ -62,14 +71,14 @@ class Login extends CI_Controller {
 			$this->load->model('membership_model');
 			if($query = $this->membership_model->create_member())
 			{
-				$data['account_created'] = 'Your account has been created.<br/><br/>You may now login';
-				$data['main_content'] = 'login_form';
-				$this->load->view('includes/template', $data);
+				$this->data['account_created'] = 'Your account has been created.<br/><br/>You may now login';
+				$this->data['main_content'] = 'login_form';
+				$this->load->view('includes/template', $this->data);
 			}
 			else
 			{
-				$data['main_content'] = 'signup_form';
-				$this->load->view('includes/template', $data);
+				$this->data['main_content'] = 'signup_form';
+				$this->load->view('includes/template', $this->data);
 			}
 		}
 	}

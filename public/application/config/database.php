@@ -48,10 +48,20 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'my-bills';
-$db['default']['password'] = 'password';
-$db['default']['database'] = 'my-bills';
+if ($_SERVER['SERVER_NAME'] == 'mybills.site90.net')
+{
+	$db['default']['hostname'] = 'mysql3.000webhost.com';
+	$db['default']['username'] = 'a8228193_mybills';
+	$db['default']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
+	$db['default']['database'] = 'a8228193_mybills';
+}
+else 
+{
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'my-bills';
+	$db['default']['password'] = 'password';
+	$db['default']['database'] = 'my-bills';
+}
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

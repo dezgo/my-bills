@@ -1,9 +1,4 @@
-<script type="text/javascript">
-function placeholderIsSupported() {
-    var test = document.createElement('input');
-    return ('placeholder' in test);
-}
-</script>
+
       <div class="row section-head">
 
       	<div class="twelve columns">
@@ -24,7 +19,7 @@ function placeholderIsSupported() {
 	<?php echo form_open('login/validate_credentials'); ?>
 	
 	<script type="text/javascript">
-	if (placeholderIsSupported() === true)
+	if (placeholderIsSupported() == true)
 	{
 	<?php 
 		echo "document.write('".form_input('username', '', 'placeholder="Username"')."');
