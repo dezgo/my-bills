@@ -16,26 +16,17 @@
 		<h1>Login, champ!</h1>
 	<?php  } ?>
 	
-	<?php echo form_open('login/validate_credentials'); ?>
+	<?php 
+	echo form_open('login/validate_credentials'); 
+	echo form_input('username', '', 'placeholder="Username"');
+	echo form_password('password', '', 'placeholder="Password" class="password"');
+	?>
 	
 	<script type="text/javascript">
-	if (placeholderIsSupported() == true)
+	if (placeholderIsSupported() !== true)
 	{
-	<?php 
-		echo "document.write('".form_input('username', '', 'placeholder="Username"')."');
-		";
-		echo "document.write('".form_password('password', '', 'placeholder="Password" class="password"')."');
-		";
-	?> 
-	}
-	else
-	{
-	<?php 
-		echo "document.write('".form_input('username', 'Username')."');
-		";
-		echo "document.write('".form_password('password', 'Password', 'class="password"')."');
-		";
-	?>
+		document.getElementById('username').value = 'Username';
+		document.getElementById('password').value = 'Password';
 	}
 	</script>
 	<?php 

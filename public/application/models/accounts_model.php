@@ -28,4 +28,20 @@ class Accounts_model extends CI_Model {
 		
 		return $ret;
 	}
+	
+	function load($id) {
+		$this->db->where('id',$id);
+		$query = $this->db->get('accounts');
+		return $query->row();
+	}
+	
+	function update($id, $data) {
+		$this->db->where('id',$id);
+		$this->db->update('accounts', $data);
+	}
+	
+	function delete($id) {
+		$this->db->where('id',$id);
+		$this->db->delete('accounts');
+	}
 }

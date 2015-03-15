@@ -13,7 +13,6 @@ class Login extends CI_Controller {
 	function index()
 	{
 		$this->data['main_content'] = 'login_form';
-		//$data['failed'] = $this->failed;
 		$this->load->view('includes/template', $this->data);
 	}
 	

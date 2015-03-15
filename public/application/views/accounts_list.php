@@ -1,3 +1,16 @@
+<script type="text/javascript">
+function editAccount(id) {
+	window.location.href = "<?php echo base_url()?>site/edit_account/" + id;
+}
+
+function deleteAccount(id) {
+	if (confirm('This will permanently delete this bill. Proceed?')) {
+		window.location.href = "<?php echo base_url()?>site/delete_account/" + id;
+	}
+}
+  
+  </script>
+  
       <div class="row section-head add-bottom">
 
       	<div class="twelve columns">
@@ -27,7 +40,8 @@
 				</td>
 				<?php endforeach; ?>
 				<td>
-					<?php echo form_button('name','Del'); ?>
+					<?php echo form_button('name','Edit','onClick="editAccount(' . $record->id . ')"'); ?>
+					<?php echo form_button('name','Delete','onClick="deleteAccount(' . $record->id . ')"'); ?>
 				</td>
 			</tr>
 			<?php endforeach; ?>

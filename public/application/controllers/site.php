@@ -43,5 +43,46 @@ class Site extends CI_Controller {
 		$data['sort_order'] = $sort_order;
 		
 		$this->load->view('includes/template', $data);
-	}	
+	}
+	
+	function edit_account($id) {
+		$this->load->model('Accounts_model');
+		$row = $this->Accounts_model->load($id);
+		$data['main_content'] = 'edit_account';
+		
+		$data['id'] = $id;
+		$data['account'] = $row->account;
+		$data['last_due'] = $row->last_due;
+		$data['times_per_year'] = $row->times_per_year;
+		$data['amount'] = $row->amount;
+		$this->load->view('includes/template', $data);
+	}
+	
+	function delete_account($id) {
+		$this->load->model('Accounts_model');
+		$row = $this->Accounts_model->delete($id);
+		
+		// and back to the list
+		$this->members_area();
+//		$data['main_content'] = 'm';
+	//	$this->load->view('includes/template', $data);
+	}
+
+	function update_account() {
+		$id = $this->input->post('id'); 
+		$data = array(
+			'account' => $this->input->post('account'), 
+			'last_due' => $this->input->post('last_due'),
+			'times_per_year' => $this->input->post('times_per_year'), 
+			'amount' => $this->input->post('amount')
+		);
+		
+		$this->load->model('Accounts_model');
+		$row = $this->Accounts_model->update($id, $data);
+		
+		// and back to the list
+		$this->members_area();
+//		$data['main_content'] = 'm';
+	//	$this->load->view('includes/template', $data);
+	}
 }
