@@ -11,9 +11,11 @@ class Accounts_model extends CI_Model {
 		$sort_by = (in_array($sort_by, $sort_columns)) ? $sort_by : 'last_due';
 		
 		// results query
+		$CI = & get_instance();
 		$query = $this->db->select('id, account, date_format(last_due,"%e&nbsp;%b&nbsp;%Y") as last_due_formatted, times_per_year, amount, '.
 					'adddate(last_due,365/times_per_year) as next_due, date_format(adddate(last_due,365/times_per_year),"%e&nbsp;%b&nbsp;%Y") as next_due_formatted, last_due', FALSE)
 				->from('accounts')
+				->where('member_id', $CI->session->userdata('member_id'))
 				->limit($limit, $offset)
 				->order_by($sort_by, $sort_order);		
 		$ret['rows'] = $query->get()->result();

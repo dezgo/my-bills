@@ -5,7 +5,7 @@ class Site extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		is_logged_in();
+		if (!is_logged_in()) redirect('');
 	}
 	
 	function members_area($sort_by = 'last_due', $sort_order = 'asc', $offset = 0)
@@ -45,7 +45,17 @@ class Site extends CI_Controller {
 		$this->load->view('includes/template', $data);
 	}
 	
+	function logout()
+	{
+		$this->session->set_userdata('member_id', 0);	
+		
+		$data['main_content'] = 'logout';
+		$this->load->view('includes/template', $data);
+	}
+	
 	function edit_account($id) {
+		$this->load->library('table');
+		
 		$this->load->model('Accounts_model');
 		$row = $this->Accounts_model->load($id);
 		$data['main_content'] = 'edit_account';

@@ -10,8 +10,11 @@ class Membership_model extends CI_Model {
 		
 		if($query->num_rows == 1)
 		{
-			return true;
+			$row = $query->row();
+			return $row->id;
 		}
+		else
+			return 0;
 	}
 	
 	function create_member()
