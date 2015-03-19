@@ -8,6 +8,10 @@ function deleteAccount(id) {
 		window.location.href = "<?php echo base_url()?>site/delete_account/" + id;
 	}
 }
+
+function insertAccount() {
+	window.location.href = "<?php echo base_url()?>site/insert_account";
+}
   
   </script>
   
@@ -16,7 +20,12 @@ function deleteAccount(id) {
       	<div class="twelve columns">
 
 	<h1>Accounts</h1>
-	
+
+	<?php if ($num_results == 0) { ?>
+		<h3>It looks like you haven't created any accounts yet. Click Add to get started.</h3>
+		
+	<?php } else { ?>
+
 	<table>
 		<thead>
 			<?php foreach($fields as $field_name => $field_display): ?>
@@ -69,6 +78,10 @@ function deleteAccount(id) {
 }
 </style>
 
-   		</div> <!-- end accounts list -->
+	<?php } ?>
+
+	<?php echo form_button('name','Add','onClick="insertAccount()"'); ?>
+	
+	</div> <!-- end accounts list -->
 
    	</div> <!-- end row -->

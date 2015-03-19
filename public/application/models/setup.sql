@@ -4,11 +4,25 @@ CREATE TABLE `membership` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `first_name` varchar(25) NOT NULL,
  `last_name` varchar(25) NOT NULL,
- `username` varchar(25) NOT NULL,
  `password` varchar(32) NOT NULL,
  `email_address` varchar(50) NOT NULL,
+ `update_date` datetime,
+ `create_date` datetime,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+DELIMITER |
+CREATE TRIGGER trigger_membershipDatetimeInsert BEFORE INSERT ON membership FOR EACH ROW 
+BEGIN
+    SET NEW.create_date = NOW();
+END; 
+|
+CREATE TRIGGER trigger_membershipDatetimeModify BEFORE UPDATE ON membership FOR EACH ROW 
+BEGIN 
+    SET NEW.update_date = NOW();
+END; 
+|
+DELIMITER ;
 
 DROP TABLE IF EXISTS `accounts`;
 
@@ -23,7 +37,7 @@ CREATE TABLE `accounts` (
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
-INSERT INTO `membership` (`first_name`, `last_name`, `username`, `password`, `email_address`) VALUES ('Derek', 'Gillett', 'dezgo', '5f4dcc3b5aa765d61d8327deb882cf99', 'mybills@derekgillett.com');
+INSERT INTO `membership` (`first_name`, `last_name`, `password`, `email_address`) VALUES ('Derek', 'Gillett', '5f4dcc3b5aa765d61d8327deb882cf99', 'mybills@derekgillett.com');
 
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Weston Water', '2015-01-06', '4', '596.97');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Domain - derekgillet.com', '2014-04-08', '1', '12');

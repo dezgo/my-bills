@@ -55,6 +55,7 @@ class Site extends CI_Controller {
 	
 	function edit_account($id) {
 		$this->load->library('table');
+		//$this->load->helper('date');
 		
 		$this->load->model('Accounts_model');
 		$row = $this->Accounts_model->load($id);
@@ -63,8 +64,26 @@ class Site extends CI_Controller {
 		$data['id'] = $id;
 		$data['account'] = $row->account;
 		$data['last_due'] = $row->last_due;
+		//echo $row->last_due;
+		//die();
+		$data['last_due_formatted'] = $row->last_due_formatted;// unix_to_human($row->last_due, FALSE, 'euro');
 		$data['times_per_year'] = $row->times_per_year;
 		$data['amount'] = $row->amount;
+		$this->load->view('includes/template', $data);
+	}
+	
+	function insert_account() {
+		$this->load->library('table');
+		
+		$this->load->model('Accounts_model');
+		$data['main_content'] = 'edit_account';
+		
+		$data['id'] = 0;
+		$data['account'] = "";
+		$data['last_due'] = "";
+		$data['last_due_formatted'] = "";
+		$data['times_per_year'] = "";
+		$data['amount'] = "";
 		$this->load->view('includes/template', $data);
 	}
 	
@@ -78,21 +97,29 @@ class Site extends CI_Controller {
 	//	$this->load->view('includes/template', $data);
 	}
 
+	// includes adding a new account - do this if id == 0
 	function update_account() {
+		$this->load->helper('date');
+		
 		$id = $this->input->post('id'); 
 		$data = array(
 			'account' => $this->input->post('account'), 
-			'last_due' => $this->input->post('last_due'),
+			'last_due' => human_to_unix($this->input->post('last_due')),
 			'times_per_year' => $this->input->post('times_per_year'), 
 			'amount' => $this->input->post('amount')
 		);
 		
 		$this->load->model('Accounts_model');
-		$row = $this->Accounts_model->update($id, $data);
+		if ($id == 0) {
+			$row = $this->Accounts_model->insert($data);
+		} else {
+			$row = $this->Accounts_model->update($id, $data);
+		}
 		
 		// and back to the list
 		$this->members_area();
 //		$data['main_content'] = 'm';
 	//	$this->load->view('includes/template', $data);
 	}
+	
 }

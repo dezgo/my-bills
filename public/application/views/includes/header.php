@@ -62,6 +62,7 @@ function addCurrent($class, $pagename)
 }
 ?>
 			   	<ul id="nav" class="nav">
+			      	<li<?php echo addCurrent($this->router->class, "home"); ?>><a href="<?php echo base_url();?>home">Home</a></li>
 			      	<li<?php echo addCurrent($this->router->class, "site"); ?>><a href="<?php echo base_url();?>site/members_area">Accounts</a></li>
 			      	<li<?php echo addCurrent($this->router->class, "contact"); ?>><a href="<?php echo base_url();?>contact">Contact Us</a></li>
 			      	<li<?php echo addCurrent($this->router->class, "setup"); ?>><a href="<?php echo base_url();?>setup">Setup</a></li>

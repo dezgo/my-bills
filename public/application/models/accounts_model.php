@@ -11,19 +11,19 @@ class Accounts_model extends CI_Model {
 		$sort_by = (in_array($sort_by, $sort_columns)) ? $sort_by : 'last_due';
 		
 		// results query
-		$CI = & get_instance();
-		$query = $this->db->select('id, account, date_format(last_due,"%e&nbsp;%b&nbsp;%Y") as last_due_formatted, times_per_year, amount, '.
-					'adddate(last_due,365/times_per_year) as next_due, date_format(adddate(last_due,365/times_per_year),"%e&nbsp;%b&nbsp;%Y") as next_due_formatted, last_due', FALSE)
+		$query = $this->db->select('id, account, date_format(last_due,"%e %b %Y") as last_due_formatted, times_per_year, amount, '.
+					'adddate(last_due,365/times_per_year) as next_due, date_format(adddate(last_due,365/times_per_year),"%e %b %Y") as next_due_formatted, last_due', FALSE)
 				->from('accounts')
-				->where('member_id', $CI->session->userdata('member_id'))
+				->where('member_id', $this->session->userdata('member_id'))
 				->limit($limit, $offset)
 				->order_by($sort_by, $sort_order);		
 		$ret['rows'] = $query->get()->result();
 		
 		// count query
 		$query = $this->db->select('COUNT(*) as count', FALSE)
-				->from('accounts');
-				
+				->from('accounts')
+				->where('member_id', $this->session->userdata('member_id'));
+		
 		$tmp = $query->get()->result();
 		
 		$ret['num_rows'] = $tmp[0]->count;
@@ -32,9 +32,11 @@ class Accounts_model extends CI_Model {
 	}
 	
 	function load($id) {
-		$this->db->where('id',$id);
-		$query = $this->db->get('accounts');
-		return $query->row();
+		$query = $this->db->select('id, account, date_format(last_due,"%e %b %Y") as last_due_formatted, times_per_year, amount, '.
+					'adddate(last_due,365/times_per_year) as next_due, date_format(adddate(last_due,365/times_per_year),"%e %b %Y") as next_due_formatted, last_due', FALSE)
+				->from('accounts')
+				->where('id',$id);
+		return $query->get()->row();
 	}
 	
 	function update($id, $data) {
@@ -45,5 +47,10 @@ class Accounts_model extends CI_Model {
 	function delete($id) {
 		$this->db->where('id',$id);
 		$this->db->delete('accounts');
+	}
+	
+	function insert($data) {
+		$data['member_id'] = $this->session->userdata('member_id');
+		$this->db->insert('accounts', $data);
 	}
 }

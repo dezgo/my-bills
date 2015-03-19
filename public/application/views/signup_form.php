@@ -2,33 +2,31 @@
 
       	<div class="twelve columns">
 
-<h1>Create an Account</h1>
+<h2>Create Account</h2>
 
-<fieldset>
-	<legend>Personal Information</legend>
-	
 	<?php 
 	
 	echo form_open('login/create_member');
-	echo form_input('first_name', set_value('first_name', 'First Name'));
-	echo form_input('last_name', set_value('last_name', 'Last Name'));
-	echo form_input('email_address', set_value('email_address', 'Email Address'));
+	echo form_input('email_address', '', 'placeholder="Email address"');
+	echo form_password('password', '', 'placeholder="Password" class="password"');
 	?>
-</fieldset>
-
-<fieldset>
-	<legend>Login Info</legend>
 	
+	<script type="text/javascript">
+	if (placeholderIsSupported() !== true)
+	{
+		document.getElementById('email').value = 'Email address';
+		document.getElementById('password').value = 'Password';
+	}
+	</script>
 	<?php 
-	echo form_input('username', set_value('username', 'Username'));
-	echo form_password('password', set_value('password', 'Password'));
-	echo form_password('password2', set_value('password2', 'Confirm Password'));
-	
-	echo form_submit('submit', 'Create Account');
+	echo form_submit('submit', 'Create account');
+	echo form_close();
+	?>
+	<br>Already have an account?<br>
+	<?php echo anchor('login', 'Sign in');	
 	?>
 
-	<?php echo validation_errors('<p class="error">'); ?>
-</fieldset>
+		<?php echo validation_errors('<p class="error">'); ?>
 
 	  		</div> <!-- end login form -->
 
