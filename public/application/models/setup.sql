@@ -36,3 +36,12 @@ CREATE TABLE `accounts` (
  `autopay` tinyint(1) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `settings`;
+
+CREATE TABLE `settings` (
+ `member_id` int(11) NOT NULL,
+ `setting_name` varchar(50) NOT NULL,
+ `setting_value` varchar(50) NOT NULL,
+ PRIMARY KEY (`member_id`, `setting_name`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

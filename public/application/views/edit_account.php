@@ -2,8 +2,11 @@
       <div class="row section-head">
 
       	<div class="twelve columns">
-   <link rel="stylesheet" href="<?php echo base_url();?>css/datepicker.css">
-<script type="text/javascript" src="<?php echo base_url();?>js/bootstrap-datepicker.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 <?php 
 // format last due date as human readable
 
@@ -36,12 +39,11 @@ echo form_close();
 
 ?>
 
-<script>
-jQuery.noConflict();
-$(function() {
-	$( "#last_due" ).datepicker();
-});
-</script>
+  <script>
+  $(function() {
+    $( "#last_due" ).datepicker();
+  });
+  </script>
       	
       	</div>
     </div>

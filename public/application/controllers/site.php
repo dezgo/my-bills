@@ -65,8 +65,7 @@ class Site extends MY_Controller {
 		$data['id'] = $id;
 		$data['account'] = $row->account;
 		$data['last_due'] = $row->last_due;
-		//echo $row->last_due;
-		//die();
+
 		$data['last_due_formatted'] = $row->last_due_formatted;// unix_to_human($row->last_due, FALSE, 'euro');
 		$data['times_per_year'] = $row->times_per_year;
 		$data['amount'] = $row->amount;
@@ -94,8 +93,6 @@ class Site extends MY_Controller {
 		
 		// and back to the list
 		$this->members_area();
-//		$data['main_content'] = 'm';
-	//	$this->load->view('includes/template', $data);
 	}
 
 	// includes adding a new account - do this if id == 0
@@ -119,8 +116,15 @@ class Site extends MY_Controller {
 		
 		// and back to the list
 		$this->members_area();
-//		$data['main_content'] = 'm';
-	//	$this->load->view('includes/template', $data);
+	}
+	
+	// mark account as paid and reschedule
+	function pay_account($id) {
+		$this->load->model('Accounts_model');
+		$this->Accounts_model->pay($id);		
+
+		// and back to the list
+		$this->members_area();
 	}
 	
 }

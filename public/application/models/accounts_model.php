@@ -53,4 +53,15 @@ class Accounts_model extends CI_Model {
 		$data['member_id'] = $this->session->userdata('member_id');
 		$this->db->insert('accounts', $data);
 	}
+	
+	function pay($id) {
+		$query = $this->db->select('adddate(last_due,365/times_per_year) as next_due', FALSE)
+				->from('accounts')
+				->where('id',$id);
+		$row = $query->get()->row();
+
+		$this->db->where('id',$id);
+		$this->db->update('accounts', array('last_due' => $row->next_due));
+		
+	}
 }

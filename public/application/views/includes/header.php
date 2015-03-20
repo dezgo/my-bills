@@ -62,17 +62,19 @@ function addCurrent($class, $pagename)
 }
 ?>
 			   	<ul id="nav" class="nav">
-			      	<li<?php echo addCurrent($this->router->class, "home") .">". anchor('home','Home'); ?></li>
-			      	<li<?php echo addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts'); ?></li>
-			      	<li<?php echo addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us'); ?></li>
+			      	<?php 
+			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('home','Home') . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us') . '</li>';
 			      	
-			      	<?php if (is_logged_in()) { ?>
-				      	<li<?php echo addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout'); ?></li>
-				    <?php } else { ?>
-				      	<li<?php echo addCurrent($this->router->class, "login") .">". anchor('login','Login'); ?></li>
-				    <?php } ?>
+			      	if (is_logged_in()) {
+				      	echo "<li" . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
+				      	echo "<li" . addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout') . '</li>';
+			      	} else {
+				      	echo "<li" . addCurrent($this->router->class, "login") .">". anchor('login','Login') . '</li>';
+				    } 
 				    
-				    <?php if (is_admin()) { ?>
+				    if (is_admin()) { ?>
 					<li class="has-children"><a href="#">Admin</a>
 	                  <ul>
 			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>

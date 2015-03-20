@@ -12,13 +12,35 @@ function deleteAccount(id) {
 function insertAccount() {
 	window.location.href = "<?php echo base_url()?>site/insert_account";
 }
+
+function toggleEditMode() {
+	var payCol = document.getElementsByName("payButton");
+	var editCol = document.getElementsByName("editButtons");
+
+	for(i=0; i<payCol.length; i++) {
+		if(payCol[i].style.display == "none") {
+			payCol[i].style.display = "block";
+			editCol[i].style.display = "none";
+		} else {
+			payCol[i].style.display = "none";
+			editCol[i].style.display = "block";
+		}
+	}
+}
+
+function payAccount(id) {
+	window.location.href = "<?php echo base_url()?>site/pay_account/" + id;
+}
   
-  </script>
+</script>
   
       <div class="row section-head add-bottom">
 
       	<div class="twelve columns">
 
+<div style="width:100%">
+	<a style="float:right" href="javascript:toggleEditMode()">Toggle Edit Mode</a>
+</div>
 	<h1>Accounts</h1>
 
 	<?php if ($num_results == 0) { ?>
@@ -35,9 +57,7 @@ function insertAccount() {
 				$field_display); ?>
 			</th>
 			<?php  endforeach; ?>
-			<th>
-				<?php echo anchor("","Actions"); ?>
-			</th>
+			
 		</thead>
 		
 		<tbody>
@@ -48,9 +68,12 @@ function insertAccount() {
 					<?php echo $record->$field_name; ?>
 				</td>
 				<?php endforeach; ?>
-				<td>
+				<td name="editButtons" style="display:none">
 					<?php echo form_button('name','Edit','onClick="editAccount(' . $record->id . ')"'); ?>
 					<?php echo form_button('name','Delete','onClick="deleteAccount(' . $record->id . ')"'); ?>
+				</td>
+				<td name="payButton">
+					<?php echo form_button('name','Pay','onClick="payAccount(' . $record->id . ')"'); ?>
 				</td>
 			</tr>
 			<?php endforeach; ?>
