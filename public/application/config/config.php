@@ -15,7 +15,10 @@
 |
 */
 $config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/';
-
+if ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
+{
+	$config['base_url']	.= 'mb/';
+}
 /*
 |--------------------------------------------------------------------------
 | Index File

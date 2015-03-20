@@ -1,6 +1,6 @@
 <?php
 
-class Site extends CI_Controller {
+class Site extends MY_Controller {
 	
 	function __construct()
 	{
@@ -47,7 +47,8 @@ class Site extends CI_Controller {
 	
 	function logout()
 	{
-		$this->session->set_userdata('member_id', 0);	
+		$this->session->sess_destroy();
+//		$this->session->set_userdata('member_id', 0);	
 		
 		$data['main_content'] = 'logout';
 		$this->load->view('includes/template', $data);

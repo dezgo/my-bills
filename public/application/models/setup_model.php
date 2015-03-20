@@ -1,6 +1,14 @@
 <?php
 class Setup_model extends CI_Model
 {
+	// check if the database has any tables
+	function dbEmpty()
+	{
+		$tables = $this->db->list_tables();
+		return (count($tables) == 0);
+	}
+	
+	// run sql in the given file
 	function runSQL($filename)
 	{
 		// Temporary variable, used to store current query

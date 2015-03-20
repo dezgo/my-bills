@@ -10,7 +10,7 @@
    <meta charset="utf-8">
 	<title>my-bills</title>
 	<meta name="description" content="">  
-	<meta name="author" content="">
+	<meta name="author" content="Derek Gillett">
 
    <!-- CSS
     ================================================== -->
@@ -39,7 +39,7 @@
 
    		<div class="header-content twelve columns">
 
-		      <h1 id="logo-text"><a href="index.html" title="">my-bills</a></h1>
+		      <h1 id="logo-text"><a href="#" title="">my-bills</a></h1>
 				<p id="intro">No more surprises!</p>
 
 			</div>			
@@ -62,16 +62,25 @@ function addCurrent($class, $pagename)
 }
 ?>
 			   	<ul id="nav" class="nav">
-			      	<li<?php echo addCurrent($this->router->class, "home"); ?>><a href="<?php echo base_url();?>home">Home</a></li>
-			      	<li<?php echo addCurrent($this->router->class, "site"); ?>><a href="<?php echo base_url();?>site/members_area">Accounts</a></li>
-			      	<li<?php echo addCurrent($this->router->class, "contact"); ?>><a href="<?php echo base_url();?>contact">Contact Us</a></li>
-			      	<li<?php echo addCurrent($this->router->class, "setup"); ?>><a href="<?php echo base_url();?>setup">Setup</a></li>
+			      	<li<?php echo addCurrent($this->router->class, "home") .">". anchor('home','Home'); ?></li>
+			      	<li<?php echo addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts'); ?></li>
+			      	<li<?php echo addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us'); ?></li>
 			      	
 			      	<?php if (is_logged_in()) { ?>
-				      	<li<?php echo addCurrent($this->router->class, "logout"); ?>><a href="<?php echo base_url();?>site/logout">Logout</a></li>
+				      	<li<?php echo addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout'); ?></li>
 				    <?php } else { ?>
-				      	<li<?php echo addCurrent($this->router->class, "login"); ?>><a href="<?php echo base_url();?>">Login</a></li>
+				      	<li<?php echo addCurrent($this->router->class, "login") .">". anchor('login','Login'); ?></li>
 				    <?php } ?>
+				    
+				    <?php if (is_admin()) { ?>
+					<li class="has-children"><a href="#">Admin</a>
+	                  <ul>
+			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>
+						 <li><?php echo anchor('setup/create', 'Create empty DB'); ?></li>
+	                  </ul>
+	               </li>
+	               <?php } ?>
+	               
 			   	</ul> <!-- end #nav -->			   	 
 
 	   	</div> 

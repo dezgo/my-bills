@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteCond $1 !^(index\.php|images|robots\.txt|css|js|setup.sql|phpMyAdmin)
+RewriteCond $1 !^(index\.php|images|robots\.txt|css|js|setup.sql|phpMyAdmin|phpinfo\.php)
 RewriteRule ^(.*)$ /index.php/$1 [L]
 
 # Removes trailing slashes (prevents SEO duplicate content issues)

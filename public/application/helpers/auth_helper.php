@@ -9,4 +9,11 @@ if(!function_exists('is_logged_in'))
 		
 		return !(!isset($member_id) || $member_id == 0);
 	}
+	
+	function is_admin()
+	{
+		$CI = & get_instance();
+		$email = $CI->session->userdata('email_address');
+		return $email == 'mybills@derekgillett.com';
+	}
 }

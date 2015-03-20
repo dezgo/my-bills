@@ -8,12 +8,17 @@ function signup() {
 
       	<div class="twelve columns">
 
-<center>
-      	<?php echo form_button('signup', 'Sign Up Now','onClick="signup()"'); ?>
-      	<br>
-      	or <?php echo anchor('login', 'Sign In')?>
+		<center>
+      	<?php 
+      	if (is_logged_in()) { 
+			echo "<h3>You're logged in. Start by clicking on Accounts</h3>";      	
+      	} else {
+	      	echo form_button('signup', 'Sign Up Now','onClick="signup()"');
+	      	echo "<br>or ".anchor('login', 'Sign In');
+      	} 
+      	?>
       	
-</center>
+		</center>
       	</div>
       	
       	</div>

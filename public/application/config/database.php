@@ -55,6 +55,14 @@ if ($_SERVER['SERVER_NAME'] == 'mybills.site90.net')
 	$db['default']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
 	$db['default']['database'] = 'a8228193_mybills';
 }
+elseif ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
+{
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'cwx10ho2_mybills';
+	$db['default']['password'] = '75HKxPWtV5CeAIoY';
+	$db['default']['database'] = 'cwx10ho2_mybills';
+	$db['default']['port'] = 3306;
+}
 else 
 {
 	$db['default']['hostname'] = 'localhost';
@@ -74,6 +82,27 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+/*
+ * Debug connection issues with this code
+ */
+
+/*
+echo '<pre>';
+print_r($db['default']);
+echo '</pre>';
+
+echo 'Connecting to database: ' .$db['default']['database'];
+$dbh=mysql_connect
+(
+		$db['default']['hostname'],
+		$db['default']['username'],
+		$db['default']['password'])
+		or die('Cannot connect to the database because: ' . mysql_error());
+mysql_select_db ($db['default']['database']);
+
+echo '<br />   Connected OK:'  ;
+die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);
+*/
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

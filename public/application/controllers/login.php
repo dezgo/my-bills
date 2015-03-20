@@ -1,6 +1,6 @@
 <?php
 
-class Login extends CI_Controller {
+class Login extends MY_Controller {
 	
 	private $data;
 	//private $failed = 0;

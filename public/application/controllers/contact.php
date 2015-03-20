@@ -1,5 +1,5 @@
 <?php
-class Contact extends CI_Controller 
+class Contact extends MY_Controller 
 {
 	function index()
 	{
