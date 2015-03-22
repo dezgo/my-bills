@@ -4,7 +4,7 @@ class Settings extends MY_Controller
 	function index()
 	{
 		$this->load->model('Settings_model');
-		$date_format = $this->Settings_model->setting_get('date_format');
+		$date_format = $this->Settings_model->date_format_get();
 
 		$data['main_content'] = 'settings_view';
 		$data['date_format'] = $date_format;
@@ -16,7 +16,7 @@ class Settings extends MY_Controller
 	{
 		$date_format = $this->input->post('date_format');
 		$this->load->model('Settings_model');
-		$this->Settings_model->setting_set('date_format', $date_format);
+		$this->Settings_model->date_format_set($date_format);
 		
 		$data['main_content'] = 'settings_view';
 		$data['date_format'] = $date_format;

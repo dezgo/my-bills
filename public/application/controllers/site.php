@@ -8,16 +8,16 @@ class Site extends MY_Controller {
 		if (!is_logged_in()) redirect('');
 	}
 	
-	function members_area($sort_by = 'last_due', $sort_order = 'asc', $offset = 0)
+	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
 	{
 		$limit = 20;
-		$data['main_content'] = 'accounts_list';
 		$data['fields'] = array(
 			'account' => 'Account',
-			'last_due_formatted' => 'Last Due',
-			'times_per_year' => 'Times&nbsp;p/a',
-			'next_due_formatted' => 'Next Due',
-			'amount' => 'Amount'
+			'last_due' => 'Last Due',
+			'amount' => 'Amount',
+			'times_per_year' => 'Times p/a',
+			'next_due' => 'Next Due',
+			'days' => 'Days'
 		);
 		
 		$this->load->library('pagination');
@@ -42,6 +42,11 @@ class Site extends MY_Controller {
 		$data['sort_by'] = $sort_by;
 		$data['sort_order'] = $sort_order;
 		
+		// used to get default date format
+		$this->load->model('Settings_model');
+		$data['date_format'] = $this->Settings_model->date_format_get(); 
+		
+		$data['main_content'] = 'accounts_list';
 		$this->load->view('includes/template', $data);
 	}
 	
@@ -55,8 +60,12 @@ class Site extends MY_Controller {
 	}
 	
 	function edit_account($id) {
+		// will be used in view to create table
 		$this->load->library('table');
-		//$this->load->helper('date');
+		
+		// used to get default date format
+		$this->load->model('Settings_model');
+		$data['date_format'] = $this->Settings_model->date_format_get(); 
 		
 		$this->load->model('Accounts_model');
 		$row = $this->Accounts_model->load($id);
@@ -66,7 +75,7 @@ class Site extends MY_Controller {
 		$data['account'] = $row->account;
 		$data['last_due'] = $row->last_due;
 
-		$data['last_due_formatted'] = $row->last_due_formatted;// unix_to_human($row->last_due, FALSE, 'euro');
+		//$data['last_due_formatted'] = $row->last_due_formatted;// unix_to_human($row->last_due, FALSE, 'euro');
 		$data['times_per_year'] = $row->times_per_year;
 		$data['amount'] = $row->amount;
 		$this->load->view('includes/template', $data);
@@ -81,7 +90,7 @@ class Site extends MY_Controller {
 		$data['id'] = 0;
 		$data['account'] = "";
 		$data['last_due'] = "";
-		$data['last_due_formatted'] = "";
+		//$data['last_due_formatted'] = "";
 		$data['times_per_year'] = "";
 		$data['amount'] = "";
 		$this->load->view('includes/template', $data);
@@ -102,7 +111,7 @@ class Site extends MY_Controller {
 		$id = $this->input->post('id'); 
 		$data = array(
 			'account' => $this->input->post('account'), 
-			'last_due' => human_to_unix($this->input->post('last_due')),
+			'last_due' => date('Y-m-d', strtotime($this->input->post('last_due'))),
 			'times_per_year' => $this->input->post('times_per_year'), 
 			'amount' => $this->input->post('amount')
 		);

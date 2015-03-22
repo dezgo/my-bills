@@ -8,6 +8,7 @@
       	echo form_open('settings/update');
       	echo form_label("Date format","date_format");
       	echo form_input("date_format",$date_format);
+      	echo 'See '.anchor('http://php.net/manual/en/function.date.php','this link').' for examples<br>';
       	echo form_submit('submit','Update');
       	echo form_close();
       	?>

@@ -3,8 +3,10 @@ class Email extends MY_Controller
 {
 	function __construct()
 	{
-		parent::__construct();	
-		$this->load->library('email');
+//		global $cronjob;
+// 		$cronjob = TRUE;
+ 		parent::__construct();	
+ 		$this->load->library('email');
 	}
 	
 	function init()
@@ -31,5 +33,12 @@ class Email extends MY_Controller
 		$this->email->send();
 		
 		echo $this->email->print_debugger();
+	}
+	
+	function index()
+	{
+		$this->send_email();
+		$data['main_content'] = 'email_view';
+		$this->load->view('includes/template.php', $data);
 	}
 }

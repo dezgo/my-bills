@@ -14,11 +14,12 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/';
-if ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
-{
-	$config['base_url']	.= 'mb/';
-}
+$config['base_url']	= 'http://cw.x10host.com/mb/';
+$config['base_url']	= 'http://192.168.33.10/';
+//if ($CI->input->server('SERVER_NAME') == 'cw.x10host.com')
+//{
+//	$config['base_url']	.= 'mb/';
+//}
 /*
 |--------------------------------------------------------------------------
 | Index File

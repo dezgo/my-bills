@@ -65,7 +65,13 @@ function payAccount(id) {
 			<tr>
 				<?php foreach($fields as $field_name => $field_display): ?>
 				<td>
-					<?php echo $record->$field_name; ?>
+					<?php 
+					if ($field_name == 'last_due' | $field_name == 'next_due') {
+						echo date($date_format, strtotime($record->$field_name));
+					}
+					else
+						echo $record->$field_name; 
+					?>
 				</td>
 				<?php endforeach; ?>
 				<td name="editButtons" style="display:none">

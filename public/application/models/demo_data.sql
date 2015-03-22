@@ -1,5 +1,7 @@
 INSERT INTO `membership` (`first_name`, `last_name`, `password`, `email_address`) VALUES ('Derek', 'Gillett', '5f4dcc3b5aa765d61d8327deb882cf99', 'mybills@derekgillett.com');
 
+INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'date_format', 'j M Y');
+ 
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Weston Water', '2015-01-06', '4', '596.97');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Domain - derekgillet.com', '2014-04-08', '1', '12');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Weston Electricity', '2015-01-08', '4', '435.34');

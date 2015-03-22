@@ -52,7 +52,12 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'session');
+//global $cronjob;
+//echo 'cronjob var is: '.$cronjob;
+//die();
+//if ( !isset($cronjob) || !$cronjob ) {
+	$autoload['libraries'] = array('database', 'session');
+//}
 
 
 /*

@@ -8,8 +8,6 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <?php 
-// format last due date as human readable
-
 
 echo form_open('site/update_account');
 echo form_hidden('id',$id);
@@ -20,7 +18,7 @@ $this->table->add_row(
 	form_input('account',$account));
 $this->table->add_row(
 	form_label('Last Due', 'last_due'),
-	form_input('last_due',$last_due_formatted,"id='last_due'"));
+	form_input('last_due',date($date_format, strtotime($last_due)),"id='last_due'"));
 $this->table->add_row(
 	form_label('Times/year', 'times_per_year'),
 	form_input('times_per_year',$times_per_year));

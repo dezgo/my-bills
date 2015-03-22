@@ -45,42 +45,44 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'local';
+//$active_group = '000webhost';
+//$active_group = 'x10hosting';
+
 $active_record = TRUE;
 
-if ($_SERVER['SERVER_NAME'] == 'mybills.site90.net')
-{
-	$db['default']['hostname'] = 'mysql3.000webhost.com';
-	$db['default']['username'] = 'a8228193_mybills';
-	$db['default']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
-	$db['default']['database'] = 'a8228193_mybills';
-}
-elseif ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
-{
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'cwx10ho2_mybills';
-	$db['default']['password'] = '75HKxPWtV5CeAIoY';
-	$db['default']['database'] = 'cwx10ho2_mybills';
-	$db['default']['port'] = 3306;
-}
-else 
-{
-	$db['default']['hostname'] = 'localhost';
-	$db['default']['username'] = 'my-bills';
-	$db['default']['password'] = 'password';
-	$db['default']['database'] = 'my-bills';
-}
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+//if ($_SERVER['SERVER_NAME'] == 'mybills.site90.net')
+//{
+	$db['000webhost']['hostname'] = 'mysql3.000webhost.com';
+	$db['000webhost']['username'] = 'a8228193_mybills';
+	$db['000webhost']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
+	$db['000webhost']['database'] = 'a8228193_mybills';
+//}
+//elseif ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
+//{
+	$db['x10hosting']['hostname'] = 'localhost';
+	$db['x10hosting']['username'] = 'cwx10ho2_mybills';
+	$db['x10hosting']['password'] = '75HKxPWtV5CeAIoY';
+	$db['x10hosting']['database'] = 'cwx10ho2_mybills';
+//}
+//else 
+//{
+	$db['local']['hostname'] = 'localhost';
+	$db['local']['username'] = 'my-bills';
+	$db['local']['password'] = 'password';
+	$db['local']['database'] = 'my-bills';
+//}
+$db[$active_group]['dbdriver'] = 'mysql';
+$db[$active_group]['dbprefix'] = '';
+$db[$active_group]['pconnect'] = TRUE;
+$db[$active_group]['db_debug'] = TRUE;
+$db[$active_group]['cache_on'] = FALSE;
+$db[$active_group]['cachedir'] = '';
+$db[$active_group]['char_set'] = 'utf8';
+$db[$active_group]['dbcollat'] = 'utf8_general_ci';
+$db[$active_group]['swap_pre'] = '';
+$db[$active_group]['autoinit'] = TRUE;
+$db[$active_group]['stricton'] = FALSE;
 
 /*
  * Debug connection issues with this code

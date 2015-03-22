@@ -79,6 +79,7 @@ function addCurrent($class, $pagename)
 	                  <ul>
 			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>
 						 <li><?php echo anchor('setup/create', 'Create empty DB'); ?></li>
+						 <li><?php echo anchor('email', 'Send Email'); ?></li>
 	                  </ul>
 	               </li>
 	               <?php } ?>
