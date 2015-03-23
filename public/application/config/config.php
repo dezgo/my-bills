@@ -15,7 +15,7 @@
 |
 */
 $config['base_url']	= 'http://cw.x10host.com/mb/';
-$config['base_url']	= 'http://192.168.33.10/';
+//$config['base_url']	= 'http://192.168.33.10/';
 //if ($CI->input->server('SERVER_NAME') == 'cw.x10host.com')
 //{
 //	$config['base_url']	.= 'mb/';
