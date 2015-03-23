@@ -1,6 +1,6 @@
 <script type="text/javascript">
 function signup() {
-	window.location.href = "<?php echo base_url()?>login/signup";
+	window.location.href = "<?php echo base_url()?>index.php/login/signup";
 }
 </script>
 

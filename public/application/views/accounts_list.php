@@ -1,16 +1,16 @@
 <script type="text/javascript">
 function editAccount(id) {
-	window.location.href = "<?php echo base_url()?>site/edit_account/" + id;
+	window.location.href = "<?php echo base_url()?>index.php/site/edit_account/" + id;
 }
 
 function deleteAccount(id) {
 	if (confirm('This will permanently delete this bill. Proceed?')) {
-		window.location.href = "<?php echo base_url()?>site/delete_account/" + id;
+		window.location.href = "<?php echo base_url()?>index.php/site/delete_account/" + id;
 	}
 }
 
 function insertAccount() {
-	window.location.href = "<?php echo base_url()?>site/insert_account";
+	window.location.href = "<?php echo base_url()?>index.php/site/insert_account";
 }
 
 function toggleEditMode() {
@@ -29,7 +29,7 @@ function toggleEditMode() {
 }
 
 function payAccount(id) {
-	window.location.href = "<?php echo base_url()?>site/pay_account/" + id;
+	window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id;
 }
   
 </script>

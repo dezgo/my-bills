@@ -20,9 +20,9 @@
 
    <!-- Script
    ================================================== -->
-   <script src="js/modernizr.js"></script>
+   <script src="<?php echo base_url();?>js/modernizr.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script type="text/javascript" src="js/home.js"></script>
+   <script type="text/javascript" src="<?php echo base_url();?>js/home.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -45,7 +45,7 @@
 			</div>			
 
 	   </div>
-
+<?php if (!isset($ignoreMenu)) { ?>
 	   <nav id="nav-wrap"> 
 
 	   	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
@@ -85,10 +85,10 @@ function addCurrent($class, $pagename)
 	               <?php } ?>
 	               
 			   	</ul> <!-- end #nav -->			   	 
-
 	   	</div> 
 
 	   </nav> <!-- end #nav-wrap --> 	     
+<?php } ?>
 
    </header> <!-- Header End -->
    

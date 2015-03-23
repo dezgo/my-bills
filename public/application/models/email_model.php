@@ -21,18 +21,22 @@ class Email_model extends CI_Model {
 				$recipient['email_address'] = $member->email_address;
 				$billcount = 0;
 				$accounts_due = $this->Accounts_model->get_accounts_due_by_member($member->id);
-				$recipient['message'] = "The following bills are due within the next ".$days." days<hr>";
+				$data['message'] = "The following bills are due within the next ".$days." days<hr>";
 				foreach ($accounts_due as $account) {
 					//print_r($accounts_due);
 					//die();
 					$billcount += 1;
-					$recipient['message'] .= 
+					$data['message'] .= 
 						$account->account." bill for ".
 						$account->amount." is due by ".
 						date($this->settings_model->date_format_get_by_member($member->id), strtotime($account->next_due))."<br>";
 				}
 				$recipient['subject'] = "You have ".$billcount." bill".($billcount > 1 ? "s" : "")." due within the next ".$days." day".($days > 1 ? "s" : "");
-				$recipients.array_push($recipients, $recipient);
+				$data['ignoreMenu'] = 'true';
+				$data['main_content'] = 'email_view';
+				$recipient['message'] = $this->load->view('includes/template.php', $data, true);
+				
+				array_push($recipients, $recipient);
 			}
 		}
 		return $recipients;
