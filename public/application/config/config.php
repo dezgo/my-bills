@@ -14,12 +14,17 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://cw.x10host.com/mb/';
-//$config['base_url']	= 'http://192.168.33.10/';
-//if ($CI->input->server('SERVER_NAME') == 'cw.x10host.com')
-//{
-//	$config['base_url']	.= 'mb/';
-//}
+switch (ENVIRONMENT) {
+	case 'development':
+		$config['base_url']	= 'http://192.168.33.10/';
+		break;
+	case 'testing':
+		$config['base_url']	= 'http://mybills.site90.net/';
+		break;
+	default:
+		$config['base_url']	= 'http://cw.x10host.com/mb/';
+		break;
+}
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -184,7 +189,17 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+switch (ENVIRONMENT) {
+	case 'development':
+		$config['log_threshold'] = 3;
+		break;
+	case 'testing':
+		$config['log_threshold'] = 3;
+		break;
+	default:
+		$config['log_threshold'] = 1;
+		break;
+}
 
 /*
 |--------------------------------------------------------------------------

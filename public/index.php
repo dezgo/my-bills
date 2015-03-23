@@ -18,7 +18,16 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
+$root = dirname(__FILE__);
+switch ($root) {
+	case '/var/www/public':
+		define('ENVIRONMENT', 'development');
+		break;
+	default:
+		define('ENVIRONMENT', 'production');
+		break;
+}
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

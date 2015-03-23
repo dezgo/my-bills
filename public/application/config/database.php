@@ -45,44 +45,49 @@
 | the active record class
 */
 
-$active_group = 'local';
-//$active_group = '000webhost';
-//$active_group = 'x10hosting';
+switch (ENVIRONMENT) {
+	case 'development':
+		$active_group = 'development';
+		break;
+	case 'testing':
+		$active_group = 'testing';
+		break;
+	default:
+		$active_group = 'production';
+}
 
 $active_record = TRUE;
 
-//if ($_SERVER['SERVER_NAME'] == 'mybills.site90.net')
-//{
-	$db['000webhost']['hostname'] = 'mysql3.000webhost.com';
-	$db['000webhost']['username'] = 'a8228193_mybills';
-	$db['000webhost']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
-	$db['000webhost']['database'] = 'a8228193_mybills';
-//}
-//elseif ($_SERVER['SERVER_NAME'] == 'cw.x10host.com')
-//{
-	$db['x10hosting']['hostname'] = 'localhost';
-	$db['x10hosting']['username'] = 'cwx10ho2_mybills';
-	$db['x10hosting']['password'] = '75HKxPWtV5CeAIoY';
-	$db['x10hosting']['database'] = 'cwx10ho2_mybills';
-//}
-//else 
-//{
-	$db['local']['hostname'] = 'localhost';
-	$db['local']['username'] = 'my-bills';
-	$db['local']['password'] = 'password';
-	$db['local']['database'] = 'my-bills';
-//}
+$db['development']['hostname'] = 'localhost';
+$db['development']['username'] = 'my-bills';
+$db['development']['password'] = 'password';
+$db['development']['database'] = 'my-bills';
+$db['development']['db_debug'] = TRUE;
+$db['development']['stricton'] = TRUE;
+
+$db['testing']['hostname'] = 'mysql3.000webhost.com';
+$db['testing']['username'] = 'a8228193_mybills';
+$db['testing']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
+$db['testing']['database'] = 'a8228193_mybills';
+$db['testing']['db_debug'] = FALSE;
+$db['testing']['stricton'] = FALSE;
+
+$db['production']['hostname'] = 'localhost';
+$db['production']['username'] = 'cwx10ho2_mybills';
+$db['production']['password'] = '75HKxPWtV5CeAIoY';
+$db['production']['database'] = 'cwx10ho2_mybills';
+$db['production']['db_debug'] = FALSE;
+$db['production']['stricton'] = FALSE;
+
 $db[$active_group]['dbdriver'] = 'mysql';
 $db[$active_group]['dbprefix'] = '';
 $db[$active_group]['pconnect'] = TRUE;
-$db[$active_group]['db_debug'] = TRUE;
 $db[$active_group]['cache_on'] = FALSE;
 $db[$active_group]['cachedir'] = '';
 $db[$active_group]['char_set'] = 'utf8';
 $db[$active_group]['dbcollat'] = 'utf8_general_ci';
 $db[$active_group]['swap_pre'] = '';
 $db[$active_group]['autoinit'] = TRUE;
-$db[$active_group]['stricton'] = FALSE;
 
 /*
  * Debug connection issues with this code
