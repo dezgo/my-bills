@@ -1,6 +1,7 @@
 INSERT INTO `membership` (`first_name`, `last_name`, `password`, `email_address`) VALUES ('Derek', 'Gillett', '5f4dcc3b5aa765d61d8327deb882cf99', 'mybills@derekgillett.com');
 
 INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'date_format', 'j M Y');
+INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'email_reminder_days', '5');
  
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Weston Water', '2015-01-06', '4', '596.97');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Domain - derekgillet.com', '2014-04-08', '1', '12');
@@ -55,8 +56,8 @@ INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `a
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Childfund', '2015-02-13', '12', '45');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Worldvision', '2015-02-19', '12', '48');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'CW Phone', '2015-02-22', '12', '10.05');
-INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Mobile - Derek', '1900-01-00', '12', '');
-INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Mobile -Sabri', '1900-01-00', '1', '');
+INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Mobile - Derek', '2015-01-01', '12', '30');
+INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Mobile -Sabri', '2015-01-01', '1', '30');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Followup Then', '2014-04-09', '1', '26');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'TPG - Derek', '2015-02-17', '12', '19.99');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'TPG - Adri', '2015-03-05', '12', '24.99');

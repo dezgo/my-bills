@@ -65,4 +65,15 @@ class Accounts_model extends CI_Model {
 		$this->db->update('accounts', array('last_due' => $row->next_due));
 		
 	}
+
+	function get_accounts_due_by_member($member_id)
+	{
+		$this->load->model('Settings_model');
+		$days = $this->Settings_model->email_reminder_days_get_by_member($member_id);
+		$query = $this->db->select('account, last_due, amount, adddate(last_due,365/times_per_year) as next_due', FALSE)
+				->from('accounts')
+				->where('adddate(last_due,365/times_per_year) < adddate(now(),'.-$days.')')
+				->where('member_id',$member_id);
+		return $query->get()->result();
+	}
 }

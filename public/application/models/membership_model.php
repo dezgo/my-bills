@@ -42,6 +42,22 @@ class Membership_model extends CI_Model {
 			return TRUE;	// email can be registered
 		}
 	}
+	
+	// for a given member, return their email address (to send out bill reminders)
+	function get_email($member_id)
+	{
+		$this->db->where('member_id', $member_id);
+		$result = $this->db->get('membership')->row();
+		return $result->email_address;
+	}
+	
+	function get_members()
+	{
+		$this->db->select('id,email_address');
+		$query = $this->db->get('membership');
+		return $query->result();
+	}
+	
 }
 
 ?>

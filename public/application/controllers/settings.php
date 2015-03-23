@@ -5,9 +5,11 @@ class Settings extends MY_Controller
 	{
 		$this->load->model('Settings_model');
 		$date_format = $this->Settings_model->date_format_get();
-
+		$email_reminder_days = $this->Settings_model->email_reminder_days_get();
+		
 		$data['main_content'] = 'settings_view';
 		$data['date_format'] = $date_format;
+		$data['email_reminder_days'] = $email_reminder_days;
 		$data['message'] = '';
 		$this->load->view('includes/template.php', $data);
 	}
@@ -15,12 +17,15 @@ class Settings extends MY_Controller
 	function update()
 	{
 		$date_format = $this->input->post('date_format');
+		$email_reminder_days = $this->input->post('email_reminder_days');
 		$this->load->model('Settings_model');
 		$this->Settings_model->date_format_set($date_format);
+		$this->Settings_model->email_reminder_days_set($email_reminder_days);
 		
-		$data['main_content'] = 'settings_view';
 		$data['date_format'] = $date_format;
+		$data['email_reminder_days'] = $email_reminder_days;
 		$data['message'] = 'Settings updated';
+		$data['main_content'] = 'settings_view';
 		$this->load->view('includes/template.php', $data);
 	}
 }

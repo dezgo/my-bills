@@ -2,7 +2,7 @@
 
       	<div class="twelve columns">
 
-	<h1>Finished creating database</h1>
+	<h3><?php echo $message; ?></h3>
 	
 	   		</div> <!-- end accounts list -->
 

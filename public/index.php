@@ -23,9 +23,13 @@ switch ($root) {
 	case '/var/www/public':
 		define('ENVIRONMENT', 'development');
 		break;
-	default:
+	case '/home/cwx10ho2/public_html/mb':
 		define('ENVIRONMENT', 'production');
 		break;
+	default:
+		echo 'Unexpected dirname, unsure what environment we\'re in!<br>';
+		echo $root;
+		die();
 }
 
 /*

@@ -2,8 +2,8 @@ DROP TABLE IF EXISTS `membership`;
 
 CREATE TABLE `membership` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
- `first_name` varchar(25) NOT NULL,
- `last_name` varchar(25) NOT NULL,
+ `first_name` varchar(25) NULL,
+ `last_name` varchar(25) NULL,
  `password` varchar(32) NOT NULL,
  `email_address` varchar(50) NOT NULL,
  `update_date` datetime,
@@ -31,9 +31,9 @@ CREATE TABLE `accounts` (
  `member_id` int(11) NOT NULL,
  `account` varchar(50) NOT NULL,
  `last_due` date NOT NULL,
- `times_per_year` int(11) NOT NULL,
+ `times_per_year` decimal(5,2) NOT NULL,
  `amount` decimal(10,2) NOT NULL,
- `autopay` tinyint(1) NOT NULL,
+ `autopay` tinyint(1) NOT NULL DEFAULT 0,
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)

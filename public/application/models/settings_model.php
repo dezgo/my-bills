@@ -9,9 +9,9 @@ class Settings_model extends CI_Model {
 		return $query->num_rows > 0;
 	}
 	
-	private function setting_get($name) {
+	private function setting_get_by_member($name, $member_id) {
 		$this->db->where('setting_name', $name);
-		$this->db->where('member_id', $this->session->userdata('member_id'));
+		$this->db->where('member_id', $member_id);
 		$query = $this->db->get('settings');
 		
 		if ($query->num_rows() == 0)
@@ -20,6 +20,10 @@ class Settings_model extends CI_Model {
 			$row = $query->row();
 			return $row->setting_value;
 		}
+	}
+
+	private function setting_get($name) {
+		return $this->setting_get_by_member($name, $this->session->userdata('member_id'));
 	}
 	
 	private function setting_set($name, $value) {
@@ -44,6 +48,19 @@ class Settings_model extends CI_Model {
 	}
 	function date_format_get() {
 		return $this->setting_get('date_format');
+	}
+	function date_format_get_by_member($member_id) {
+		return $this->setting_get_by_member('date_format',$member_id);
+	}
+	
+	function email_reminder_days_set($value) {
+		$this->setting_set('email_reminder_days', $value);
+	}
+	function email_reminder_days_get() {
+		return $this->setting_get('email_reminder_days');
+	}
+	function email_reminder_days_get_by_member($member_id) {
+		return $this->setting_get_by_member('email_reminder_days',$member_id);
 	}
 }
 
