@@ -28,8 +28,9 @@ function toggleEditMode() {
 	}
 }
 
-function payAccount(id) {
-	window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id;
+function payAccount(id,amount) {
+	var amountActual = prompt("Enter the amount to pay", amount);
+	window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id + "/" + amountActual;
 }
   
 </script>
@@ -79,7 +80,7 @@ function payAccount(id) {
 					<?php echo form_button('name','Delete','onClick="deleteAccount(' . $record->id . ')"'); ?>
 				</td>
 				<td name="payButton">
-					<?php echo form_button('name','Pay','onClick="payAccount(' . $record->id . ')"'); ?>
+					<?php echo form_button('name','Pay','onClick="payAccount(' . $record->id . ','.$record->amount.')"'); ?>
 				</td>
 			</tr>
 			<?php endforeach; ?>

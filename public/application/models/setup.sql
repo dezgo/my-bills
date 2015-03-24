@@ -9,7 +9,7 @@ CREATE TABLE `membership` (
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DELIMITER |
 CREATE TRIGGER trigger_membershipDatetimeInsert BEFORE INSERT ON `membership` FOR EACH ROW 
@@ -37,7 +37,7 @@ CREATE TABLE `accounts` (
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DELIMITER |
 CREATE TRIGGER trigger_accountsDatetimeInsert BEFORE INSERT ON `accounts` FOR EACH ROW 
@@ -81,17 +81,19 @@ DROP TABLE IF EXISTS `payments`;
 CREATE TABLE `payments` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `member_id` int(11) NOT NULL,
- `payment_date` date NOT NULL,
+ `account` varchar(50) NOT NULL,
+ `payment_date` datetime,
  `amount` decimal(10,2) NOT NULL,
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DELIMITER |
 CREATE TRIGGER trigger_paymentsDatetimeInsert BEFORE INSERT ON `payments` FOR EACH ROW 
 BEGIN
     SET NEW.create_date = NOW();
+    SET NEW.payment_date = NOW();
 END; 
 |
 CREATE TRIGGER trigger_paymentsDatetimeModify BEFORE UPDATE ON `payments` FOR EACH ROW 
@@ -110,7 +112,7 @@ CREATE TABLE `account_tags` (
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DELIMITER |
 CREATE TRIGGER trigger_account_tagsDatetimeInsert BEFORE INSERT ON `account_tags` FOR EACH ROW 
@@ -134,7 +136,7 @@ CREATE TABLE `payment_tags` (
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 DELIMITER |
 CREATE TRIGGER trigger_payment_tagsDatetimeInsert BEFORE INSERT ON `payment_tags` FOR EACH ROW 

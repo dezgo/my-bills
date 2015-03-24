@@ -2,6 +2,7 @@ INSERT INTO `membership` (`first_name`, `last_name`, `password`, `email_address`
 
 INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'date_format', 'j M Y');
 INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'email_reminder_days', '5');
+INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'items_per_page', '50');
  
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Weston Water', '2015-01-06', '4', '596.97');
 INSERT INTO `accounts` (`member_id`, `account`, `last_due`, `times_per_year`, `amount`) VALUES ((SELECT `id` FROM `membership`), 'Domain - derekgillet.com', '2014-04-08', '1', '12');

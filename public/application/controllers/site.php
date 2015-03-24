@@ -10,7 +10,8 @@ class Site extends MY_Controller {
 	
 	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
 	{
-		$limit = 20;
+		$this->load->model('Settings_model');
+		$limit =  $this->Settings_model->items_per_page_get();
 		$data['fields'] = array(
 			'account' => 'Account',
 			'last_due' => 'Last Due',
@@ -53,7 +54,6 @@ class Site extends MY_Controller {
 	function logout()
 	{
 		$this->session->sess_destroy();
-//		$this->session->set_userdata('member_id', 0);	
 		
 		$data['main_content'] = 'logout';
 		$this->load->view('includes/template', $data);
@@ -128,9 +128,9 @@ class Site extends MY_Controller {
 	}
 	
 	// mark account as paid and reschedule
-	function pay_account($id) {
+	function pay_account($id,$amount) {
 		$this->load->model('Accounts_model');
-		$this->Accounts_model->pay($id);		
+		$this->Accounts_model->pay($id,$amount);		
 
 		// and back to the list
 		$this->members_area();

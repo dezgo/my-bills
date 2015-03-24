@@ -64,14 +64,13 @@ function addCurrent($class, $pagename)
 			   	<ul id="nav" class="nav">
 			      	<?php 
 			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('home','Home') . '</li>';
-			      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
 			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us') . '</li>';
 			      	
 			      	if (is_logged_in()) {
-				      	echo "<li" . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
+				      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
+				      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('payments/show_list','Payments') . '</li>';
+			      		echo "<li" . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
 				      	echo "<li" . addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout') . '</li>';
-			      	} else {
-				      	echo "<li" . addCurrent($this->router->class, "login") .">". anchor('login','Login') . '</li>';
 				    } 
 				    
 				    if (is_admin()) { ?>

@@ -17,6 +17,11 @@
       	echo form_input("email_reminder_days",$email_reminder_days);
       	echo 'Number of days before bill is due to send email reminder (zero for no reminders)<br>';
       	 
+      	// items per page
+      	echo form_label("Items / page","items_per_page");
+      	echo form_input("items_per_page",$items_per_page);
+      	echo 'Number of items to show per page in accounts and payments lists<br>';
+      	
       	echo form_submit('submit','Update');
       	echo form_close();
       	?>

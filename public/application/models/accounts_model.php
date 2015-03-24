@@ -55,8 +55,8 @@ class Accounts_model extends CI_Model {
 		$this->db->insert('accounts', $data);
 	}
 	
-	function pay($id) {
-		$query = $this->db->select('adddate(last_due,365/times_per_year) as next_due', FALSE)
+	function pay($id,$amount) {
+		$query = $this->db->select('adddate(last_due,365/times_per_year) as next_due, account', FALSE)
 				->from('accounts')
 				->where('id',$id);
 		$row = $query->get()->row();
@@ -64,6 +64,9 @@ class Accounts_model extends CI_Model {
 		$this->db->where('id',$id);
 		$this->db->update('accounts', array('last_due' => $row->next_due));
 		
+		// and record this payment
+		$this->load->model('Payments_model');
+		$this->Payments_model->insert($row->account, $amount);
 	}
 
 	function get_accounts_due_by_member($member_id)
@@ -73,7 +76,8 @@ class Accounts_model extends CI_Model {
 		$query = $this->db->select('account, last_due, amount, adddate(last_due,365/times_per_year) as next_due', FALSE)
 				->from('accounts')
 				->where('adddate(last_due,365/times_per_year) < adddate(now(),'.-$days.')')
-				->where('member_id',$member_id);
+				->where('member_id',$member_id)
+				->where('autopay',FALSE);
 		return $query->get()->result();
 	}
 }

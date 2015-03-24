@@ -62,5 +62,13 @@ class Settings_model extends CI_Model {
 	function email_reminder_days_get_by_member($member_id) {
 		return $this->setting_get_by_member('email_reminder_days',$member_id);
 	}
+	
+	function items_per_page_set($value) {
+		$this->setting_set('items_per_page', $value);
+	}
+	function items_per_page_get() {
+		return $this->setting_get('items_per_page');
+	}
+	
 }
 
