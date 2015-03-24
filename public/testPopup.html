@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/alertbox.css"> 
+<script type="text/javascript" src="js/alertbox.js"></script>
+<script type="text/javascript">
+function testit() {
+ alertBox('Enter your firstname','prompt','John Smith')
+}
+
+function alertReturn(r) {
+ alert(r)
+}
+</script>
+
+</head>
+<body>
+
+<input type="button" value="testme" onclick="testit()">
+<br>
+    <div id="alertBox">
+        <div id="alertBox_container">
+            <div id="alertBox_titlebar"><span style="padding-left: 3px;">IMTS</span></div>
+            <div><input id="alertBox_close" type="button" value="X" onclick="alertBox_hide()"></div>
+            <div id="alertBox_text"></div>
+        </div>
+    </div>
+
+</body>
+</html>

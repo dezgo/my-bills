@@ -30,9 +30,10 @@ function toggleEditMode() {
 
 function payAccount(id,amount) {
 	var amountActual = prompt("Enter the amount to pay", amount);
-	window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id + "/" + amountActual;
+	if (amountActual !== null && amountActual !== undefined)
+		window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id + "/" + amountActual;
 }
-  
+
 </script>
   
       <div class="row section-head add-bottom">
