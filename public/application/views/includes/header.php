@@ -68,7 +68,7 @@ function addCurrent($class, $pagename)
 			      	
 			      	if (is_logged_in()) {
 				      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
-				      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('payments/show_list','Payments') . '</li>';
+				      	echo "<li" . addCurrent($this->router->class, "payments") .">". anchor('payments/show_list','Payments') . '</li>';
 			      		echo "<li" . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
 				      	echo "<li" . addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout') . '</li>';
 				    } 
