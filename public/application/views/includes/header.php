@@ -90,4 +90,3 @@ function addCurrent($class, $pagename)
 <?php } ?>
 
    </header> <!-- Header End -->
-   
