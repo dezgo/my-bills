@@ -2401,3 +2401,2894 @@ DEBUG - 2015-03-25 20:39:15 --> Controller Class Initialized
 DEBUG - 2015-03-25 20:39:15 --> Model Class Initialized
 DEBUG - 2015-03-25 20:39:15 --> Model Class Initialized
 DEBUG - 2015-03-25 20:39:15 --> Helper loaded: csv_helper
+DEBUG - 2015-03-25 23:24:58 --> Config Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:24:58 --> URI Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Router Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:24:58 --> Output Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Security Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Input Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:24:58 --> Language Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:24:58 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:24:58 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:24:58 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:24:58 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:24:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:24:59 --> Severity: Warning  --> mysql_pconnect(): Access denied for user 'my-bills'@'localhost' (using password: YES) /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:24:59 --> Unable to connect to the database
+DEBUG - 2015-03-25 23:24:59 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:24:59 --> Config Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:24:59 --> URI Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Router Class Initialized
+ERROR - 2015-03-25 23:24:59 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2015-03-25 23:24:59 --> Config Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:24:59 --> URI Class Initialized
+DEBUG - 2015-03-25 23:24:59 --> Router Class Initialized
+ERROR - 2015-03-25 23:24:59 --> 404 Page Not Found --> favicon.ico
+DEBUG - 2015-03-25 23:25:35 --> Config Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:25:35 --> URI Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Router Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:25:35 --> Output Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Input Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:25:35 --> Language Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:25:35 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:25:35 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:25:35 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:25:35 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:25:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:25:35 --> Unable to select database: my-bills
+DEBUG - 2015-03-25 23:25:35 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:25:38 --> Config Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:25:38 --> URI Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Router Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:25:38 --> Output Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Security Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Input Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:25:38 --> Language Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:25:38 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:25:38 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:25:38 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:25:38 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:25:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:25:38 --> Unable to select database: my-bills
+DEBUG - 2015-03-25 23:25:38 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:26:11 --> Config Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:26:12 --> URI Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Router Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:26:12 --> Output Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Security Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Input Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:26:12 --> Language Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:26:12 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:26:12 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:26:12 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:26:12 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:26:12 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:26:12 --> Unable to select database: my-bills
+DEBUG - 2015-03-25 23:26:12 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:27:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:27:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:27:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Input Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:27:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:27:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:27:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:27:28 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:27:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:27:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:27:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:27:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:27:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:27:28 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:27:28 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:27:28 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:27:28 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:27:28 --> Final output sent to browser
+DEBUG - 2015-03-25 23:27:28 --> Total execution time: 0.3297
+DEBUG - 2015-03-25 23:27:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:27:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:27:29 --> URI Class Initialized
+DEBUG - 2015-03-25 23:27:29 --> Router Class Initialized
+ERROR - 2015-03-25 23:27:29 --> 404 Page Not Found --> favicon.png
+DEBUG - 2015-03-25 23:27:29 --> Config Class Initialized
+DEBUG - 2015-03-25 23:27:29 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:27:29 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:27:29 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:27:29 --> URI Class Initialized
+DEBUG - 2015-03-25 23:27:29 --> Router Class Initialized
+ERROR - 2015-03-25 23:27:29 --> 404 Page Not Found --> favicon.png
+DEBUG - 2015-03-25 23:28:23 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:23 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:23 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:23 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:23 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:23 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:23 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:23 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:23 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:23 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:28:23 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:23 --> File loaded: application/views/setup_view.php
+DEBUG - 2015-03-25 23:28:23 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:23 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:23 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:23 --> Total execution time: 0.3177
+DEBUG - 2015-03-25 23:28:23 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:23 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:23 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:23 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:23 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:24 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:24 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:24 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:24 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:24 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:24 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session routines successfully run
+ERROR - 2015-03-25 23:28:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:24 --> Controller Class Initialized
+ERROR - 2015-03-25 23:28:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:24 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:24 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:24 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> DB Transaction Failure
+ERROR - 2015-03-25 23:28:24 --> Query error: Table 'my-bills.membership' doesn't exist
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:28:24 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:28:24 --> DB Transaction Failure
+DEBUG - 2015-03-25 23:28:24 --> DB Transaction Failure
+ERROR - 2015-03-25 23:28:24 --> Query error: Subquery returns more than 1 row
+ERROR - 2015-03-25 23:28:24 --> Query error: Subquery returns more than 1 row
+DEBUG - 2015-03-25 23:28:24 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:28:24 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2015-03-25 23:28:24 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:24 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:24 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:24 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:24 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:24 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:24 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Loader Class Initialized
+ERROR - 2015-03-25 23:28:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:24 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:24 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session routines successfully run
+ERROR - 2015-03-25 23:28:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:24 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:24 --> Helper loaded: file_helper
+DEBUG - 2015-03-25 23:28:24 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:24 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:24 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:24 --> Total execution time: 0.3592
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/setup_view.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:24 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:24 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:24 --> Total execution time: 0.4727
+DEBUG - 2015-03-25 23:28:24 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:24 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> favicon.png
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> favicon.png
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:25 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:25 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:25 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:25 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:25 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:25 --> File loaded: application/views/login_form.php
+DEBUG - 2015-03-25 23:28:25 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:25 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:25 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:25 --> Total execution time: 0.2468
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:25 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:25 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:25 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:25 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:25 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:25 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:25 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:25 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:25 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:25 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:25 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:25 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:25 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:25 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:25 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:26 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:26 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:26 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:26 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:26 --> Total execution time: 0.2754
+DEBUG - 2015-03-25 23:28:26 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:26 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:26 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:26 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:26 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:26 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:26 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:26 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:26 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:26 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:26 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:26 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:26 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:26 --> 404 Page Not Found --> site/js
+ERROR - 2015-03-25 23:28:26 --> 404 Page Not Found --> site/favicon.png
+ERROR - 2015-03-25 23:28:26 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:26 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:26 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:26 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:26 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:26 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:26 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:26 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:26 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:26 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:26 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:26 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:27 --> 404 Page Not Found --> site/js
+ERROR - 2015-03-25 23:28:27 --> 404 Page Not Found --> site/favicon.png
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:27 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:27 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:27 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:27 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:27 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:27 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:27 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Global POST and COOKIE data sanitized
+ERROR - 2015-03-25 23:28:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:27 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:27 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:27 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:27 --> Session routines successfully run
+ERROR - 2015-03-25 23:28:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:27 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:27 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:27 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:27 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:27 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:27 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/payments_view.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:27 --> Total execution time: 0.6621
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:27 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:27 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:27 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:27 --> Total execution time: 0.6640
+DEBUG - 2015-03-25 23:28:27 --> Total execution time: 0.6566
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:27 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:27 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:27 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:28 --> 404 Page Not Found --> payments/js
+ERROR - 2015-03-25 23:28:28 --> 404 Page Not Found --> payments/js
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:28 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Input Class Initialized
+ERROR - 2015-03-25 23:28:28 --> 404 Page Not Found --> payments/favicon.png
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> UTF-8 Support Enabled
+ERROR - 2015-03-25 23:28:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:28 --> File loaded: application/views/logout.php
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:28 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:28 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:28 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Final output sent to browser
+ERROR - 2015-03-25 23:28:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:28 --> Total execution time: 0.3977
+DEBUG - 2015-03-25 23:28:28 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:28 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:28 --> Utf8 Class Initialized
+ERROR - 2015-03-25 23:28:28 --> 404 Page Not Found --> payments/favicon.png
+DEBUG - 2015-03-25 23:28:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:28 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:28 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:29 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:29 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Loader Class Initialized
+ERROR - 2015-03-25 23:28:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:29 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:29 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:29 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:29 --> Controller Class Initialized
+ERROR - 2015-03-25 23:28:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:29 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:29 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:29 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:29 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:29 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:29 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:29 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:29 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:29 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:29 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:29 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:29 --> Total execution time: 0.2977
+DEBUG - 2015-03-25 23:28:29 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:29 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:29 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:29 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:29 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:29 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:29 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:29 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:29 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:29 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:29 --> Total execution time: 0.2446
+DEBUG - 2015-03-25 23:28:29 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:29 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:29 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:29 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:29 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:29 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:29 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:29 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:29 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:30 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:30 --> Total execution time: 0.2363
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:30 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:30 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:30 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:30 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:30 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:30 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:30 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:30 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:30 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:30 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:30 --> Total execution time: 0.2565
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:30 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:30 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:30 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:30 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:30 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Loader Class Initialized
+ERROR - 2015-03-25 23:28:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:30 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:30 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:30 --> Helper loaded: auth_helper
+ERROR - 2015-03-25 23:28:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:31 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:31 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: string_helper
+ERROR - 2015-03-25 23:28:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Encrypt Class Initialized
+ERROR - 2015-03-25 23:28:31 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:31 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:31 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:31 --> 404 Page Not Found --> login/favicon.png
+DEBUG - 2015-03-25 23:28:31 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:31 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> UTF-8 Support Enabled
+ERROR - 2015-03-25 23:28:31 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:31 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:31 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:31 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:31 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:31 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:31 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> URI Class Initialized
+ERROR - 2015-03-25 23:28:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:31 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:31 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:31 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:31 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:31 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Language Class Initialized
+ERROR - 2015-03-25 23:28:31 --> 404 Page Not Found --> login/favicon.png
+DEBUG - 2015-03-25 23:28:31 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:31 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:31 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:31 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:31 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:31 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Form Validation Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2015-03-25 23:28:31 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:31 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:31 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:31 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:31 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:31 --> Total execution time: 0.3849
+DEBUG - 2015-03-25 23:28:31 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:31 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:31 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:31 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:31 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:31 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:31 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:32 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:32 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:32 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:32 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:32 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:32 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:32 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:32 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:32 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:32 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:32 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:32 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:32 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:32 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:32 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Form Validation Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:32 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:32 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:32 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:32 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:32 --> Total execution time: 0.3148
+DEBUG - 2015-03-25 23:28:32 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:32 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:32 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:32 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:32 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:32 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:32 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:32 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:32 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:32 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:32 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:32 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:32 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:32 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:32 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:33 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:33 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:33 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:33 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:33 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:33 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:33 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:33 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:33 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:33 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:33 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:33 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:33 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:33 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:33 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Form Validation Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:33 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:33 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:33 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:33 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:33 --> Total execution time: 0.3365
+DEBUG - 2015-03-25 23:28:33 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:33 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:33 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:33 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:33 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:33 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:33 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:33 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:33 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:33 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:33 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:33 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:33 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:34 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:34 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:34 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:34 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:34 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:34 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:34 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:34 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:34 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:34 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:34 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:34 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:34 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:34 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:34 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:34 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:34 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Form Validation Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:34 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:34 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:34 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:34 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:34 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:34 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:34 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:34 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:34 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:34 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:34 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:34 --> Total execution time: 0.2838
+DEBUG - 2015-03-25 23:28:34 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:34 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:34 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:34 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:35 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:35 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:35 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:35 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:35 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:35 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:35 --> 404 Page Not Found --> site/js
+ERROR - 2015-03-25 23:28:35 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:35 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:35 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:35 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:35 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:35 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:35 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:35 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:35 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:35 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:35 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:35 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:35 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:35 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:35 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:35 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:35 --> File loaded: application/views/logout.php
+DEBUG - 2015-03-25 23:28:35 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:35 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:35 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:35 --> Total execution time: 0.2534
+DEBUG - 2015-03-25 23:28:35 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:35 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:35 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:35 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:36 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:36 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:36 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:36 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:36 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:36 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:36 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:36 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:36 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:36 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:36 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:36 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:36 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:36 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:36 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:36 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:36 --> Total execution time: 0.2736
+DEBUG - 2015-03-25 23:28:36 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:36 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:36 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:36 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:36 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:36 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:36 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:36 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:36 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:36 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:36 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:36 --> Total execution time: 0.2662
+DEBUG - 2015-03-25 23:28:36 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:36 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:36 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:37 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:37 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:37 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:37 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:37 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:37 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:37 --> Total execution time: 0.2587
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:37 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:37 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:37 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:37 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:37 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:37 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:37 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/login_form.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:37 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:37 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:37 --> Total execution time: 0.2583
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:37 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:37 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:37 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:37 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:37 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:37 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:38 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:38 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:38 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:38 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:38 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:38 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:38 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:38 --> File loaded: application/views/login_form.php
+DEBUG - 2015-03-25 23:28:38 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:38 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:38 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:38 --> Total execution time: 0.3043
+DEBUG - 2015-03-25 23:28:38 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:38 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:38 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:38 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:38 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:38 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:38 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:38 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:38 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:38 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:38 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:38 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:38 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:38 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:38 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:38 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:38 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:38 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:38 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:38 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:38 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:39 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:39 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:39 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:39 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:39 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:39 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:39 --> Total execution time: 0.2639
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:39 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:39 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:39 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:39 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:39 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:39 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:39 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:39 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:39 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:39 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:39 --> Total execution time: 0.2614
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:39 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:39 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:40 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:40 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:40 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:40 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:40 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:40 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:40 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:40 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:40 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:40 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:40 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:40 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:40 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:40 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/login_form.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:40 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:40 --> Total execution time: 0.2676
+DEBUG - 2015-03-25 23:28:40 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:40 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:40 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:40 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:40 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:40 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:40 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:40 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:40 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:40 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:40 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:40 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/signup_form.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:40 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:40 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:41 --> Total execution time: 0.2681
+DEBUG - 2015-03-25 23:28:41 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:41 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:41 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:41 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:41 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:41 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:41 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:41 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:41 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:41 --> 404 Page Not Found --> login/js
+ERROR - 2015-03-25 23:28:41 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:41 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:41 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:41 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:41 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:41 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:41 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:41 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:41 --> 404 Page Not Found --> login/js
+DEBUG - 2015-03-25 23:28:41 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:41 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:41 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:41 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:41 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:41 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:41 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:41 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:42 --> File loaded: application/views/login_form.php
+DEBUG - 2015-03-25 23:28:42 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:42 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:42 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:42 --> Total execution time: 0.2669
+DEBUG - 2015-03-25 23:28:42 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:42 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:42 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:42 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:42 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:42 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:42 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:42 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:42 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:42 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:42 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:42 --> XSS Filtering completed
+DEBUG - 2015-03-25 23:28:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:42 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:42 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:42 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:42 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:42 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:42 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:42 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:42 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:42 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:42 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:42 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:42 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:42 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:43 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:43 --> Total execution time: 0.3220
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:43 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:43 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:43 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:43 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:43 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:43 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:43 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:43 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:43 --> 404 Page Not Found --> site/js
+ERROR - 2015-03-25 23:28:43 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:43 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:43 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:43 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:43 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:43 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:43 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:43 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:43 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:43 --> Total execution time: 0.2772
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:43 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:43 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:43 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:43 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:43 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:44 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:44 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:44 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:44 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:44 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:44 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:44 --> File loaded: application/views/contact_form.php
+DEBUG - 2015-03-25 23:28:44 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:44 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:44 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:44 --> Total execution time: 0.3223
+DEBUG - 2015-03-25 23:28:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:44 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:44 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:44 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:44 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:44 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:44 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:44 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:44 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:44 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:45 --> File loaded: application/views/accounts_list.php
+DEBUG - 2015-03-25 23:28:45 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:45 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:45 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:45 --> Total execution time: 0.3263
+DEBUG - 2015-03-25 23:28:45 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:45 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:45 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:45 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:45 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:45 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:45 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:45 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:45 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:45 --> 404 Page Not Found --> site/js
+ERROR - 2015-03-25 23:28:45 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:45 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:45 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:45 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:45 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:45 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:45 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:45 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:45 --> 404 Page Not Found --> site/js
+DEBUG - 2015-03-25 23:28:45 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:45 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:45 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:45 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:45 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:46 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:46 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:46 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Pagination Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Table Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:46 --> File loaded: application/views/payments_view.php
+DEBUG - 2015-03-25 23:28:46 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:46 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:46 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:46 --> Total execution time: 0.3454
+DEBUG - 2015-03-25 23:28:46 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:46 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:46 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:46 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:46 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:46 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:46 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:46 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:46 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:46 --> 404 Page Not Found --> payments/js
+ERROR - 2015-03-25 23:28:46 --> 404 Page Not Found --> payments/js
+DEBUG - 2015-03-25 23:28:46 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:46 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:46 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:46 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:46 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:46 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:46 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Model Class Initialized
+ERROR - 2015-03-25 23:28:46 --> 404 Page Not Found --> payments/js
+DEBUG - 2015-03-25 23:28:46 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:46 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:46 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:47 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:47 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:47 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:47 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:47 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/settings_view.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:47 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:47 --> Total execution time: 0.2964
+DEBUG - 2015-03-25 23:28:47 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:47 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:47 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+ERROR - 2015-03-25 23:28:47 --> 404 Page Not Found --> js
+ERROR - 2015-03-25 23:28:47 --> 404 Page Not Found --> js
+DEBUG - 2015-03-25 23:28:47 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:47 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:47 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:47 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:47 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:47 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:47 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/logout.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:47 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:47 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:47 --> Total execution time: 0.3018
+DEBUG - 2015-03-25 23:28:47 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:47 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:47 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:47 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:47 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:48 --> Database Driver Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+ERROR - 2015-03-25 23:28:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:48 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:48 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:48 --> A session cookie was not found.
+DEBUG - 2015-03-25 23:28:48 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:48 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:48 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:48 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:48 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:48 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:48 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:48 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:48 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:48 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:48 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:48 --> Total execution time: 0.2974
+DEBUG - 2015-03-25 23:28:48 --> Config Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:28:48 --> URI Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Router Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:28:48 --> Output Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Security Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Input Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:28:48 --> Language Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:28:48 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:28:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:28:48 --> Session Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:28:48 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Session routines successfully run
+DEBUG - 2015-03-25 23:28:48 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> Model Class Initialized
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:28:48 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:28:48 --> Final output sent to browser
+DEBUG - 2015-03-25 23:28:48 --> Total execution time: 0.3215
+DEBUG - 2015-03-25 23:52:43 --> Config Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:52:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Router Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> No URI present. Default controller set.
+DEBUG - 2015-03-25 23:52:44 --> Output Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Security Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Input Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2015-03-25 23:52:44 --> Language Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Loader Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Helper loaded: url_helper
+DEBUG - 2015-03-25 23:52:44 --> Helper loaded: form_helper
+DEBUG - 2015-03-25 23:52:44 --> Helper loaded: auth_helper
+DEBUG - 2015-03-25 23:52:44 --> Database Driver Class Initialized
+ERROR - 2015-03-25 23:52:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/public/system/database/drivers/mysql/mysql_driver.php 92
+DEBUG - 2015-03-25 23:52:44 --> Session Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Helper loaded: string_helper
+DEBUG - 2015-03-25 23:52:44 --> Encrypt Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Session routines successfully run
+DEBUG - 2015-03-25 23:52:44 --> Controller Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Model Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> File loaded: application/views/includes/header.php
+DEBUG - 2015-03-25 23:52:44 --> File loaded: application/views/home_view.php
+DEBUG - 2015-03-25 23:52:44 --> File loaded: application/views/includes/footer.php
+DEBUG - 2015-03-25 23:52:44 --> File loaded: application/views/includes/template.php
+DEBUG - 2015-03-25 23:52:44 --> Final output sent to browser
+DEBUG - 2015-03-25 23:52:44 --> Total execution time: 0.3405
+DEBUG - 2015-03-25 23:52:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:52:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Router Class Initialized
+ERROR - 2015-03-25 23:52:44 --> 404 Page Not Found --> favicon.png
+DEBUG - 2015-03-25 23:52:44 --> Config Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Hooks Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Utf8 Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> UTF-8 Support Enabled
+DEBUG - 2015-03-25 23:52:44 --> URI Class Initialized
+DEBUG - 2015-03-25 23:52:44 --> Router Class Initialized
+ERROR - 2015-03-25 23:52:44 --> 404 Page Not Found --> favicon.png

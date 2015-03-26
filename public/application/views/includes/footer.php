@@ -6,14 +6,12 @@
 
       	<div class="twelve columns">	
 			<ul class="social-links">
-               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>               
-               <li><a href="#"><i class="fa fa-github-square"></i></a></li>
-               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="#"><i class="fa fa-flickr"></i></a></li>               
-               <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>			
+				<li><a target="_blank" href="http://www.facebook.com/share.php?u=<?php echo base_url()?>"><i class="fa fa-facebook"></i></a></li>
+				<li><a target="_blank" href="https://twitter.com/home?status=<?php echo base_url()?>"><i class="fa fa-twitter"></i></a></li>
+				<li><a target="_blank" href="https://plus.google.com/share?url=<?php echo base_url()?>"><i class="fa fa-google-plus"></i></a></li>               
+				<li><a target="_blank" href="http://digg.com/submit?phase=2&amp;url=<?php echo base_url()?>"><i class="fa fa-digg"></i></a></li>
+				<li><a target="_blank" href="http://del.icio.us/post?url=<?php echo base_url()?>"><i class="fa fa-delicious"></i></a></li>                                             
+				</ul>			
       	</div>
       	
          <div class="eight columns info">
