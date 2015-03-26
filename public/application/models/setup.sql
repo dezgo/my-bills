@@ -93,7 +93,6 @@ DELIMITER |
 CREATE TRIGGER trigger_paymentsDatetimeInsert BEFORE INSERT ON `payments` FOR EACH ROW 
 BEGIN
     SET NEW.create_date = NOW();
-    SET NEW.payment_date = NOW();
 END; 
 |
 CREATE TRIGGER trigger_paymentsDatetimeModify BEFORE UPDATE ON `payments` FOR EACH ROW 

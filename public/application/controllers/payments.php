@@ -7,6 +7,11 @@ class Payments extends MY_Controller {
 		if (!is_logged_in()) redirect('');
 	}
 	
+	function index()
+	{
+		$this->show_list();
+	}
+	
 	function show_list($sort_by = 'account', $sort_order = 'asc', $offset = 0)
 	{
 		$this->load->model('Settings_model');
@@ -43,9 +48,63 @@ class Payments extends MY_Controller {
 		$this->load->model('Settings_model');
 		$data['date_format'] = $this->Settings_model->date_format_get();
 	
+		// import csv errors
+		$data['error'] = '';
+		
 		$data['main_content'] = 'payments_view';
 		$this->load->view('includes/template', $data);
 	}
 	
+	function import_csv()
+	{
+		$this->load->spark('csvimport/0.0.1');
+		$array = $this->csvimport->get_array('test.csv');		
+		print_r($array);
+	}
+	
+	function export_csv()
+	{
+		$this->load->helper('csv');
+		$quer = $this->db->get('payments');
+		query_to_csv($quer,TRUE,'payments_'.date('dMy').'.csv');
+	}
+	
+	function do_upload()
+	{
+		$config['upload_path'] = './uploads/';
+		$config['allowed_types'] = 'csv';
+		$config['max_size']	= '100';
+		$config['max_width']  = '1024';
+		$config['max_height']  = '768';
+	
+		$this->load->library('upload', $config);
+	
+		if ( ! $this->upload->do_upload())
+		{
+			$data['upload_data'] = '';
+			$data['error'] = $this->upload->display_errors();
+			$data['main_content'] = 'upload_form';
+		}
+		else
+		{
+			$data['upload_data'] = $this->upload->data();
+			$data['error'] = '';
+			$data['main_content'] = 'upload_success';
+
+			$this->load->spark('csvimport/0.0.1');
+			$this->load->model('Payments_model');
+			$array = $this->csvimport->get_array('uploads/'.$this->upload->data()['file_name']);
+			$overwrite = $this->input->post('chkOverwrite');
+			$this->Payments_model->insertArray($array, $overwrite);
+		}
+		$this->load->view('includes/template', $data);
+	}
+	
+	function upload_get_file()
+	{
+		$data['error'] = '';
+		$data['main_content'] = 'upload_form';
+		$this->load->view('includes/template', $data);
+	}
 }
 ?>

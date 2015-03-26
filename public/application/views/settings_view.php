@@ -1,9 +1,31 @@
-      <div class="row section-head">
+<?php 		$timezone = $this->session->userdata('time'); ?>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        if("<?php echo $timezone; ?>".length==0){
+            var visitortime = new Date();
+            var visitortimezone = "GMT " + -visitortime.getTimezoneOffset()/60;
+            $.ajax({
+                type: "GET",
+                url: "<?php echo base_url()?>timezone.php",
+                data: 'time='+ visitortimezone,
+                success: function(){
+                    location.reload();
+                }
+            });
+        }
+    });
+</script>
+
+	<div class="row section-head">
 
       	<div class="twelve columns">
       	
       	
-      	<?php 
+      	<?php
+		echo 'Timezone is '. $timezone;
+      	
+      	
       	echo "<h3>".$message."</h3>";
       	echo form_open('settings/update');
       	

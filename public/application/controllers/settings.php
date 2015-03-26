@@ -33,4 +33,10 @@ class Settings extends MY_Controller
 		$data['main_content'] = 'settings_view';
 		$this->load->view('includes/template.php', $data);
 	}
+	
+	function set_timezone()
+	{
+		echo 'hi';
+		die();
+	}
 }

@@ -1,13 +1,28 @@
-      <div class="row section-head add-bottom">
+<script type="text/javascript">
+function export_csv()
+{
+	window.location.href = "<?php echo base_url()?>index.php/payments/export_csv";
+}
+
+function import_csv()
+{
+	window.location.href = "<?php echo base_url()?>index.php/payments/upload_get_file";
+}
+
+</script>
+<div class="row section-head add-bottom">
 
       	<div class="twelve columns">
 
-	<h1>History</h1>
+	<h2>History</h2>
 
 	<?php if ($num_results == 0) { ?>
-		<h3>It looks like you haven't paid any accounts yet. Click Accounts to get started.</h3>
-		
-	<?php } else { ?>
+	It looks like you haven't paid any accounts yet. Click Accounts to get started or import your history now.<br>
+	<br>		
+	<?php } else { 
+	
+		$this->load->helper('date');
+		?>
 
 	<table>
 		<thead>
@@ -28,7 +43,7 @@
 				<td>
 					<?php 
 					if ($field_name == 'payment_date') {
-						echo date($date_format, strtotime($record->$field_name));
+						echo date($date_format, gmt_to_local(strtotime($record->$field_name)));
 					}
 					else
 						echo $record->$field_name; 
@@ -60,8 +75,15 @@
 	content: "v";
 }
 </style>
+<hr>
+<?php 
+echo form_button('export', 'Export to CSV', 'onclick="export_csv()"')."&nbsp;";
 
-	<?php } ?>
+} 
+
+echo form_button('export', 'Import from CSV', 'onclick="import_csv()"');
+
+?>
 	
 	</div> <!-- end payments list -->
 
