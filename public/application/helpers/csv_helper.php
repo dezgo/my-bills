@@ -11,12 +11,10 @@ if ( ! function_exists('array_to_csv'))
         }        
 		
         ob_start();
-        $f = fopen($download, 'wb') or show_error("Can't open php://output");
-        $n = 0;        
+        $f = fopen('php://output', 'w') or show_error("Can't open php://output");
         
         foreach ($array as $line)
         {
-            $n++;
             if ( ! fputcsv($f, $line))
             {
                 show_error("Can't write line $n: $line");
@@ -33,7 +31,7 @@ if ( ! function_exists('array_to_csv'))
         else
         {    
             echo $str;
-        }        
+        }
     }
 }
 

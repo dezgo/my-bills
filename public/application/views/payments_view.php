@@ -60,6 +60,10 @@
 	content: "v";
 }
 </style>
+<hr>
+<?php echo anchor(base_url().'index.php/payments/export_csv','Export to CSV')?>
+<?php echo anchor(base_url().'index.php/payments/upload_get_file','Import from CSV')?>
+
 
 	<?php } ?>
 	
