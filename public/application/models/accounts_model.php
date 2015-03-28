@@ -1,6 +1,12 @@
 <?php
 class Accounts_model extends CI_Model {
 	
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('date');
+	}
+	
 	function search($limit, $offset, $sort_by, $sort_order)
 	{
 		
@@ -66,7 +72,7 @@ class Accounts_model extends CI_Model {
 		
 		// and record this payment
 		$this->load->model('Payments_model');
-		$this->Payments_model->insert($row->account, $amount);
+		$this->Payments_model->insert($row->account, $amount, now());
 	}
 
 	function get_accounts_due_by_member($member_id)

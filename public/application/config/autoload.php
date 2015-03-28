@@ -69,7 +69,7 @@ $autoload['packages'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'form', 'auth');
+$autoload['helper'] = array('url', 'form', 'auth', 'date');
 
 
 /*

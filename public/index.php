@@ -24,6 +24,9 @@ switch ($root) {
 		define('ENVIRONMENT', 'development');
 		break;
 	case '/home/cwx10ho2/public_html/mb':
+		define('ENVIRONMENT', 'testing');
+		break;
+	case '/home3/dezgo/public_html':
 		define('ENVIRONMENT', 'production');
 		break;
 	default:

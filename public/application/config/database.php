@@ -65,17 +65,26 @@ $db['development']['database'] = 'my-bills';
 $db['development']['db_debug'] = TRUE;
 $db['development']['stricton'] = TRUE;
 
+/*
 $db['testing']['hostname'] = 'mysql3.000webhost.com';
 $db['testing']['username'] = 'a8228193_mybills';
 $db['testing']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
 $db['testing']['database'] = 'a8228193_mybills';
 $db['testing']['db_debug'] = FALSE;
 $db['testing']['stricton'] = FALSE;
+*/
+
+$db['testing']['hostname'] = 'localhost';
+$db['testing']['username'] = 'cwx10ho2_mybills';
+$db['testing']['password'] = '75HKxPWtV5CeAIoY';
+$db['testing']['database'] = 'cwx10ho2_mybills';
+$db['testing']['db_debug'] = FALSE;
+$db['testing']['stricton'] = FALSE;
 
 $db['production']['hostname'] = 'localhost';
-$db['production']['username'] = 'cwx10ho2_mybills';
-$db['production']['password'] = '75HKxPWtV5CeAIoY';
-$db['production']['database'] = 'cwx10ho2_mybills';
+$db['production']['username'] = 'dezgo_mybills';
+$db['production']['password'] = 'styvF&1AjByjru0cxFc4';
+$db['production']['database'] = 'dezgo_mybills';
 $db['production']['db_debug'] = FALSE;
 $db['production']['stricton'] = FALSE;
 

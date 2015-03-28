@@ -18,25 +18,44 @@
 
             <h3>About my-bills</h3> 
 
-            <p>my-bills is a simple web-based reminder system for your regular bills. Use it to 
-            ensure you never forget a bill again. Once entered, you can set my-bills to send reminder
-            emails when a bill is due. You can then pay the bill, inform my-bills that the bill is paid
-            and my-bills will automatically re-schedule the bill for it's next due date based on it's 
-            frequency.</p>
-
+            <p>remember-my-bills is a simple web-based reminder system for your regular bills. Use it to 
+            ensure you never forget a bill again. Add a bill, enter when it's next due, and how many times per year it comes up
+            Once entered, remember-my-bills will send a reminder
+            email when the bill is next due. You then pay the bill, and the next bill will be automatically scheduled.</p>
          </div>
 
          <div class="four columns">
             <h3 class="social">Navigate</h3>
 
             <ul class="navigate group">
-               <li><a href="<?php echo base_url();?>">Home</a></li>
-               <li><a href="<?php echo base_url();?>site/members_area">Accounts</a></li>
-               <li><a href="<?php echo base_url();?>contact">Contact Us</a></li>
+            <?php 
+               echo "<li>".anchor('','Home','')."</li>";
+               echo "<li>".anchor('contact','Contact Us')."</li>";
+
+				if (is_logged_in()) {
+			      	echo "<li>". anchor('site/members_area','Accounts') . '</li>';
+			      	echo "<li>". anchor('payments/show_list','Payments') . '</li>';
+		      		echo "<li>". anchor('settings','Settings') . '</li>';
+			      	echo "<li>". anchor('site/logout','Logout') . '</li>';
+			    } 
+				    
+			    if (is_admin()) { ?>
+					<li class="has-children"><a href="#">Admin</a>
+	                  <ul>
+			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>
+						 <li><?php echo anchor('setup/create', 'Create empty DB'); ?></li>
+						 <li><?php echo anchor('email', 'Send Email'); ?></li>
+	                  </ul>
+	               </li>
+	            <?php } ?>
             </ul>
          </div>
 
-         <p class="copyright">&copy; Copyright 2015 my-bills. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.</p>
+         <p class="copyright">&copy; Copyright 2015 remember-my-bills. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>.
+         
+<a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=remembermybills.com','SiteLock','width=600,height=600,left=160,top=170');" ><img alt="website security" title="SiteLock" src="//shield.sitelock.com/shield/remembermybills.com"/></a>
+         
+         </p>
         
       </div> <!-- End row -->
 

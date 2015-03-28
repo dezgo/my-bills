@@ -18,11 +18,18 @@ switch (ENVIRONMENT) {
 	case 'development':
 		$config['base_url']	= 'http://192.168.33.10/';
 		break;
+	//case 'testing':
+	//	$config['base_url']	= 'http://mybills.site90.net/';
+	//	break;
 	case 'testing':
-		$config['base_url']	= 'http://mybills.site90.net/';
+		$config['base_url']	= 'http://cw.x10host.com/mb/';
+		break;
+	case 'production':
+		$config['base_url']	= 'http://remembermybills.com/';
 		break;
 	default:
-		$config['base_url']	= 'http://cw.x10host.com/mb/';
+		echo 'Unexpected environment: '.ENVIRONMENT;
+		die();
 		break;
 }
 /*
@@ -348,7 +355,7 @@ $config['compress_output'] = FALSE;
 |
 */
 $config['time_reference'] = 'gmt';
-
+date_default_timezone_set('UTC');
 
 /*
 |--------------------------------------------------------------------------

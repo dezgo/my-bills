@@ -149,4 +149,44 @@ BEGIN
 END; 
 |
 DELIMITER ;
+
+DROP TABLE IF EXISTS `timezones`;
+
+CREATE TABLE `timezones` (
+ `offset` decimal(3,1) NOT NULL,
+ `timezone` varchar(4) NOT NULL,
+ PRIMARY KEY (`offset`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `timezones` VALUES (-12,'UM12');
+INSERT INTO `timezones` VALUES (-11,'UM11');
+INSERT INTO `timezones` VALUES (-10,'UM10');
+INSERT INTO `timezones` VALUES (-9,'UM9');
+INSERT INTO `timezones` VALUES (-8,'UM8');
+INSERT INTO `timezones` VALUES (-7,'UM7');
+INSERT INTO `timezones` VALUES (-6,'UM6');
+INSERT INTO `timezones` VALUES (-5,'UM5');
+INSERT INTO `timezones` VALUES (-4,'UM4');
+INSERT INTO `timezones` VALUES (-3.5,'UM25');
+INSERT INTO `timezones` VALUES (-3,'UM3');
+INSERT INTO `timezones` VALUES (-2,'UM2');
+INSERT INTO `timezones` VALUES (-1,'UM1');
+INSERT INTO `timezones` VALUES (0,'UTC');
+INSERT INTO `timezones` VALUES (1,'UP1');
+INSERT INTO `timezones` VALUES (2,'UP2');
+INSERT INTO `timezones` VALUES (3,'UP3');
+INSERT INTO `timezones` VALUES (3.5,'UP25');
+INSERT INTO `timezones` VALUES (4,'UP4');
+INSERT INTO `timezones` VALUES (4.5,'UP35');
+INSERT INTO `timezones` VALUES (5,'UP5');
+INSERT INTO `timezones` VALUES (5.5,'UP45');
+INSERT INTO `timezones` VALUES (6,'UP6');
+INSERT INTO `timezones` VALUES (7,'UP7');
+INSERT INTO `timezones` VALUES (8,'UP8');
+INSERT INTO `timezones` VALUES (9,'UP9');
+INSERT INTO `timezones` VALUES (9.5,'UP85');
+INSERT INTO `timezones` VALUES (10,'UP10');
+INSERT INTO `timezones` VALUES (11,'UP11');
+INSERT INTO `timezones` VALUES (12,'UP12');
+
  

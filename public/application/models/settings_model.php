@@ -70,5 +70,34 @@ class Settings_model extends CI_Model {
 		return $this->setting_get('items_per_page');
 	}
 	
+	function timezone_getCode($value) {
+		$this->db->select('timezone');
+		$this->db->from('timezones');
+		$this->db->where('offset',(float) $value);
+		$query = $this->db->get();
+		if ($query->num_rows() > 0)
+		{
+			$row = $query->row();
+			return $row->timezone;
+		}
+		else
+		{
+			return 'UTC';
+		}
+	}
+	function timezone_set($value) {
+		$this->setting_set('timezone', $value);
+	}
+	function timezone_get() {
+		return $this->setting_get('timezone');
+	}
+	function auto_timezone_set($value) {
+		$this->setting_set('auto_timezone', $value);
+	}
+	function auto_timezone_get() {
+		return $this->setting_get('auto_timezone');
+	}
+	
+	
 }
 

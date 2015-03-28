@@ -1,14 +1,13 @@
-<?php 		$timezone = $this->session->userdata('time'); ?>
+<?php 		$timezone_auto = $this->session->userdata('timezone'); ?>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        if("<?php echo $timezone; ?>".length==0){
+        if("<?php echo $timezone_auto; ?>".length==0){
             var visitortime = new Date();
-            var visitortimezone = "GMT " + -visitortime.getTimezoneOffset()/60;
+            var visitortimezone = -visitortime.getTimezoneOffset()/60;
             $.ajax({
                 type: "GET",
-                url: "<?php echo base_url()?>timezone.php",
-                data: 'time='+ visitortimezone,
+                url: "<?php echo base_url()?>index.php/settings/timezone/" + visitortimezone,
                 success: function(){
                     location.reload();
                 }
@@ -23,9 +22,6 @@
       	
       	
       	<?php
-		echo 'Timezone is '. $timezone;
-      	
-      	
       	echo "<h3>".$message."</h3>";
       	echo form_open('settings/update');
       	
@@ -43,6 +39,14 @@
       	echo form_label("Items / page","items_per_page");
       	echo form_input("items_per_page",$items_per_page);
       	echo 'Number of items to show per page in accounts and payments lists<br>';
+      	
+      	// timezone
+      	if ($auto_timezone != '') $timezone = $timezone_auto;
+      	echo form_label("Timezone","timezone");
+      	echo timezone_menu($timezone, "", "cmbTimezone");
+      	echo 'Set timezone automatically';
+      	echo form_checkbox('auto_timezone','TRUE',$auto_timezone);
+      	echo '<br><br>';
       	
       	echo form_submit('submit','Update');
       	echo form_close();

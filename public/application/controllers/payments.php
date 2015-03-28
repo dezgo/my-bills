@@ -93,7 +93,7 @@ class Payments extends MY_Controller {
 
 			$this->load->spark('csvimport/0.0.1');
 			$this->load->model('Payments_model');
-			$array = $this->csvimport->get_array('uploads/'.$this->upload->data()['file_name']);
+			$array = $this->csvimport->get_array('uploads/'.$data['upload_data']['file_name']);
 			$overwrite = $this->input->post('chkOverwrite');
 			$this->Payments_model->insertArray($array, $overwrite);
 		}
