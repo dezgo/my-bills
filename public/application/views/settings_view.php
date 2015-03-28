@@ -1,13 +1,29 @@
-<?php 		$timezone_auto = $this->session->userdata('timezone'); ?>
+<?php
+$timezone_auto = $this->session->userdata('timezone'); 
+$dst_auto = $this->session->userdata('dst');
+?>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
+<!-- thanks to http://stackoverflow.com/questions/11887934/check-if-daylight-saving-time-is-in-effect-and-if-it-is-for-how-many-hours -->
+	Date.prototype.stdTimezoneOffset = function() {
+	    var jan = new Date(this.getFullYear(), 0, 1);
+	    var jul = new Date(this.getFullYear(), 6, 1);
+	    return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+	}
+	
+	Date.prototype.dst = function() {
+	    return this.getTimezoneOffset() < this.stdTimezoneOffset();
+	}
+	
+	var today = new Date();
+
+ 	$(document).ready(function() {
         if("<?php echo $timezone_auto; ?>".length==0){
             var visitortime = new Date();
-            var visitortimezone = -visitortime.getTimezoneOffset()/60;
+            var visitortimezone = -visitortime.getTimezoneOffset()/60-today.dst();
             $.ajax({
                 type: "GET",
-                url: "<?php echo base_url()?>index.php/settings/timezone/" + visitortimezone,
+                url: "<?php echo base_url()?>index.php/settings/timezone/" + visitortimezone + "/" + today.dst(),
                 success: function(){
                     location.reload();
                 }
@@ -41,11 +57,17 @@
       	echo 'Number of items to show per page in accounts and payments lists<br>';
       	
       	// timezone
-      	if ($auto_timezone != '') $timezone = $timezone_auto;
+      	if ($auto_timezone) 
+      	{
+      		$timezone = $timezone_auto;
+      		$dst = $dst_auto;
+      	}
       	echo form_label("Timezone","timezone");
       	echo timezone_menu($timezone, "", "cmbTimezone");
+      	echo form_checkbox('chkDst','true',$dst);
+      	echo 'Daylight Savings time?<br>';
+      	echo form_checkbox('auto_timezone','true',$auto_timezone);
       	echo 'Set timezone automatically';
-      	echo form_checkbox('auto_timezone','TRUE',$auto_timezone);
       	echo '<br><br>';
       	
       	echo form_submit('submit','Update');

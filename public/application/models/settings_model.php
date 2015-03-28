@@ -97,7 +97,13 @@ class Settings_model extends CI_Model {
 	function auto_timezone_get() {
 		return $this->setting_get('auto_timezone');
 	}
-	
+	function dst_set($value) {
+		$this->setting_set('dst', $value);
+	}
+	function dst_get() {
+		return $this->setting_get('dst');
+	}
+		
 	
 }
 
