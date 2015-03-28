@@ -27,7 +27,10 @@ switch ($root) {
 		define('ENVIRONMENT', 'testing');
 		break;
 	case '/home3/dezgo/public_html':
-		define('ENVIRONMENT', 'production');
+		//if ($_SERVER['HTTPS'] == 'on')
+			define('ENVIRONMENT', 'productions');
+		//else 
+		//	define('ENVIRONMENT', 'production');
 		break;
 	default:
 		echo 'Unexpected dirname, unsure what environment we\'re in!<br>';
@@ -54,6 +57,7 @@ if (defined('ENVIRONMENT'))
 
 		case 'testing':
 		case 'production':
+		case 'productions':
 			error_reporting(0);
 		break;
 

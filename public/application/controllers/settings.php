@@ -71,6 +71,8 @@ class Settings extends MY_Controller
 		$this->load->library('session');
     	$this->session->set_userdata('timezone', $this->Settings_model->timezone_getCode($time));
     	$this->session->set_userdata('dst', $dst == 'true');
+    	
+    	// this is called via ajax so below echo'ing is just to debug by calling directly
     	echo 'Timezone is '.$this->session->userdata('timezone').'<br>';
     	if ($this->session->userdata('dst'))
     	{

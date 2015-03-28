@@ -27,6 +27,9 @@ switch (ENVIRONMENT) {
 	case 'production':
 		$config['base_url']	= 'http://remembermybills.com/';
 		break;
+	case 'productions':
+		$config['base_url']	= 'https://secure4221.hostgator.com/~dezgo/';
+		break;
 	default:
 		echo 'Unexpected environment: '.ENVIRONMENT;
 		die();
