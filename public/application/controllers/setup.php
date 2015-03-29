@@ -20,10 +20,10 @@ class Setup extends MY_Controller
 			// load and run sql
 			$this->load->model('setup_model');
 			$this->load->helper('file');
-			$this->setup_model->runSQL('application/models/setup.sql');
+			$this->setup_model->runSQL('../public/application/models/setup.sql');
 			$data['message'] = 'Finished creating database';
 			if ($add_demo_data !== '') {
-				$this->setup_model->runSQL('application/models/demo_data.sql');		
+				$this->setup_model->runSQL('../public/application/models/demo_data.sql');		
 				$data['message'] .= ' and adding demo data';
 			}
 		}

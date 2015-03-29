@@ -11,7 +11,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->model('setup_model');
 		if ($this->setup_model->dbEmpty()) {
 			$this->load->helper('file');
-			$this->setup_model->runSQL('application/models/setup.sql');
+			$this->setup_model->runSQL('../public/application/models/setup.sql');
 		}
 	}
 }

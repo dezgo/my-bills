@@ -1,0 +1,12 @@
+<?php
+// application/hooks/DisplayHook.php
+class DisplayHook {
+	public function captureOutput() {
+		$this->CI =& get_instance();
+		$output = $this->CI->output->get_output();
+		if (ENVIRONMENT != 'phpunit') {
+			echo $output;
+		}
+	}
+}
+?>
