@@ -3,7 +3,6 @@
 class Login extends MY_Controller {
 	
 	private $data;
-	//private $failed = 0;
 	
 	function __construct() {
 		parent::__construct();
@@ -16,17 +15,30 @@ class Login extends MY_Controller {
 		$this->load->view('includes/template', $this->data);
 	}
 	
-	function validate_credentials()
+	function validate_credentials($new_member)
 	{
 		$this->load->model('membership_model');
 		$member_id = $this->membership_model->validate();
 		
 		if($member_id !== 0) // if the user's credentials validated...
 		{
+//			// just set the member id first as it's required for other functions in settings model
+			$this->load->model('Settings_model');
+			$this->session->set_userdata('member_id', $member_id);
+
 			$this->data['email_address'] = $this->input->post('email_address');
-			$this->data['member_id'] = $member_id;
+			$this->data['timezone'] = $this->Settings_model->timezone_get();
+			$this->data['dst'] = $this->Settings_model->dst_get();
 			$this->session->set_userdata($this->data);
-			redirect('site/members_area');
+			
+			if ($new_member)
+			{	// start at the settings page to ensure we pickup the correct timezone
+				redirect('settings');
+			}
+			else
+			{	// otherwise returning members go straight to the account list
+				redirect('site/members_area');
+			}
 		}
 		
 		else
@@ -39,7 +51,6 @@ class Login extends MY_Controller {
 	function signup()
 	{
 		$this->data['main_content'] = 'signup_form';
-		//$data['failed'] = $this->failed;
 		$this->load->view('includes/template', $this->data);
 	}
 	
@@ -61,7 +72,7 @@ class Login extends MY_Controller {
 			$this->load->model('membership_model');
 			if($query = $this->membership_model->create_member())
 			{
-				$this->validate_credentials();
+				$this->validate_credentials(TRUE);
 			}
 			else
 			{
@@ -73,15 +84,7 @@ class Login extends MY_Controller {
 
 	function check_if_email_exists($requested_email)	// custom callback function
 	{
-		
 		$this->load->model('membership_model');
-		
-		$email_available = $this->membership_model->check_if_email_exists($requested_email);
-		
-		if ($email_available) {
-			return TRUE;
-		} else {
-			return FALSE;
-		}
+		return $this->membership_model->check_if_email_exists($requested_email);
 	}
 }

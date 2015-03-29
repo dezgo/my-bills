@@ -43,10 +43,6 @@ class Site extends MY_Controller {
 		$data['sort_by'] = $sort_by;
 		$data['sort_order'] = $sort_order;
 		
-		// used to get default date format
-		$this->load->model('Settings_model');
-		$data['date_format'] = $this->Settings_model->date_format_get(); 
-		
 		$data['main_content'] = 'accounts_list';
 		$this->load->view('includes/template', $data);
 	}

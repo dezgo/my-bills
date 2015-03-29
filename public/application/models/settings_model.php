@@ -3,6 +3,9 @@
 class Settings_model extends CI_Model {
 
 	private function setting_exists($name) {
+		// pre-condition - member_id session variable set
+		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+				
 		$this->db->where('setting_name', $name);
 		$this->db->where('member_id', $this->session->userdata('member_id'));
 		$query = $this->db->get('settings');
@@ -23,10 +26,16 @@ class Settings_model extends CI_Model {
 	}
 
 	private function setting_get($name) {
+		// pre-condition - member_id session variable set
+		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+
 		return $this->setting_get_by_member($name, $this->session->userdata('member_id'));
 	}
 	
 	private function setting_set($name, $value) {
+		// pre-condition - member_id session variable set
+		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+				
 		if ($this->setting_exists($name)) {
 			$this->db->where('setting_name', $name);
 			$this->db->where('member_id', $this->session->userdata('member_id'));
@@ -90,12 +99,6 @@ class Settings_model extends CI_Model {
 	}
 	function timezone_get() {
 		return $this->setting_get('timezone');
-	}
-	function auto_timezone_set($value) {
-		$this->setting_set('auto_timezone', $value);
-	}
-	function auto_timezone_get() {
-		return $this->setting_get('auto_timezone');
 	}
 	function dst_set($value) {
 		$this->setting_set('dst', $value);

@@ -52,13 +52,19 @@ function payAccount(id,amount) {
 
 	<table>
 		<thead>
-			<?php foreach($fields as $field_name => $field_display): ?>
-			<th <?php if ($sort_by == $field_name) echo "class='sort_$sort_order'"; ?>>
-				<?php echo anchor("site/members_area/$field_name/" .
-				(($sort_order == 'asc' && $sort_by == $field_name) ? "desc" : "asc"), 
-				$field_display); ?>
-			</th>
-			<?php  endforeach; ?>
+			<?php 
+			foreach($fields as $field_name => $field_display):
+				echo "<th";
+				if ($sort_by == $field_name) echo " class='sort_$sort_order'";
+				echo ">";
+				echo anchor("site/members_area/$field_name/" .
+					(($sort_order == 'asc' && $sort_by == $field_name) ? "desc" : "asc"), 
+					$field_display);
+				echo "</th>";
+			endforeach; 
+
+			$this->load->helper('gmt');
+			?>
 			
 		</thead>
 		
@@ -69,7 +75,7 @@ function payAccount(id,amount) {
 				<td>
 					<?php 
 					if ($field_name == 'last_due' | $field_name == 'next_due') {
-						echo date($date_format, strtotime($record->$field_name));
+						echo get_local_date($record->$field_name);
 					}
 					else
 						echo $record->$field_name; 

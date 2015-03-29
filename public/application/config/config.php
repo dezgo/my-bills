@@ -16,6 +16,7 @@
 */
 switch (ENVIRONMENT) {
 	case 'development':
+	case 'phpunit':
 		$config['base_url']	= 'http://192.168.33.10/';
 		break;
 	//case 'testing':
@@ -110,7 +111,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = TRUE;
 
 
 /*
