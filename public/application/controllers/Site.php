@@ -5,7 +5,7 @@ class Site extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!is_logged_in()) redirect('');
+		boot_non_member();
 	}
 	
 	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
@@ -49,10 +49,8 @@ class Site extends MY_Controller {
 	
 	function logout()
 	{
-		$this->session->sess_destroy();
-		
-		$data['main_content'] = 'logout';
-		$this->load->view('includes/template', $data);
+		session_destroy();
+		redirect('Home');
 	}
 	
 	function edit_account($id) {

@@ -4,7 +4,7 @@ class Payments extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!is_logged_in()) redirect('');
+		boot_non_member();
 	}
 	
 	function index()

@@ -24,12 +24,11 @@ class Login extends MY_Controller {
 		{
 //			// just set the member id first as it's required for other functions in settings model
 			$this->load->model('Settings_model');
-			$this->session->set_userdata('member_id', $member_id);
-
-			$this->data['email_address'] = $this->input->post('email_address');
-			$this->data['timezone'] = $this->Settings_model->timezone_get();
-			$this->data['dst'] = $this->Settings_model->dst_get();
-			$this->session->set_userdata($this->data);
+			$_SESSION['member_id'] = $member_id;
+			
+			$_SESSION['email_address'] = $this->input->post('email_address');
+			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
+			$_SESSION['dst'] = $this->Settings_model->dst_get();
 			
 			if ($new_member)
 			{	// start at the settings page to ensure we pickup the correct timezone
@@ -37,7 +36,8 @@ class Login extends MY_Controller {
 			}
 			else
 			{	// otherwise returning members go straight to the account list
-				redirect('site/members_area');
+				redirect('site/members_area/');
+				die();
 			}
 		}
 		

@@ -48,12 +48,12 @@ class Setup_model extends CI_Model
 		$tables = $this->db->list_tables();
 		if (count($tables) == 0 || $force)
 		{
-			$this->runSQL('../public/application/models/setup.sql');
+			$this->runSQL(APPPATH.'models/setup.sql');
 		}
 	}
 	
 	function addDemoData()
 	{
-			$this->runSQL('../public/application/models/demo_data.sql');		
+			$this->runSQL(APPPATH.'models/demo_data.sql');		
 	}
 }

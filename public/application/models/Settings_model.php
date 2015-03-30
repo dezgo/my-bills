@@ -4,10 +4,10 @@ class Settings_model extends CI_Model {
 
 	private function setting_exists($name) {
 		// pre-condition - member_id session variable set
-		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
 				
 		$this->db->where('setting_name', $name);
-		$this->db->where('member_id', $this->session->userdata('member_id'));
+		$this->db->where('member_id', $_SESSION['member_id']);
 		$query = $this->db->get('settings');
 		return $query->num_rows() > 0;
 	}
@@ -27,23 +27,23 @@ class Settings_model extends CI_Model {
 
 	private function setting_get($name) {
 		// pre-condition - member_id session variable set
-		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
 
-		return $this->setting_get_by_member($name, $this->session->userdata('member_id'));
+		return $this->setting_get_by_member($name, $_SESSION['member_id']);
 	}
 	
 	private function setting_set($name, $value) {
 		// pre-condition - member_id session variable set
-		assert($this->session->userdata('member_id') != '', 'Check member_id session variable not empty') or die();
+		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
 				
 		if ($this->setting_exists($name)) {
 			$this->db->where('setting_name', $name);
-			$this->db->where('member_id', $this->session->userdata('member_id'));
+			$this->db->where('member_id', $_SESSION['member_id']);
 			$this->db->update('settings', array('setting_value' => $value));
 		}
 		else {
 			$data = array(
-				'member_id' => $this->session->userdata('member_id'),
+				'member_id' => $_SESSION['member_id'],
 				'setting_name' => $name,
 				'setting_value' => $value
 			);
