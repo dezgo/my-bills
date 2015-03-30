@@ -4,6 +4,7 @@ class Settings_Test extends PHPUnit_Framework_TestCase
 	private $CI;
 
 	public function __construct() {
+		ob_start();
 		parent::__construct();
 		$this->CI = &get_instance();
 	}
@@ -12,7 +13,7 @@ class Settings_Test extends PHPUnit_Framework_TestCase
 	{
 		$this->CI->session->set_userdata('member_id',1);
 		$this->CI->load->model('Settings_model');
-		$exists = $this->CI->Settings_model->setting_exists('blah');
-		$this->assertEquals(FALSE, $exists);
+		$date_format= $this->CI->Settings_model->date_format_get();
+		$this->assertTrue('Date format shouldn\'t be empty '.$date_format,$date_format != '');
 	}
 }
