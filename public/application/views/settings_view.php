@@ -54,7 +54,7 @@
       	
       	// timezone
       	echo form_label("Timezone","timezone");
-      	echo timezone_menu($timezone, "", "cmbTimezone");
+      	echo timezone_menu($timezone, '', 'cmbTimezone', 'autocomplete="off"');
       	echo form_checkbox('chkDst','true',$dst);
       	echo 'Daylight Savings time?<br>';
       	echo '<br><br>';

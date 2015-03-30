@@ -9,10 +9,7 @@ class MY_Controller extends CI_Controller {
 
 		// load and run sql to create database if required (when no tables in db)
 		$this->load->model('setup_model');
-		if ($this->setup_model->dbEmpty()) {
-			$this->load->helper('file');
-			$this->setup_model->runSQL('../public/application/models/setup.sql');
-		}
+		$this->setup_model->checkDB();
 	}
 }
 ?>

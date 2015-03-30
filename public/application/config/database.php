@@ -1,4 +1,6 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -12,14 +14,17 @@
 | EXPLANATION OF VARIABLES
 | -------------------------------------------------------------------
 |
+|	['dsn']      The full DSN string describe a connection to the database.
 |	['hostname'] The hostname of your database server.
 |	['username'] The username used to connect to the database
 |	['password'] The password used to connect to the database
 |	['database'] The name of the database you want to connect to
-|	['dbdriver'] The database type. ie: mysql.  Currently supported:
-				 mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
+|	['dbdriver'] The database driver. e.g.: mysqli.
+|			Currently supported:
+|				 cubrid, ibase, mssql, mysql, mysqli, oci8,
+|				 odbc, pdo, postgre, sqlite, sqlite3, sqlsrv
 |	['dbprefix'] You can add an optional prefix, which will be added
-|				 to the table name when using the  Active Record class
+|				 to the table name when using the  Query Builder class
 |	['pconnect'] TRUE/FALSE - Whether to use a persistent connection
 |	['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
 |	['cache_on'] TRUE/FALSE - Enables/disables query caching
@@ -34,15 +39,24 @@
 | 				 multi-byte character set and are running versions lower than these.
 | 				 Sites using Latin-1 or UTF-8 database character set and collation are unaffected.
 |	['swap_pre'] A default table prefix that should be swapped with the dbprefix
-|	['autoinit'] Whether or not to automatically initialize the database.
+|	['encrypt']  Whether or not to use an encrypted connection.
+|	['compress'] Whether or not to use client compression (MySQL only)
 |	['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
 |							- good for ensuring strict SQL while developing
+|	['failover'] array - A array with 0 or more data for connections if the main should fail.
+|	['save_queries'] TRUE/FALSE - Whether to "save" all executed queries.
+| 				NOTE: Disabling this will also effectively disable both
+| 				$this->db->last_query() and profiling of DB queries.
+| 				When you run a query, with this setting set to TRUE (default),
+| 				CodeIgniter will store the SQL statement for debugging purposes.
+| 				However, this may cause high memory usage, especially if you run
+| 				a lot of SQL queries ... disable this to avoid that problem.
 |
 | The $active_group variable lets you choose which connection group to
 | make active.  By default there is only one group (the 'default' group).
 |
-| The $active_record variables lets you determine whether or not to load
-| the active record class
+| The $query_builder variables lets you determine whether or not to load
+| the query builder class.
 */
 
 switch (ENVIRONMENT) {
@@ -56,7 +70,21 @@ switch (ENVIRONMENT) {
 		$active_group = 'production';
 }
 
-$active_record = TRUE;
+$db[$active_group] = array(
+	'dsn'	=> '',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
 
 $db['development']['hostname'] = 'localhost';
 $db['development']['username'] = 'my-bills';
@@ -64,15 +92,6 @@ $db['development']['password'] = 'password';
 $db['development']['database'] = 'my-bills';
 $db['development']['db_debug'] = TRUE;
 $db['development']['stricton'] = TRUE;
-
-/*
-$db['testing']['hostname'] = 'mysql3.000webhost.com';
-$db['testing']['username'] = 'a8228193_mybills';
-$db['testing']['password'] = 'B4YU5BZ*%rVwntNTrTp$';
-$db['testing']['database'] = 'a8228193_mybills';
-$db['testing']['db_debug'] = FALSE;
-$db['testing']['stricton'] = FALSE;
-*/
 
 $db['testing']['hostname'] = 'localhost';
 $db['testing']['username'] = 'cwx10ho2_mybills';
@@ -88,37 +107,5 @@ $db['production']['database'] = 'dezgo_mybills';
 $db['production']['db_debug'] = FALSE;
 $db['production']['stricton'] = FALSE;
 
-$db[$active_group]['dbdriver'] = 'mysql';
-$db[$active_group]['dbprefix'] = '';
-$db[$active_group]['pconnect'] = TRUE;
-$db[$active_group]['cache_on'] = FALSE;
-$db[$active_group]['cachedir'] = '';
-$db[$active_group]['char_set'] = 'utf8';
-$db[$active_group]['dbcollat'] = 'utf8_general_ci';
-$db[$active_group]['swap_pre'] = '';
-$db[$active_group]['autoinit'] = TRUE;
+$query_builder = TRUE;
 
-/*
- * Debug connection issues with this code
- */
-
-/*
-echo '<pre>';
-print_r($db['default']);
-echo '</pre>';
-
-echo 'Connecting to database: ' .$db['default']['database'];
-$dbh=mysql_connect
-(
-		$db['default']['hostname'],
-		$db['default']['username'],
-		$db['default']['password'])
-		or die('Cannot connect to the database because: ' . mysql_error());
-mysql_select_db ($db['default']['database']);
-
-echo '<br />   Connected OK:'  ;
-die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);
-*/
-
-/* End of file database.php */
-/* Location: ./application/config/database.php */
