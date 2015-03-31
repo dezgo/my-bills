@@ -47,6 +47,44 @@ class Site extends MY_Controller {
 		$this->load->view('includes/template', $data);
 	}
 	
+	function profile($message = '')
+	{
+		// get member details
+		$this->load->model('membership_model');
+		$member = $this->membership_model->get_member();
+		
+		$data['message'] = $message;
+		$data['firstname'] = $this->input->post('first_name') == '' ? $member->first_name : $this->input->post('first_name');
+		$data['lastname'] = $this->input->post('last_name') == '' ? $member->last_name : $this->input->post('last_name');
+		$data['email_address'] = $this->input->post('email_address') == '' ? $member->email_address : $this->input->post('email_address');
+		$data['main_content'] = 'profile_view';
+		$this->load->view('includes/template', $data);
+	}
+	
+	function update_profile()
+	{
+		$this->load->library('form_validation');
+		// field name, error message, validation rules
+		
+		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists');
+		$this->form_validation->set_rules('password', 'Password', 'matches[passconf]');
+		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|min_length[4]|max_length[32]');
+		
+		if($this->form_validation->run() == TRUE)
+		{
+			$this->load->model('membership_model');
+			$this->membership_model->update_member();
+			
+		}
+		$this->profile('Details Updated');
+	}
+	
+	function check_if_email_exists($requested_email)	// custom callback function
+	{
+		$this->load->model('membership_model');
+		return $this->membership_model->check_if_email_exists($requested_email);
+	}
+	
 	function logout()
 	{
 		session_destroy();

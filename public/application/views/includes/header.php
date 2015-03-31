@@ -67,11 +67,15 @@ function addCurrent($class, $pagename)
 			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us') . '</li>';
 			      	
 			      	if (is_logged_in()) {
-				      	echo "<li" . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
-				      	echo "<li" . addCurrent($this->router->class, "payments") .">". anchor('payments/show_list','Payments') . '</li>';
-			      		echo "<li" . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
-				      	echo "<li" . addCurrent($this->router->class, "logout") .">". anchor('site/logout','Logout') . '</li>';
-				    } 
+				      	echo '<li' . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
+				      	echo '<li' . addCurrent($this->router->class, "payments") .">". anchor('payments/show_list','Payments') . '</li>';
+			      		echo '<li' . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
+				      	echo '<li class="has-children"><a href="#">'.$_SESSION['email_address'].'</a>';
+				      	echo '<ul>';
+				      	echo '<li>'. anchor('site/profile','Profile') . '</li>';
+				      	echo '<li>'. anchor('site/logout','Logout') . '</li>';
+				      	echo "</ul></li>";
+			      	} 
 				    
 				    if (is_admin()) { ?>
 					<li class="has-children"><a href="#">Admin</a>

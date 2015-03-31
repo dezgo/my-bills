@@ -1,33 +1,3 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- thanks to http://stackoverflow.com/questions/11887934/check-if-daylight-saving-time-is-in-effect-and-if-it-is-for-how-many-hours -->
-<script type="text/javascript">
-	Date.prototype.stdTimezoneOffset = function() {
-	    var jan = new Date(this.getFullYear(), 0, 1);
-	    var jul = new Date(this.getFullYear(), 6, 1);
-	    return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
-	}
-	
-	Date.prototype.dst = function() {
-	    return this.getTimezoneOffset() < this.stdTimezoneOffset();
-	}
-	
-	var today = new Date();
-
- 	$(document).ready(function() {
-        if("<?php echo $timezone; ?>".length==0){
-            var visitortime = new Date();
-            var visitortimezone = -visitortime.getTimezoneOffset()/60-today.dst();
-            $.ajax({
-                type: "GET",
-                url: "<?php echo base_url()?>index.php/settings/timezone/" + visitortimezone + "/" + today.dst(),
-                success: function(){
-                    location.reload();
-                }
-            });
-        }
-    });
-</script>
-
 	<div class="row section-head">
 
       	<div class="twelve columns">

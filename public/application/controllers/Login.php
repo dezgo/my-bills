@@ -15,14 +15,14 @@ class Login extends MY_Controller {
 		$this->load->view('includes/template', $this->data);
 	}
 	
-	function validate_credentials($new_member)
+	function validate_credentials()
 	{
 		$this->load->model('membership_model');
 		$member_id = $this->membership_model->validate();
 		
 		if($member_id !== 0) // if the user's credentials validated...
 		{
-//			// just set the member id first as it's required for other functions in settings model
+			//  set the member id first as it's required for other functions in settings model
 			$this->load->model('Settings_model');
 			$_SESSION['member_id'] = $member_id;
 			
@@ -30,15 +30,7 @@ class Login extends MY_Controller {
 			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
 			$_SESSION['dst'] = $this->Settings_model->dst_get();
 			
-			if ($new_member)
-			{	// start at the settings page to ensure we pickup the correct timezone
-				redirect('settings');
-			}
-			else
-			{	// otherwise returning members go straight to the account list
-				redirect('site/members_area/');
-				die();
-			}
+			redirect('site/members_area');
 		}
 		
 		else
@@ -72,7 +64,7 @@ class Login extends MY_Controller {
 			$this->load->model('membership_model');
 			if($query = $this->membership_model->create_member())
 			{
-				$this->validate_credentials(TRUE);
+				$this->validate_credentials();
 			}
 			else
 			{

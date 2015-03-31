@@ -96,12 +96,14 @@ class Settings_model extends CI_Model {
 	}
 	function timezone_set($value) {
 		$this->setting_set('timezone', $value);
+		$_SESSION['timezone'] = $value;
 	}
 	function timezone_get() {
 		return $this->setting_get('timezone');
 	}
 	function dst_set($value) {
 		$this->setting_set('dst', $value);
+		$_SESSION['dst'] = $value;
 	}
 	function dst_get() {
 		return $this->setting_get('dst');

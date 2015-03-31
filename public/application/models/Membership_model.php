@@ -27,9 +27,23 @@ class Membership_model extends CI_Model {
 		return $insert;
 	}
 	
+	function update_member()
+	{
+		$data['email_address'] = $this->input->post('email_address');
+		if ($this->input->post('password') != '')
+			$data['password'] = md5($this->input->post('password'));
+		$data['first_name'] = $this->input->post('first_name');
+		$data['last_name'] = $this->input->post('last_name');
+		
+		$this->db->where('id',$_SESSION['member_id']);
+		$this->db->update('membership', $data);
+	}
+	
 	function check_if_email_exists($email)
 	{
 		$this->db->where('email_address', $email);
+		if (isset($_SESSION['member_id']) && $_SESSION['member_id'] != '')
+			$this->db->where('id !=',$_SESSION['member_id']);
 		$result = $this->db->get('membership');
 		
 		if ($result->num_rows() > 0)
@@ -42,12 +56,11 @@ class Membership_model extends CI_Model {
 		}
 	}
 	
-	// for a given member, return their email address (to send out bill reminders)
-	function get_email($member_id)
+	// return details for a given member
+	function get_member()
 	{
-		$this->db->where('member_id', $member_id);
-		$result = $this->db->get('membership')->row();
-		return $result->email_address;
+		$this->db->where('id', $_SESSION['member_id']);
+		return $this->db->get('membership')->row();
 	}
 	
 	function get_members()

@@ -61,7 +61,6 @@ class Settings extends MY_Controller
 	function timezone($time, $dst)
 	{
 		$this->load->model('Settings_model');
-		$this->load->library('session');
     	$_SESSION['timezone'] = $this->Settings_model->timezone_getCode($time);
     	$_SESSION['dst'] = $dst == 'true';
     	$this->Settings_model->timezone_set($_SESSION['timezone']);

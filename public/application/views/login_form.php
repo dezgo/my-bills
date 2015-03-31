@@ -17,7 +17,7 @@
 	<?php  } ?>
 	
 	<?php 
-	echo form_open('login/validate_credentials/0'); 
+	echo form_open('login/validate_credentials'); 
 	echo form_input('email_address', '', 'placeholder="Email address" autofocus');
 	echo form_password('password', '', 'placeholder="Password" class="password"');
 	?>
