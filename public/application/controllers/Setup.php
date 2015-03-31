@@ -1,11 +1,6 @@
 <?php
 class Setup extends MY_Controller
 {
-	function __construct()
-	{
-		parent::__construct();
-	}
-
 	// seeing as anyone with the right URL can run this, added this
 	// key to lock it down more. 
 	// have to get key right before it will run

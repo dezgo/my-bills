@@ -13,7 +13,7 @@ class Payments_model extends CI_Model {
 		// results query
 		$query = $this->db->select('id, account, amount, payment_date, ')
 				->from('payments')
-				->where('member_id', $this->session->userdata('member_id'))
+				->where('member_id', $_SESSION['member_id'])
 				->limit($limit, $offset)
 				->order_by($sort_by, $sort_order);
 		$ret['rows'] = $query->get()->result();
@@ -21,7 +21,7 @@ class Payments_model extends CI_Model {
 		// count query
 		$query = $this->db->select('COUNT(*) as count', FALSE)
 		->from('payments')
-		->where('member_id', $this->session->userdata('member_id'));
+		->where('member_id', $_SESSION['member_id']);
 	
 		$tmp = $query->get()->result();
 	
@@ -33,7 +33,7 @@ class Payments_model extends CI_Model {
 	// note payment date defaults to today via mysql trigger
 	function insert($account, $amount, $payment_date)
 	{
-		$data['member_id'] = $this->session->userdata('member_id');
+		$data['member_id'] = $_SESSION['member_id'];
 		$data['amount'] = $amount;
 		$data['account'] = $account;
 		$data['payment_date'] = date('Y-m-d H:i:s', local_to_gmt($payment_date));

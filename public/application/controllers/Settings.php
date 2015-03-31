@@ -62,14 +62,14 @@ class Settings extends MY_Controller
 	{
 		$this->load->model('Settings_model');
 		$this->load->library('session');
-    	$this->session->set_userdata('timezone', $this->Settings_model->timezone_getCode($time));
-    	$this->session->set_userdata('dst', $dst == 'true');
-    	$this->Settings_model->timezone_set($this->session->userdata('timezone'));
-    	$this->Settings_model->dst_set($this->session->userdata('dst'));
+    	$_SESSION['timezone'] = $this->Settings_model->timezone_getCode($time);
+    	$_SESSION['dst'] = $dst == 'true';
+    	$this->Settings_model->timezone_set($_SESSION['timezone']);
+    	$this->Settings_model->dst_set($_SESSION['dst']);
     	
     	// this is called via ajax so below echo'ing is just to debug by calling directly
-    	echo 'Timezone is '.$this->session->userdata('timezone').'<br>';
-    	if ($this->session->userdata('dst'))
+    	echo 'Timezone is '.$_SESSION['timezone'].'<br>';
+    	if ($_SESSION['dst'])
     	{
     		echo "DST is in effect";
     	}

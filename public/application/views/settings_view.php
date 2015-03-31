@@ -1,6 +1,6 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
 <!-- thanks to http://stackoverflow.com/questions/11887934/check-if-daylight-saving-time-is-in-effect-and-if-it-is-for-how-many-hours -->
+<script type="text/javascript">
 	Date.prototype.stdTimezoneOffset = function() {
 	    var jan = new Date(this.getFullYear(), 0, 1);
 	    var jul = new Date(this.getFullYear(), 6, 1);

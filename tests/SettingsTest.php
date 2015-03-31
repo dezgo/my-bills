@@ -11,7 +11,7 @@ class Settings_Test extends PHPUnit_Framework_TestCase
 	
 	public function testSetGet()
 	{
-		$this->CI->session->set_userdata('member_id',1);
+		$_SESSION['member_id'] = 1;
 		$this->CI->load->model('Settings_model');
 		$date_format= $this->CI->Settings_model->date_format_get();
 		$this->assertTrue('Date format shouldn\'t be empty '.$date_format,$date_format != '');

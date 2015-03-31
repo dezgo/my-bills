@@ -5,8 +5,8 @@ if(!function_exists('get_local_date'))
 	function get_local_date($date)
 	{
 		$CI = & get_instance();
-		$timezone = $CI->session->userdata('timezone');
-		$dst = $CI->session->userdata('dst');
+		$timezone = $_SESSION['timezone'];
+		$dst = $_SESSION['dst'];
 		
 		// used to get default date format
 		$CI->load->model('Settings_model');
