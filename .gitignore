@@ -4,3 +4,4 @@ app/core/config.php
 .project
 .vagrant/*
 .settings/*
+/.vagrant/
