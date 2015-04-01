@@ -11,14 +11,20 @@
 <thead>
 <tr><td rowspan="1" colspan="3">Pay bills / view history</td></tr>
 </thead><tbody>
+<!--Setup-->
 <tr>
 	<td>open</td>
-	<td>/setup/create/wer34345ertgdffjERDFG/true</td>
+	<td>http://192.168.33.10/setup/create/wer34345ertgdffjERDFG/true</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/index.php/Home</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,6 +48,12 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>css=td[name=&quot;payButton&quot;] &gt; button[name=&quot;name&quot;]</td>
+	<td></td>
+</tr>
+<!--Pay two accounts-->
+<tr>
 	<td>answerOnNextPrompt</td>
 	<td>30</td>
 	<td></td>
@@ -71,6 +83,7 @@
 	<td>Enter the amount to pay</td>
 	<td></td>
 </tr>
+<!--Ensure payments show up in history-->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Payments</td>

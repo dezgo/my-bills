@@ -79,4 +79,33 @@ class Login extends MY_Controller {
 		$this->load->model('membership_model');
 		return $this->membership_model->check_if_email_exists($requested_email);
 	}
+
+	function check_if_email_exists_to_reset($requested_email)	// custom callback function
+	{
+		$this->load->model('membership_model');
+		return !$this->membership_model->check_if_email_exists($requested_email);
+	}
+
+	function forgot_password()
+	{
+		$this->data['main_content'] = 'reset_password_form';
+		$this->load->view('includes/template', $this->data);
+	}
+	
+	function send_password_reset()
+	{
+		$this->load->library('form_validation');
+		// field name, error message, validation rules
+		
+		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists_to_reset');
+		
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->forgot_password();
+		}
+		else
+		{
+			$this->load->model('membership_model');
+		}	
+	}
 }

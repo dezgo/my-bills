@@ -70,6 +70,15 @@ class Membership_model extends CI_Model {
 		return $query->result();
 	}
 	
+	function create_password_reset_token()
+	{
+		$email_address = $this->input->post('email_address');
+		$data['retieve_token'] = md5($email_address.time());
+		
+		echo 'token:'.$data['retieve_token'];
+		echo 'email: '.$email_address;
+		die();
+	}
 }
 
 ?>
