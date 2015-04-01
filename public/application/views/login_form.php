@@ -33,9 +33,10 @@
 	echo form_submit('submit', 'Sign in');
 	echo form_close();
 	?>
-	<br>Don't have an account?<br>
-	<?php echo anchor('login/signup', 'Create account');	
-	?>
+	<br>Forget your password?&nbsp;
+	<?php echo anchor('login/forgot_password', 'Reset it');?>	
+	<br>Don't have an account?&nbsp;
+	<?php echo anchor('login/signup', 'Create one');?>
 
 	  		</div> <!-- end login form -->
 

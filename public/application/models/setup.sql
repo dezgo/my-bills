@@ -6,6 +6,8 @@ CREATE TABLE `membership` (
  `last_name` varchar(25) NULL,
  `password` varchar(32) NOT NULL,
  `email_address` varchar(50) NOT NULL,
+ `retrieve_token` varchar(50) NULL,
+ `retrieve_expiration` date NULL,
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)
