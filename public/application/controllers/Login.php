@@ -4,7 +4,8 @@ class Login extends MY_Controller {
 	
 	private $data;
 	
-	function __construct() {
+	function __construct()
+	{
 		parent::__construct();
 		$this->data['failed'] = 0;
 	}
@@ -85,27 +86,62 @@ class Login extends MY_Controller {
 		$this->load->model('membership_model');
 		return !$this->membership_model->check_if_email_exists($requested_email);
 	}
+	
+	function captcha_is_correct($captcha)
+	{
+		return strcmp(strtolower($captcha),strtolower($_SESSION['captchaWord'])) == 0;
+	}
 
 	function forgot_password()
 	{
-		$this->data['main_content'] = 'reset_password_form';
-		$this->load->view('includes/template', $this->data);
+		$this->load->library('form_validation');
+		$this->load->helper('captcha');
+		
+		/* Set form validation rules */
+		$this->form_validation->set_rules('email_address', 'lang:email_address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists_to_reset');
+		$this->form_validation->set_rules('captcha', "Captcha", 'required|callback_captcha_is_correct');
+	    
+	    /* Get the user's entered captcha value from the form */
+	    $userCaptcha = $this->input->post('captcha');
+	    
+	    // initialise session variable if required
+	    if (!isset($_SESSION['captchaWord'])) $_SESSION['captchaWord'] = '';
+	    
+	    /* Check if form (and captcha) passed validation*/
+	    if ($this->form_validation->run() == TRUE && $this->captcha_is_correct($userCaptcha)) {
+		    /** Validation was successful; show the Success view **/
+		    /* Clear the session variable */
+		    $this->session->unset_userdata('captchaWord');
+		    
+		    // send off password reset email
+		    echo 'send password reset email';
+		    die();
+
+		} else {
+			/** Validation was not successful - Generate a captcha **/
+			/* Setup vals to pass into the create_captcha function */
+			$vals = array(
+				'img_path' => 'captcha/',
+				'img_url' => base_url().'captcha/',
+				'font_path' => 'fonts/ostrich-black.ttf',
+				'img_width' => '250',
+				'font_size' => 30,
+				'word_length' => 6,
+				'img_height' => 60,
+				'expiration' => 7200
+				);
+			/* Generate the captcha */
+			$this->data = create_captcha($vals);
+			
+		    // save the email address
+		    $this->data['email_address'] = $this->input->post('email_address');
+		    
+			/* Store the captcha value (or 'word') in a session to retrieve later */
+			$_SESSION['captchaWord'] = $this->data['word'];
+			/* Load the captcha view containing the form (located under the 'views' folder) */
+			$this->data['main_content'] = 'reset_password_form';
+			$this->load->view('includes/template', $this->data);
+		}		
 	}
 	
-	function send_password_reset()
-	{
-		$this->load->library('form_validation');
-		// field name, error message, validation rules
-		
-		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists_to_reset');
-		
-		if($this->form_validation->run() == FALSE)
-		{
-			$this->forgot_password();
-		}
-		else
-		{
-			$this->load->model('membership_model');
-		}	
-	}
 }
