@@ -3,7 +3,7 @@
 
 			<h1>Contact Us!</h1>
 			<?php 
-			echo form_open('contact/submit');
+			echo form_open('Contact/submit');
 			echo form_input('name', '', 'id="name" placeholder="Name" maxlength="20" size="20"');
 			echo form_input('email', '', 'id="email" placeholder="Email" maxlength="50" size="50"');
 			echo form_textarea(array('name' => 'message', 'placeholder' => 'Message', 'id' => 'message'));
@@ -25,7 +25,7 @@ $('#submit').click(function() {
 	};	
 
 	$.ajax({
-		url: "<?php echo site_url('contact/submit'); ?>",
+		url: "<?php echo site_url('Contact/submit'); ?>",
 		type: 'POST',
 		data: form_data,
 		success: function(msg) {

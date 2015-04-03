@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <!-- thanks to http://stackoverflow.com/questions/11887934/check-if-daylight-saving-time-is-in-effect-and-if-it-is-for-how-many-hours -->
 <script type="text/javascript">
 	Date.prototype.stdTimezoneOffset = function() {
@@ -12,17 +12,25 @@
 	}
 	
 	var today = new Date();
-
  	$(document).ready(function() {
         if("<?php echo $_SESSION['timezone']; ?>".length==0 || today.dst() != "<?php echo $_SESSION['dst']?>".length){
             var visitortime = new Date();
             var visitortimezone = -visitortime.getTimezoneOffset()/60-today.dst();
             $.ajax({
-                type: "GET",
-                url: "<?php echo base_url()?>index.php/settings/timezone/" + visitortimezone + "/" + today.dst(),
+            	type: "POST",
+            	crossDomain: true,
+                url: "<?php echo base_url()?>index.php/Settings/timezone/" + visitortimezone + "/" + today.dst(),
                 success: function(){
                     location.reload();
-                }
+                },
+            	error: function(){
+                	alert('error');
+            	},
+            	statusCode: {
+            	    404: function() {
+            	        alert( "page not found" );
+            	      }
+            	    }
             });
         }
     });

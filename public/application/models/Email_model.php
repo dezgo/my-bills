@@ -8,14 +8,14 @@ class Email_model extends CI_Model {
 	{
 		$recipients = array();
 		$recipient = array();
-		$this->load->model('membership_model');
+		$this->load->model('Membership_model');
 		$this->load->model('Accounts_model');
-		$this->load->model('settings_model');
+		$this->load->model('Settings_model');
 		
-		$result = $this->membership_model->get_members();
+		$result = $this->Membership_model->get_members();
 		foreach ($result as $member)
 		{
-			$days = $this->settings_model->email_reminder_days_get_by_member($member->id);
+			$days = $this->Settings_model->email_reminder_days_get_by_member($member->id);
 			if ($days > 0) // only do this if they want email reminders 
 			{
 				$recipient['email_address'] = $member->email_address;
@@ -29,7 +29,7 @@ class Email_model extends CI_Model {
 					$data['message'] .= 
 						$account->account." bill for ".
 						$account->amount." is due by ".
-						date($this->settings_model->date_format_get_by_member($member->id), strtotime($account->next_due))."<br>";
+						date($this->Settings_model->date_format_get_by_member($member->id), strtotime($account->next_due))."<br>";
 				}
 				$recipient['subject'] = "You have ".$billcount." bill".($billcount > 1 ? "s" : "")." due within the next ".$days." day".($days > 1 ? "s" : "");
 				$data['ignoreMenu'] = 'true';

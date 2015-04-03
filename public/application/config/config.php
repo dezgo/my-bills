@@ -29,7 +29,9 @@ switch (ENVIRONMENT) {
 		$config['base_url']	= 'http://cw.x10host.com/mb/';
 		break;
 	case 'production':
-		$config['base_url']	= 'http://remembermybills.com/';
+		//$config['base_url']	= 'http://remembermybills.com/';
+		//$config['base_url']	= 'http://gator4221.hostgator.com/~dezgo/';
+		$config['base_url']	= 'https://secure4221.hostgator.com/~dezgo/';
 		break;
 	case 'productions':
 		$config['base_url']	= 'https://secure4221.hostgator.com/~dezgo/';
@@ -91,7 +93,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'spanish';
+$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------

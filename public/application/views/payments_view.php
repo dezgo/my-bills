@@ -1,12 +1,12 @@
 <script type="text/javascript">
 function export_csv()
 {
-	window.location.href = "<?php echo base_url()?>index.php/payments/export_csv";
+	window.location.href = "<?php echo base_url()?>index.php/Payments/export_csv";
 }
 
 function import_csv()
 {
-	window.location.href = "<?php echo base_url()?>index.php/payments/upload_get_file";
+	window.location.href = "<?php echo base_url()?>index.php/Payments/upload_get_file";
 }
 
 </script>
@@ -28,7 +28,7 @@ function import_csv()
 		<thead>
 			<?php foreach($fields as $field_name => $field_display): ?>
 			<th <?php if ($sort_by == $field_name) echo "class='sort_$sort_order'"; ?>>
-				<?php echo anchor("payments/show_list/$field_name/" .
+				<?php echo anchor("Payments/show_list/$field_name/" .
 				(($sort_order == 'asc' && $sort_by == $field_name) ? "desc" : "asc"), 
 				$field_display); ?>
 			</th>

@@ -29,22 +29,22 @@
 
             <ul class="navigate group">
             <?php 
-               echo "<li>".anchor('','Home','')."</li>";
-               echo "<li>".anchor('contact','Contact Us')."</li>";
+               echo "<li>".anchor('Home','Home','')."</li>";
+               echo "<li>".anchor('Contact','Contact Us')."</li>";
 
 				if (is_logged_in()) {
-			      	echo "<li>". anchor('site/members_area','Accounts') . '</li>';
-			      	echo "<li>". anchor('payments/show_list','Payments') . '</li>';
-		      		echo "<li>". anchor('settings','Settings') . '</li>';
-			      	echo "<li>". anchor('site/logout','Logout') . '</li>';
+			      	echo "<li>". anchor('Site/members_area','Accounts') . '</li>';
+			      	echo "<li>". anchor('Payments/show_list','Payments') . '</li>';
+		      		echo "<li>". anchor('Settings','Settings') . '</li>';
+			      	echo "<li>". anchor('Site/logout','Logout') . '</li>';
 			    } 
 				    
 			    if (is_admin()) { ?>
 					<li class="has-children"><a href="#">Admin</a>
 	                  <ul>
-			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>
-						 <li><?php echo anchor('setup/create', 'Create empty DB'); ?></li>
-						 <li><?php echo anchor('email', 'Send Email'); ?></li>
+			      		 <li><?php echo anchor('Setup/create/true', 'Create DB with data'); ?></li>
+						 <li><?php echo anchor('Setup/create', 'Create empty DB'); ?></li>
+						 <li><?php echo anchor('Email', 'Send Email'); ?></li>
 	                  </ul>
 	               </li>
 	            <?php } ?>

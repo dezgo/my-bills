@@ -9,7 +9,7 @@
 
 <?php 
 
-echo form_open('site/update_account');
+echo form_open('Site/update_account');
 echo form_hidden('id',$id);
 //$tmpl = array ( 'table_open'  => '<table border="1" cellpadding="2" cellspacing="1" class="mytable">' );
 //$this->table->set_template($tmpl);

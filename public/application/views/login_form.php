@@ -17,7 +17,7 @@
 	<?php  } ?>
 	
 	<?php 
-	echo form_open('login/validate_credentials'); 
+	echo form_open('Login/validate_credentials'); 
 	echo form_input('email_address', '', 'placeholder="Email address" autofocus');
 	echo form_password('password', '', 'placeholder="Password" class="password"');
 	?>
@@ -34,9 +34,9 @@
 	echo form_close();
 	?>
 	<br>Forget your password?&nbsp;
-	<?php echo anchor('login/forgot_password', 'Reset it');?>	
+	<?php echo anchor('Login/forgot_password', 'Reset it');?>	
 	<br>Don't have an account?&nbsp;
-	<?php echo anchor('login/signup', 'Create one');?>
+	<?php echo anchor('Login/signup', 'Create one');?>
 
 	  		</div> <!-- end login form -->
 

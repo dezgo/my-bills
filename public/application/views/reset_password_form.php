@@ -4,7 +4,7 @@
 
 	<?php 
 	$this->lang->load('standard');
-	echo form_open('login/forgot_password'); 
+	echo form_open('Login/forgot_password'); 
 	echo lang('email_address','email_address');
 	echo form_input('email_address', $email_address, 'size=30 placeholder="'.$this->lang->line('email_address').'" autofocus');
 
@@ -16,7 +16,7 @@
 	echo form_close();
 
 	echo $this->lang->line('no_account').'&nbsp;';
-	echo anchor('login/signup', $this->lang->line('create_one'));
+	echo anchor('Login/signup', $this->lang->line('create_one'));
 	
 	echo validation_errors('<p class="error">'); 
 	?>

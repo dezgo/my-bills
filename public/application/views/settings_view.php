@@ -5,7 +5,7 @@
       	
       	<?php
       	echo "<h3>".$message."</h3>";
-      	echo form_open('settings/update');
+      	echo form_open('Settings/update');
       	
       	// date format
       	echo form_label("Date format","date_format");

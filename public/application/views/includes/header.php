@@ -64,26 +64,26 @@ function addCurrent($class, $pagename)
 ?>
 			   	<ul id="nav" class="nav">
 			      	<?php 
-			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('home','Home') . '</li>';
-			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('contact','Contact Us') . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('Home',$this->lang->line('menu_home')) . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('Contact',$this->lang->line('menu_contact_us')) . '</li>';
 			      	
 			      	if (is_logged_in()) {
-				      	echo '<li' . addCurrent($this->router->class, "site") .">". anchor('site/members_area','Accounts') . '</li>';
-				      	echo '<li' . addCurrent($this->router->class, "payments") .">". anchor('payments/show_list','Payments') . '</li>';
-			      		echo '<li' . addCurrent($this->router->class, "settings") .">". anchor('settings','Settings') . '</li>';
+				      	echo '<li' . addCurrent($this->router->class, "site") .">". anchor('Site/members_area',$this->lang->line('menu_accounts')) . '</li>';
+				      	echo '<li' . addCurrent($this->router->class, "payments") .">". anchor('Payments/show_list',$this->lang->line('menu_payments')) . '</li>';
+			      		echo '<li' . addCurrent($this->router->class, "settings") .">". anchor('Settings',$this->lang->line('menu_settings')) . '</li>';
 				      	echo '<li class="has-children"><a href="#">'.$_SESSION['email_address'].'</a>';
 				      	echo '<ul>';
-				      	echo '<li>'. anchor('site/profile','Profile') . '</li>';
-				      	echo '<li>'. anchor('site/logout','Logout') . '</li>';
+				      	echo '<li>'. anchor('Site/profile',$this->lang->line('menu_profile')) . '</li>';
+				      	echo '<li>'. anchor('Site/logout',$this->lang->line('menu_logout')) . '</li>';
 				      	echo "</ul></li>";
 			      	} 
 				    
 				    if (is_admin()) { ?>
 					<li class="has-children"><a href="#">Admin</a>
 	                  <ul>
-			      		 <li><?php echo anchor('setup/create/true', 'Create DB with data'); ?></li>
-						 <li><?php echo anchor('setup/create', 'Create empty DB'); ?></li>
-						 <li><?php echo anchor('email', 'Send Email'); ?></li>
+			      		 <li><?php echo anchor('Setup/create/true', 'Create DB with data'); ?></li>
+						 <li><?php echo anchor('Setup/create', 'Create empty DB'); ?></li>
+						 <li><?php echo anchor('Email', 'Send Email'); ?></li>
 	                  </ul>
 	               </li>
 	               <?php } ?>

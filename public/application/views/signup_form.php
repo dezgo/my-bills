@@ -6,7 +6,7 @@
 
 	<?php 
 	
-	echo form_open('login/create_member');
+	echo form_open('Login/create_member');
 	echo form_input('email_address', '', 'placeholder="Email address" autofocus');
 	echo form_password('password', '', 'placeholder="Password" class="password"');
 	?>
@@ -23,7 +23,7 @@
 	echo form_close();
 	?>
 	<br>Already have an account?<br>
-	<?php echo anchor('login', 'Sign in');	
+	<?php echo anchor('Login', 'Sign in');	
 	?>
 
 		<?php echo validation_errors('<p class="error">'); ?>

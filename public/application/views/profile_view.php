@@ -4,7 +4,7 @@
 		<?php
       	echo "<h3>".$message."</h3>";
 		echo validation_errors('<p class="error">');
-      	echo form_open('site/update_profile');
+      	echo form_open('Site/update_profile');
       	
       	// firstname
       	echo form_label("Firstname","lbl_firstname");
