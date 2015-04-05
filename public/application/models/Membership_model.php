@@ -2,16 +2,16 @@
 
 class Membership_model extends CI_Model {
 	
-	function validate() 
+	function validate($email_address, $password) 
 	{
 		require_once 'crypto/PasswordHash.php';
 		
-		$this->db->where('email_address', $this->input->post('email_address'));
+		$this->db->where('email_address', $email_address);
 		$query = $this->db->get('membership');
 		if($query->num_rows() == 1)
 		{
 			$row = $query->row();
-			if (validate_password($this->input->post('password'), $row->params))
+			if (validate_password($password, $row->params))
 				return $row->id;
 			else 
 				return 0;
@@ -20,7 +20,6 @@ class Membership_model extends CI_Model {
 			return 0;
 	}
 	
-	// returns the url to the QR code, and populates pass-by-reference variable $secret
 	function google_auth_disable()
 	{
 		$this->db->where('id',$_SESSION['member_id']);
@@ -28,10 +27,11 @@ class Membership_model extends CI_Model {
 		$this->db->update('membership',$data);
 	}
 	
+	// returns the url to the QR code, and populates pass-by-reference variable $secret
 	function google_auth_enable(&$secret)
 	{
 		// get new instance of google auth class
-		require_once 'crypto/PasswordHash.php';
+		require_once 'crypto/GoogleAuthenticator.php';
 		$ga = new PHPGangsta_GoogleAuthenticator();
 
 		// generate a new secret and store in database
@@ -44,62 +44,71 @@ class Membership_model extends CI_Model {
 		return $ga->getQRCodeGoogleUrl( 'remember-my-bills' , $secret );
 	}
 
+	// get user's google auth secret
+	function google_auth_get_secret()
+	{
+		$this->db->where('id',$_SESSION['member_id']);
+		$query = $this->db->get('membership');
+		$row = $query->row();
+		if ($query->num_rows() > 0) {
+			return $row->google_auth_secret;
+		} else {
+			return '';
+		}
+	}
+	
 	function google_auth_check_code($OneCode)
 	{
 		// get new instance of google auth class
 		require_once 'crypto/PasswordHash.php';
 		$ga = new PHPGangsta_GoogleAuthenticator();
 		
-		// get user's google auth secret
-		$this->db->where('id',$_SESSION['member_id']);
-		$query = $this->db->get('membership');
-		$row = $query->row();
-		$secret = $row->google_auth_secret;
-		
-		$checkResult  = $ga->verifyCode( $secret , $OneCode , 2);     // 2 = 2 * 30sec clock tolerance
-		return  $checkResult;
+		$checkResult  = $ga->verifyCode( $this->google_auth_get_secret() , $OneCode , 2);     // 2 = 2 * 30sec clock tolerance
+		return $checkResult;
 	}
 	
-	function create_member()
+	function create_member($email_address, $password)
 	{
-		require_once 'crypto/PasswordHash.php';
-		
-		$new_member_insert_data = array(
-			'email_address' => $this->input->post('email_address'),
-			'params' => create_hash($this->input->post('password'))
-		);
-		
-		$insert = $this->db->insert('membership', $new_member_insert_data);
-		return $insert;
+		if ($this->check_if_email_exists($email_address))
+		{
+			return false;
+		}
+		else
+		{
+			require_once 'crypto/PasswordHash.php';
+			
+			$new_member_insert_data = array(
+				'email_address' => $email_address,
+				'params' => create_hash($password)
+			);
+			
+			$insert = $this->db->insert('membership', $new_member_insert_data);
+			return $insert;
+		}
 	}
 	
-	function update_member()
+	function update_member($email_address, $password = '', $first_name, $last_name)
 	{
-		$data['email_address'] = $this->input->post('email_address');
-		if ($this->input->post('password') != '')
-			$data['password'] = md5($this->input->post('password'));
-		$data['first_name'] = $this->input->post('first_name');
-		$data['last_name'] = $this->input->post('last_name');
+		$data['email_address'] = $email_address;
+		if ($password != '')
+		{
+			require_once 'crypto/PasswordHash.php';
+			$data['params'] = create_hash($password);
+		}
+		$data['first_name'] = $first_name;
+		$data['last_name'] = $last_name;
 		
 		$this->db->where('id',$_SESSION['member_id']);
 		$this->db->update('membership', $data);
 	}
 	
-	function check_if_email_exists($email)
+	// returns true if email exists, false otherwise
+	function check_if_email_exists($email_address)
 	{
-		$this->db->where('email_address', $email);
-		if (isset($_SESSION['member_id']) && $_SESSION['member_id'] != '')
-			$this->db->where('id !=',$_SESSION['member_id']);
+		$this->db->where('email_address', $email_address);
 		$result = $this->db->get('membership');
 		
-		if ($result->num_rows() > 0)
-		{
-			return FALSE;	// email taken
-		}
-		else
-		{
-			return TRUE;	// email can be registered
-		}
+		return $result->num_rows() > 0;
 	}
 	
 	// return details for a given member
@@ -116,14 +125,15 @@ class Membership_model extends CI_Model {
 		return $query->result();
 	}
 	
-	function create_password_reset_token()
+	function create_password_reset_token($email_address)
 	{
-		$email_address = $this->input->post('email_address');
-		$data['retieve_token'] = md5($email_address.time());
+		$data['retrieve_token'] = bin2hex(openssl_random_pseudo_bytes(20));
+		$data['retrieve_expiration'] =  date('Y-m-d H:i:s', local_to_gmt(time() + 60*15));	// expire in 15 minutes
+
+		$this->db->where('email_address',$email_address);
+		$this->db->update('membership', $data);
 		
-		echo 'token:'.$data['retieve_token'];
-		echo 'email: '.$email_address;
-		die();
+		return $data['retrieve_token'];
 	}
 }
 

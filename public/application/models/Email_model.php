@@ -1,10 +1,26 @@
 <?php
 class Email_model extends CI_Model {
 	
+	function __construct()
+	{
+ 		parent::__construct();	
+ 		$this->load->library('email');
+	}
+	
+	private function init()
+	{
+		$config['protocol'] = 'mail';
+		$config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = TRUE;
+		$config['mailtype'] = 'html';
+		
+		$this->email->initialize($config);
+	}
+	
 /*
  * returns an array with email_address, subject, and message
  * 
- */	function get_emails()
+ */	private function get_emails()
 	{
 		$recipients = array();
 		$recipient = array();
@@ -40,6 +56,45 @@ class Email_model extends CI_Model {
 			}
 		}
 		return $recipients;
+	}
+	
+	function send_email()
+	{
+		$this->init();
+		$this->email->from('info@remembermybills.com', 'my-bills');
+		
+		$this->load->model('email_model');
+		$recipients = $this->email_model->get_emails();
+
+		foreach ($recipients as $recipient)
+		{
+			$this->email->to($recipient['email_address']);
+			
+			$this->email->subject($recipient['subject']);
+			$this->email->message($recipient['message']);
+			
+			$this->email->send();
+			
+			if (ENVIRONMENT == 'development')
+				echo $this->email->print_debugger();
+		}
+	}
+	
+	function send_password_reset_email($email_address, $token)
+	{
+		$this->init();
+		$this->email->from('info@remembermybills.com', 'my-bills');
+		
+		$this->load->model('email_model');
+		$this->email->to($email_address);
+		
+		$this->email->subject($this->lang->line('password_reset_email_subject'));
+		$this->email->message("Here's that password reset email you wanted<br><br>Token is ".$token);
+		
+		$this->email->send();
+		
+		if (ENVIRONMENT == 'development')
+			echo $this->email->print_debugger();
 	}
 	
 }

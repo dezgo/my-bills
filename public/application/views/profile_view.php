@@ -24,6 +24,8 @@
       	echo form_label("Confirm Password","lbl_new_password_confirm");
       	echo form_password("passconf","");
       	echo "Leave blank to keep your current password";
+      	
+      	// close form
       	echo "<BR><BR>";
       	echo form_submit('submit','Update');
       	echo form_close();

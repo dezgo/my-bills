@@ -22,7 +22,7 @@
 	<!-- Script
 	================================================== -->
 	<script src="<?php echo base_url();?>js/modernizr.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/home.js"></script>
 
 	<!-- Favicons

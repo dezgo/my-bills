@@ -54,6 +54,6 @@ class Setup_model extends CI_Model
 	
 	function addDemoData()
 	{
-			$this->runSQL(APPPATH.'models/demo_data.sql');		
+		$this->runSQL(APPPATH.'models/demo_data.sql');		
 	}
 }

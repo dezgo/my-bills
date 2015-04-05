@@ -73,7 +73,12 @@ class Site extends MY_Controller {
 		if($this->form_validation->run() == TRUE)
 		{
 			$this->load->model('membership_model');
-			$this->membership_model->update_member();
+			$email_address = $this->input->post('email_address');
+			$password = $this->input->post('password');
+			$first_name = $this->input->post('first_name');
+			$last_name = $this->input->post('last_name');
+			
+			$this->membership_model->update_member($email_address, $password, $first_name, $last_name);
 			
 		}
 		$this->profile('Details Updated');
@@ -82,7 +87,7 @@ class Site extends MY_Controller {
 	function check_if_email_exists($requested_email)	// custom callback function
 	{
 		$this->load->model('membership_model');
-		return $this->membership_model->check_if_email_exists($requested_email);
+		return !$this->membership_model->check_if_email_exists($requested_email);
 	}
 	
 	function logout()

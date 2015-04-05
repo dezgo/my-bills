@@ -15,4 +15,6 @@ $lang['captcha']			            = "Captcha";
 $lang['no_account']                     = "Don't have an account?";
 $lang['create_one']                     = "Create one";
 $lang['reset']                          = "Reset";	// button text when resetting a password
+
+$lang['password_reset_email_subject']   = "Reset email address";
 ?>

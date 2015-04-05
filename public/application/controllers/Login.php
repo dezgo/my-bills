@@ -18,8 +18,11 @@ class Login extends MY_Controller {
 	
 	function validate_credentials()
 	{
+		$email_address = $this->input->post['email_address'];
+		$password = $this->input->post['password'];
+		
 		$this->load->model('membership_model');
-		$member_id = $this->membership_model->validate();
+		$member_id = $this->membership_model->validate($email_address, $password);
 		
 		if($member_id !== 0) // if the user's credentials validated...
 		{
@@ -27,7 +30,7 @@ class Login extends MY_Controller {
 			$this->load->model('Settings_model');
 			$_SESSION['member_id'] = $member_id;
 			
-			$_SESSION['email_address'] = $this->input->post('email_address');
+			$_SESSION['email_address'] = $email_address;
 			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
 			$_SESSION['dst'] = $this->Settings_model->dst_get();
 			
@@ -63,7 +66,9 @@ class Login extends MY_Controller {
 		else
 		{
 			$this->load->model('membership_model');
-			if($query = $this->membership_model->create_member())
+			$email_address = $this->input->post('email_address');
+			$password = $this->input->post('password');
+			if($query = $this->membership_model->create_member($email_address, $password))
 			{
 				$this->validate_credentials();
 			}
@@ -78,13 +83,13 @@ class Login extends MY_Controller {
 	function check_if_email_exists($requested_email)	// custom callback function
 	{
 		$this->load->model('membership_model');
-		return $this->membership_model->check_if_email_exists($requested_email);
+		return !$this->membership_model->check_if_email_exists($requested_email);
 	}
 
 	function check_if_email_exists_to_reset($requested_email)	// custom callback function
 	{
 		$this->load->model('membership_model');
-		return !$this->membership_model->check_if_email_exists($requested_email);
+		return $this->membership_model->check_if_email_exists($requested_email);
 	}
 	
 	function captcha_is_correct($captcha)
@@ -113,10 +118,20 @@ class Login extends MY_Controller {
 		    /* Clear the session variable */
 		    $this->session->unset_userdata('captchaWord');
 		    
-		    // send off password reset email
-		    echo 'send password reset email';
-		    die();
+			$this->load->model('Membership_model');
+			$this->load->model('Email_model');
 
+			// create the reset token
+			$email_address = $this->input->post('email_address');
+			$token = $this->Membership_model->create_password_reset_token($email_address);
+
+			// send off password reset email
+			$this->Email_model->send_password_reset_email($email_address, $token);
+
+			$this->data['main_content'] = 'reset_password_form_success';
+			$this->load->view('includes/template', $this->data);
+			
+			
 		} else {
 			/** Validation was not successful - Generate a captcha **/
 			/* Setup vals to pass into the create_captcha function */
