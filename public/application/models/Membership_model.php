@@ -4,23 +4,69 @@ class Membership_model extends CI_Model {
 	
 	function validate() 
 	{
+		require_once 'crypto/PasswordHash.php';
+		
 		$this->db->where('email_address', $this->input->post('email_address'));
-		$this->db->where('password', md5($this->input->post('password')));
 		$query = $this->db->get('membership');
 		if($query->num_rows() == 1)
 		{
 			$row = $query->row();
-			return $row->id;
+			if (validate_password($this->input->post('password'), $row->params))
+				return $row->id;
+			else 
+				return 0;
 		}
 		else
 			return 0;
 	}
 	
+	// returns the url to the QR code, and populates pass-by-reference variable $secret
+	function google_auth_disable()
+	{
+		$this->db->where('id',$_SESSION['member_id']);
+		$data['google_auth_secret'] = '';
+		$this->db->update('membership',$data);
+	}
+	
+	function google_auth_enable(&$secret)
+	{
+		// get new instance of google auth class
+		require_once 'crypto/PasswordHash.php';
+		$ga = new PHPGangsta_GoogleAuthenticator();
+
+		// generate a new secret and store in database
+		$secret = $ga->createSecret();
+		$this->db->where('id',$_SESSION['member_id']);
+		$data['google_auth_secret'] = $secret;
+		$this->db->update('membership',$data);
+
+		// return url of QRCode
+		return $ga->getQRCodeGoogleUrl( 'remember-my-bills' , $secret );
+	}
+
+	function google_auth_check_code($OneCode)
+	{
+		// get new instance of google auth class
+		require_once 'crypto/PasswordHash.php';
+		$ga = new PHPGangsta_GoogleAuthenticator();
+		
+		// get user's google auth secret
+		$this->db->where('id',$_SESSION['member_id']);
+		$query = $this->db->get('membership');
+		$row = $query->row();
+		$secret = $row->google_auth_secret;
+		
+		$checkResult  = $ga->verifyCode( $secret , $OneCode , 2);     // 2 = 2 * 30sec clock tolerance
+		return  $checkResult;
+	}
+	
 	function create_member()
 	{
+		require_once 'crypto/PasswordHash.php';
+		
 		$new_member_insert_data = array(
 			'email_address' => $this->input->post('email_address'),
-			'password' => md5($this->input->post('password'))
+			'params' => create_hash($this->input->post('password'))
 		);
 		
 		$insert = $this->db->insert('membership', $new_member_insert_data);

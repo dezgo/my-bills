@@ -337,7 +337,7 @@ $config['cache_query_string'] = FALSE;
 | http://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'retfgsdf$%67gd';
+//$config['encryption_key'] = 'retfgsdf$%67gd';
 
 /*
 |--------------------------------------------------------------------------

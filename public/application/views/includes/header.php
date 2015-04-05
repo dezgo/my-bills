@@ -10,7 +10,7 @@
 	================================================== -->
 	<meta charset="utf-8">
 	<title><?php echo $this->lang->line('title'); ?></title>
-	<meta name="description" content="">  
+	<meta name="description" content="remember-my-bills is a simple web-based reminder system for your regular bills. Use it to ensure you never forget a bill again. Add a bill, enter when it's next due, and how many times per year it comes up Once entered, remember-my-bills will send a reminder email when the bill is next due. You then pay the bill, and the next bill will be automatically scheduled.">  
 	<meta name="author" content="Derek Gillett">
 
 	<!-- CSS

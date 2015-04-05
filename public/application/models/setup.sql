@@ -4,10 +4,11 @@ CREATE TABLE `membership` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `first_name` varchar(25) NULL,
  `last_name` varchar(25) NULL,
- `password` varchar(32) NOT NULL,
+ `params` varchar(256) NOT NULL,
  `email_address` varchar(50) NOT NULL,
  `retrieve_token` varchar(50) NULL,
  `retrieve_expiration` date NULL,
+ `google_auth_secret` varchar(16) NULL,
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)

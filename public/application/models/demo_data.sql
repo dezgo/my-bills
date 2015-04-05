@@ -1,4 +1,4 @@
-INSERT INTO `membership` (`first_name`, `last_name`, `password`, `email_address`) VALUES ('Derek', 'Gillett', '5f4dcc3b5aa765d61d8327deb882cf99', 'mybills@derekgillett.com');
+INSERT INTO `membership` (`first_name`, `last_name`, `params`, `email_address`) VALUES ('Derek', 'Gillett', 'sha256:1000:+ZvYwe5812mZ+SDomPsDAjL/xvsutetV:jlthvS53EYfHWh9hb6XQCe4UD9OVsd7v', 'mybills@derekgillett.com');
 
 INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'date_format', 'j M Y');
 INSERT INTO `settings` (`member_id`, `setting_name`, `setting_value`) VALUES ((SELECT `id` FROM `membership`), 'email_reminder_days', '5');
