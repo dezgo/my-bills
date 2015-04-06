@@ -22,7 +22,7 @@
                 url: "<?php echo base_url()?>index.php/Settings/timezone/" + visitortimezone + "/" + today.dst(),
                 data: { 'csrf_test_name' : csrf_test_name },
                 success: function(){
-                    location.reload();
+                    location.href=location.href;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status+': '+thrownError);
@@ -101,7 +101,7 @@ One moment while we get your timezone....
 				echo "<th";
 				if ($sort_by == $field_name) echo " class='sort_$sort_order'";
 				echo ">";
-				echo anchor("site/members_area/$field_name/" .
+				echo anchor("Site/members_area/$field_name/" .
 					(($sort_order == 'asc' && $sort_by == $field_name) ? "desc" : "asc"), 
 					$field_display);
 				echo "</th>";

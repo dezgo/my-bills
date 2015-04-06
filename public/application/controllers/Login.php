@@ -12,7 +12,17 @@ class Login extends MY_Controller {
 	
 	function index()
 	{
-		$this->data['main_content'] = 'login_form';
+		$this->load->helper('cookie');
+		$member_id = get_cookie('stay_logged_in');
+		if ($member_id != '') 
+		{
+			$this->Membership_model->initial_login_setup($member_id);			
+			$this->data['main_content'] = 'home_view';
+		}
+		else
+		{
+			$this->data['main_content'] = 'login_form';
+		}
 		$this->load->view('includes/template', $this->data);
 	}
 	
@@ -20,24 +30,31 @@ class Login extends MY_Controller {
 	{
 		$email_address = $this->input->post('email_address');
 		$password = $this->input->post('password');
+		$stay_logged_in = $this->input->post("stay_logged_in") != '';
 		
 		$this->load->model('Membership_model');
 		$member_id = $this->Membership_model->validate($email_address, $password);
 		
 		if($member_id != 0) // if the user's credentials validated...
 		{
+			// remember the password if user wants to
+			if ($stay_logged_in)
+			{
+				$this->load->helper('cookie');
+				if (ENVIRONMENT == 'development')
+					set_cookie('stay_logged_in', $member_id, 30);	// to test, just remember for 30 seconds
+				else
+					set_cookie('stay_logged_in', $member_id, 30 * 24 * 60 * 60);	// remember for 30 days
+			}
+			
 			$_SESSION['email_address'] = $email_address;
 			$this->load->helper('cookie');
 			$this->load->model("Membership_model");
 			$google_auth_secret = $this->Membership_model->google_auth_get_secret($member_id);
 			if ($google_auth_secret == '' or get_cookie('google_auth_remember') != '')
 			{
-				$this->load->model('Settings_model');
-				$_SESSION['member_id'] = $member_id;
-				$_SESSION['timezone'] = $this->Settings_model->timezone_get();
-				$_SESSION['dst'] = $this->Settings_model->dst_get();
-			
-				redirect('Site/members_area');
+				$this->Membership_model->initial_login_setup($member_id, $email_address);
+				$this->data['main_content'] = 'home_view';
 			}
 			else
 			{
@@ -46,6 +63,7 @@ class Login extends MY_Controller {
 				$this->data['main_content'] = 'login_form_google_auth';
 				$this->load->view('includes/template', $this->data);
 			}
+			$this->load->view('includes/template', $this->data);
 		}
 		
 		else
@@ -64,10 +82,6 @@ class Login extends MY_Controller {
 		$this->load->model('Membership_model');
 		if ($this->Membership_model->google_auth_check_code($google_auth_code,$member_id))
 		{
-			$this->load->model('Settings_model');
-			$_SESSION['member_id'] = $member_id;
-			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
-			$_SESSION['dst'] = $this->Settings_model->dst_get();
 			if ($google_auth_remember)
 			{
 				$this->load->helper('cookie');
@@ -76,16 +90,16 @@ class Login extends MY_Controller {
 				else
 					set_cookie('google_auth_remember', 'yesplease', 30 * 24 * 60 * 60);	// remember for 30 days
 			}
-		
-			redirect('Site/members_area');
+			$this->Membership_model->initial_login_setup($member_id, $email_address);
+			$this->data['main_content'] = 'home_view';
 		}
 		else
 		{
 			$this->data['message'] = 'Invalid verification code.';
 			$this->data['member_id'] = $member_id;
 			$this->data['main_content'] = 'login_form_google_auth';
-			$this->load->view('includes/template', $this->data);
 		}
+		$this->load->view('includes/template', $this->data);
 	}
 	
 	function signup()

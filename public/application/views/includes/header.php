@@ -64,7 +64,7 @@ function addCurrent($class, $pagename)
 ?>
 			   	<ul id="nav" class="nav">
 			      	<?php 
-			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('Home',$this->lang->line('menu_home')) . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('Site',$this->lang->line('menu_home')) . '</li>';
 			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('Contact',$this->lang->line('menu_contact_us')) . '</li>';
 			      	
 			      	if (is_logged_in()) {

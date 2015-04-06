@@ -4,17 +4,17 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://192.168.33.10/" />
-<title>Update profile</title>
+<title>profile update</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Update profile</td></tr>
+<tr><td rowspan="1" colspan="3">profile update</td></tr>
 </thead><tbody>
-<!--Setup-->
+<!--setup-->
 <tr>
 	<td>open</td>
-	<td>index.php</td>
+	<td>/index.php/Home</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,23 +42,23 @@
 	<td>link=Profile</td>
 	<td></td>
 </tr>
-<!--Change to existing email address not allowed-->
+<!--update name-->
 <tr>
-	<td>storeAlert</td>
-	<td></td>
-	<td></td>
+	<td>type</td>
+	<td>name=first_name</td>
+	<td>Derek</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>name=email_address</td>
-	<td>joebloe@derekgillett.com</td>
+	<td>name=last_name</td>
+	<td>Gillett</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>name=submit</td>
 	<td></td>
 </tr>
-<!--Update email address-->
+<!--update email address-->
 <tr>
 	<td>type</td>
 	<td>name=email_address</td>
@@ -69,6 +69,18 @@
 	<td>name=submit</td>
 	<td></td>
 </tr>
+<!--use existing email address-->
+<tr>
+	<td>type</td>
+	<td>name=email_address</td>
+	<td>joebloe@derekgillett.com</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<!--back to standard address-->
 <tr>
 	<td>type</td>
 	<td>name=email_address</td>
@@ -79,18 +91,7 @@
 	<td>name=submit</td>
 	<td></td>
 </tr>
-<!--Different passwords not allowed-->
-<tr>
-	<td>type</td>
-	<td>name=password</td>
-	<td>sadf</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=submit</td>
-	<td></td>
-</tr>
-<!--Passwords must be at least 4 characters long-->
+<!--password too short-->
 <tr>
 	<td>type</td>
 	<td>name=password</td>
@@ -106,54 +107,39 @@
 	<td>name=submit</td>
 	<td></td>
 </tr>
-<!--Passwords must be at most 32 characters long-->
+<!--mismatching passwords-->
 <tr>
 	<td>type</td>
 	<td>name=password</td>
-	<td>asdfasdfasdfasdfasdfasdfasdfasdfasdfawrafsdfasdfasdfasdfasdfac</td>
+	<td>asdf</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>name=passconf</td>
-	<td>asdfasdfasdfasdfasdfasdfasdfasdfasdfawrafsdfasdfasdfasdfasdfac</td>
+	<td>asdfasdf</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>name=submit</td>
 	<td></td>
 </tr>
-<!--Email address required-->
+<!--password too long-->
 <tr>
 	<td>type</td>
-	<td>name=email_address</td>
-	<td></td>
+	<td>name=password</td>
+	<td>asdfasdfasdfasdfasdfasdfasdfasdfasdf</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=passconf</td>
+	<td>asdfasdfasdfasdfasdfasdfasdfasdfasdf</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>name=submit</td>
 	<td></td>
 </tr>
-<!--Name not required-->
-<tr>
-	<td>type</td>
-	<td>name=first_name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>name=last_name</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>name=submit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Logout</td>
-	<td></td>
-</tr>
+
 </tbody></table>
 </body>
 </html>

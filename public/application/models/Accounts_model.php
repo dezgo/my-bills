@@ -7,7 +7,7 @@ class Accounts_model extends CI_Model {
 		$this->load->helper('date');
 	}
 	
-	function search($limit, $offset, $sort_by, $sort_order)
+	function search($member_id, $limit, $offset, $sort_by, $sort_order)
 	{
 		
 		$sort_order = ($sort_order =='desc') ? 'desc' : 'asc';
@@ -21,7 +21,7 @@ class Accounts_model extends CI_Model {
 					'adddate(last_due,365/times_per_year) as next_due, last_due, '.
 					'datediff(adddate(last_due,365/times_per_year), now()) as days', FALSE)
 				->from('accounts')
-				->where('member_id', $_SESSION['member_id'])
+				->where('member_id', $member_id)
 				->limit($limit, $offset)
 				->order_by($sort_by, $sort_order);		
 		$ret['rows'] = $query->get()->result();
@@ -29,7 +29,7 @@ class Accounts_model extends CI_Model {
 		// count query
 		$query = $this->db->select('COUNT(*) as count', FALSE)
 				->from('accounts')
-				->where('member_id', $_SESSION['member_id']);
+				->where('member_id', $member_id);
 		
 		$tmp = $query->get()->result();
 		
