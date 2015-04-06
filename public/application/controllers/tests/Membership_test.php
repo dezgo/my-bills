@@ -115,7 +115,7 @@ class Membership_test extends MY_Controller {
 	
 	function testGetMember()
 	{
-		$test = $this->Membership_model->get_member();
+		$test = $this->Membership_model->get_member($_SESSION['member_id']);
 		$expected_result = 'is_object';
 		$test_name = 'Get member';
 		$notes = print_r($test,true);
@@ -139,7 +139,7 @@ class Membership_test extends MY_Controller {
 		$test = true;
 		$expected_result = true;
 		$test_name = 'Create password reset token';
-		$notes = print_r($this->Membership_model->get_member(),true);
+		$notes = print_r($this->Membership_model->get_member($_SESSION['member_id']),true);
 		$this->unit->run($test, $expected_result, $test_name, $notes);
 	}
 	

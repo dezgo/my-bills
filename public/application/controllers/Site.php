@@ -5,7 +5,25 @@ class Site extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		boot_non_member();
+		
+		$this->load->helper('cookie');
+		if (get_cookie('stay_logged_in') != '') {
+			$data['main_content'] = 'login_form';
+			$this->load->view('includes/template.php', $data);
+		} 
+
+		// only allow members to get to anything but the index function
+		if (uri_string() != '' and uri_string() != 'Site' and uri_string() != 'Site/index')
+			boot_non_member();
+	}
+	
+	function index()
+	{
+		if (is_logged_in())
+			$data['main_content'] = 'accounts_list';
+		else
+			$data['main_content'] = 'home_view';
+		$this->load->view('includes/template.php', $data);
 	}
 	
 	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
@@ -25,7 +43,7 @@ class Site extends MY_Controller {
 		$this->load->library('table');
 		
 		$this->load->model('Accounts_model');
-		$results = $this->Accounts_model->search($limit, $offset, $sort_by, $sort_order);
+		$results = $this->Accounts_model->search($_SESSION['member_id'], $limit, $offset, $sort_by, $sort_order);
 		
 		$data['records'] = $results['rows'];
 		$data['num_results'] = $results['num_rows'];
@@ -51,7 +69,7 @@ class Site extends MY_Controller {
 	{
 		// get member details
 		$this->load->model('Membership_model');
-		$member = $this->Membership_model->get_member();
+		$member = $this->Membership_model->get_member($_SESSION['member_id']);
 		
 		$data['message'] = $message;
 		$data['firstname'] = $this->input->post('first_name') == '' ? $member->first_name : $this->input->post('first_name');
@@ -129,10 +147,13 @@ class Site extends MY_Controller {
 		}
 	}
 	
+	// logout, kill session and delete cookie that keeps user logged in
 	function logout()
 	{
 		session_destroy();
-		redirect('Home');
+		$this->load->helper('cookie');
+		delete_cookie('stay_logged_in');
+		redirect('');
 	}
 	
 	function edit_account($id) {

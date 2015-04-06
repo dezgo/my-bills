@@ -31,11 +31,11 @@
 	echo form_input('email_address', '', 'autofocus size="40"');
 	echo lang('password','password');
 	echo form_password('password', '', 'class="password"');
-	echo form_label('Remember password','lbl_password_remember');
+	echo form_label('Keep me logged in for 30 days','lbl_password_remember');
 ?>
 		<!--  https://proto.io/freebies/onoff/ -->
 		<div class="onoffswitch">
-		    <input style="display: none" type="checkbox" name="password_remember" value="yesthanks" class="onoffswitch-checkbox" id="myonoffswitch">
+		    <input style="display: none" type="checkbox" name="stay_logged_in" value="yesthanks" class="onoffswitch-checkbox" id="myonoffswitch">
 		    <label class="onoffswitch-label" for="myonoffswitch">
 		        <span class="onoffswitch-inner"></span>
 		        <span class="onoffswitch-switch"></span>

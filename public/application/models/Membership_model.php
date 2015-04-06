@@ -116,9 +116,9 @@ class Membership_model extends CI_Model {
 	}
 	
 	// return details for a given member
-	function get_member()
+	function get_member($member_id)
 	{
-		$this->db->where('id', $_SESSION['member_id']);
+		$this->db->where('id', $member_id);
 		return $this->db->get('membership')->row();
 	}
 	
@@ -138,6 +138,20 @@ class Membership_model extends CI_Model {
 		$this->db->update('membership', $data);
 		
 		return $data['retrieve_token'];
+	}
+
+	function initial_login_setup($member_id, $email_address = '')
+	{
+		if ($email_address == '')
+		{
+			$member = $this->get_member($member_id);
+			$email_address = $member->email_address;
+		}
+		$this->load->model('Settings_model');
+		$_SESSION['member_id'] = $member_id;
+		$_SESSION['email_address'] = $email_address;
+		$_SESSION['timezone'] = $this->Settings_model->timezone_get();
+		$_SESSION['dst'] = $this->Settings_model->dst_get();
 	}
 }
 

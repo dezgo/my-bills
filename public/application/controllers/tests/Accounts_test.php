@@ -24,7 +24,7 @@ class Accounts_test extends MY_Controller {
 
 	function testSearch()
 	{
-		$this->ret = $this->Accounts_model->search(50, 0, '', '');
+		$this->ret = $this->Accounts_model->search($_SESSION['member_id'], 50, 0, '', '');
 		
 		$test = $this->ret;
 		$expected_result = 'is_array';

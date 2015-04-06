@@ -29,7 +29,7 @@
 
             <ul class="navigate group">
             <?php 
-               echo "<li>".anchor('Home','Home','')."</li>";
+               echo "<li>".anchor('Site','Home','')."</li>";
                echo "<li>".anchor('Contact','Contact Us')."</li>";
 
 				if (is_logged_in()) {

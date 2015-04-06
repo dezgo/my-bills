@@ -19,7 +19,7 @@
 	echo form_hidden('member_id',$member_id);
 	echo form_label('Google Authenticator Verification Code','lbl_google_auth_code');
 	echo form_input('google_auth_code');
-	echo form_label("Don't prompt for verification code on this browser for 30 days",'lbl_google_auth_remember');
+	echo form_label("Don't prompt for verification code on this computer for 30 days",'lbl_google_auth_remember');
 	?>
 		<!--  https://proto.io/freebies/onoff/ -->
 		<div class="onoffswitch">

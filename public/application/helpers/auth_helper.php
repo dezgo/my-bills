@@ -15,7 +15,7 @@ function is_logged_in()
 
 function boot_non_member()
 {
-	if (!is_logged_in()) redirect('Home');
+	if (!is_logged_in()) redirect('');
 }
 
 function is_admin()

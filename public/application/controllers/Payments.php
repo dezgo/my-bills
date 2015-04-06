@@ -26,7 +26,7 @@ class Payments extends MY_Controller {
 		$this->load->library('table');
 	
 		$this->load->model('Payments_model');
-		$results = $this->Payments_model->search($limit, $offset, $sort_by, $sort_order);
+		$results = $this->Payments_model->search($_SESSION['member_id'], $limit, $offset, $sort_by, $sort_order);
 	
 		$data['records'] = $results['rows'];
 		$data['num_results'] = $results['num_rows'];

@@ -1,7 +1,7 @@
 <?php
 class Payments_model extends CI_Model {
 
-	function search($limit, $offset, $sort_by, $sort_order)
+	function search($member_id, $limit, $offset, $sort_by, $sort_order)
 	{
 	
 		$sort_order = ($sort_order =='desc') ? 'desc' : 'asc';
@@ -13,7 +13,7 @@ class Payments_model extends CI_Model {
 		// results query
 		$query = $this->db->select('id, account, amount, payment_date, ')
 				->from('payments')
-				->where('member_id', $_SESSION['member_id'])
+				->where('member_id', $member_id)
 				->limit($limit, $offset)
 				->order_by($sort_by, $sort_order);
 		$ret['rows'] = $query->get()->result();
@@ -21,7 +21,7 @@ class Payments_model extends CI_Model {
 		// count query
 		$query = $this->db->select('COUNT(*) as count', FALSE)
 		->from('payments')
-		->where('member_id', $_SESSION['member_id']);
+		->where('member_id', $member_id);
 	
 		$tmp = $query->get()->result();
 	
