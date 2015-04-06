@@ -16,7 +16,7 @@ class Setup extends MY_Controller
 			$this->load->model('Setup_model');
 			$this->Setup_model->checkDB(TRUE);
 			$data['message'] = 'Finished creating database';
-			if ($add_demo_data !== '') {
+			if ($add_demo_data != '') {
 				$this->Setup_model->addDemoData();	
 				$data['message'] .= ' and adding demo data';
 			}

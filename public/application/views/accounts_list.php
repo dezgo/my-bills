@@ -16,16 +16,17 @@
         if("<?php echo $_SESSION['timezone']; ?>".length==0 || today.dst() != "<?php echo $_SESSION['dst']?>".length){
             var visitortime = new Date();
             var visitortimezone = -visitortime.getTimezoneOffset()/60-today.dst();
+            var csrf_test_name = $("input[name=csrf_test_name]").val();
             $.ajax({
             	type: "POST",
-            	crossDomain: true,
                 url: "<?php echo base_url()?>index.php/Settings/timezone/" + visitortimezone + "/" + today.dst(),
+                data: { 'csrf_test_name' : csrf_test_name },
                 success: function(){
                     location.reload();
                 },
-            	error: function(){
-                	alert('error');
-            	},
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status+': '+thrownError);
+                },
             	statusCode: {
             	    404: function() {
             	        alert( "page not found" );
@@ -39,17 +40,17 @@
 
 <script type="text/javascript">
 function editAccount(id) {
-	window.location.href = "<?php echo base_url()?>index.php/site/edit_account/" + id;
+	window.location.href = "<?php echo base_url()?>index.php/Site/edit_account/" + id;
 }
 
 function deleteAccount(id) {
 	if (confirm('This will permanently delete this bill. Proceed?')) {
-		window.location.href = "<?php echo base_url()?>index.php/site/delete_account/" + id;
+		window.location.href = "<?php echo base_url()?>index.php/Site/delete_account/" + id;
 	}
 }
 
 function insertAccount() {
-	window.location.href = "<?php echo base_url()?>index.php/site/insert_account";
+	window.location.href = "<?php echo base_url()?>index.php/Site/insert_account";
 }
 
 function toggleEditMode() {
@@ -70,7 +71,7 @@ function toggleEditMode() {
 function payAccount(id,amount) {
 	var amountActual = prompt("Enter the amount to pay", amount);
 	if (amountActual !== null && amountActual !== undefined)
-		window.location.href = "<?php echo base_url()?>index.php/site/pay_account/" + id + "/" + amountActual;
+		window.location.href = "<?php echo base_url()?>index.php/Site/pay_account/" + id + "/" + amountActual;
 }
 
 </script>
@@ -78,6 +79,7 @@ function payAccount(id,amount) {
       <div class="row section-head add-bottom">
 
       	<div class="twelve columns">
+<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
 <?php if (!isset($_SESSION['timezone']) || $_SESSION['timezone'] == '') { ?>
 One moment while we get your timezone....
 <?php } else { ?>
@@ -157,7 +159,7 @@ One moment while we get your timezone....
 
 	<?php } ?>
 
-	<?php echo form_button('name','Add','onClick="insertAccount()"'); } ?>
+	<?php echo form_button('btnAddAccount','Add','onClick="insertAccount()"'); } ?>
 	
 	</div> <!-- end accounts list -->
 

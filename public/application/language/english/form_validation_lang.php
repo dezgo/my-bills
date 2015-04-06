@@ -25,10 +25,10 @@ $lang['less_than']			= "The %s field must contain a number less than %s.";
 $lang['greater_than']		= "The %s field must contain a number greater than %s.";
 
 // added custom entries here
-$lang['check_if_username_exists']       = "Sorry, that username is already taken.";
 $lang['check_if_email_exists']          = "Sorry, that email address has already been registered.";
 $lang['check_if_email_exists_to_reset'] = "Sorry, that email address is not registered.";
 $lang['captcha_is_correct']             = "Incorrect captcha text.";
+$lang['check_google_auth_code']         = "Google authenticator verifiation code is incorrect.";
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/english/form_validation_lang.php */

@@ -18,29 +18,73 @@ class Login extends MY_Controller {
 	
 	function validate_credentials()
 	{
-		$email_address = $this->input->post['email_address'];
-		$password = $this->input->post['password'];
+		$email_address = $this->input->post('email_address');
+		$password = $this->input->post('password');
 		
-		$this->load->model('membership_model');
-		$member_id = $this->membership_model->validate($email_address, $password);
+		$this->load->model('Membership_model');
+		$member_id = $this->Membership_model->validate($email_address, $password);
 		
-		if($member_id !== 0) // if the user's credentials validated...
+		if($member_id != 0) // if the user's credentials validated...
 		{
-			//  set the member id first as it's required for other functions in settings model
-			$this->load->model('Settings_model');
-			$_SESSION['member_id'] = $member_id;
-			
 			$_SESSION['email_address'] = $email_address;
-			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
-			$_SESSION['dst'] = $this->Settings_model->dst_get();
+			$this->load->helper('cookie');
+			$this->load->model("Membership_model");
+			$google_auth_secret = $this->Membership_model->google_auth_get_secret($member_id);
+			if ($google_auth_secret == '' or get_cookie('google_auth_remember') != '')
+			{
+				$this->load->model('Settings_model');
+				$_SESSION['member_id'] = $member_id;
+				$_SESSION['timezone'] = $this->Settings_model->timezone_get();
+				$_SESSION['dst'] = $this->Settings_model->dst_get();
 			
-			redirect('site/members_area');
+				redirect('Site/members_area');
+			}
+			else
+			{
+				$this->data['member_id'] = $member_id;
+				$this->data['message'] = '';
+				$this->data['main_content'] = 'login_form_google_auth';
+				$this->load->view('includes/template', $this->data);
+			}
 		}
 		
 		else
 		{
 			$this->data['failed']++;
 			$this->index();
+		}
+	}
+	
+	function validate_google_auth_code()
+	{
+		$google_auth_code = $this->input->post('google_auth_code');
+		$member_id = $this->input->post('member_id');
+		$google_auth_remember = $this->input->post('google_auth_remember') != '';
+		
+		$this->load->model('Membership_model');
+		if ($this->Membership_model->google_auth_check_code($google_auth_code,$member_id))
+		{
+			$this->load->model('Settings_model');
+			$_SESSION['member_id'] = $member_id;
+			$_SESSION['timezone'] = $this->Settings_model->timezone_get();
+			$_SESSION['dst'] = $this->Settings_model->dst_get();
+			if ($google_auth_remember)
+			{
+				$this->load->helper('cookie');
+				if (ENVIRONMENT == 'development')
+					set_cookie('google_auth_remember', 'yesplease', 30);	// to test, just remember for 30 seconds
+				else
+					set_cookie('google_auth_remember', 'yesplease', 30 * 24 * 60 * 60);	// remember for 30 days
+			}
+		
+			redirect('Site/members_area');
+		}
+		else
+		{
+			$this->data['message'] = 'Invalid verification code.';
+			$this->data['member_id'] = $member_id;
+			$this->data['main_content'] = 'login_form_google_auth';
+			$this->load->view('includes/template', $this->data);
 		}
 	}
 	
@@ -56,19 +100,18 @@ class Login extends MY_Controller {
 		// field name, error message, validation rules
 		
 		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists');
-		
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
-
-		if($this->form_validation->run() == FALSE)
+		$result = $this->form_validation->run();
+		if(!$result)
 		{
 			$this->signup();
 		}
 		else
 		{
-			$this->load->model('membership_model');
+			$this->load->model('Membership_model');
 			$email_address = $this->input->post('email_address');
 			$password = $this->input->post('password');
-			if($query = $this->membership_model->create_member($email_address, $password))
+			if($query = $this->Membership_model->create_member($email_address, $password))
 			{
 				$this->validate_credentials();
 			}
@@ -80,16 +123,16 @@ class Login extends MY_Controller {
 		}
 	}
 
-	function check_if_email_exists($requested_email)	// custom callback function
+	function check_if_email_exists($requested_email)	// when creating a new account, ensure email isn't already registered
 	{
-		$this->load->model('membership_model');
-		return !$this->membership_model->check_if_email_exists($requested_email);
+		$this->load->model('Membership_model');
+		return !$this->Membership_model->check_if_email_exists($requested_email);
 	}
 
-	function check_if_email_exists_to_reset($requested_email)	// custom callback function
+	function check_if_email_exists_to_reset($requested_email)	// when reseting password, check email exists
 	{
-		$this->load->model('membership_model');
-		return $this->membership_model->check_if_email_exists($requested_email);
+		$this->load->model('Membership_model');
+		return $this->Membership_model->check_if_email_exists($requested_email);
 	}
 	
 	function captcha_is_correct($captcha)

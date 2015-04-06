@@ -50,13 +50,32 @@ class Site extends MY_Controller {
 	function profile($message = '')
 	{
 		// get member details
-		$this->load->model('membership_model');
-		$member = $this->membership_model->get_member();
+		$this->load->model('Membership_model');
+		$member = $this->Membership_model->get_member();
 		
 		$data['message'] = $message;
 		$data['firstname'] = $this->input->post('first_name') == '' ? $member->first_name : $this->input->post('first_name');
 		$data['lastname'] = $this->input->post('last_name') == '' ? $member->last_name : $this->input->post('last_name');
 		$data['email_address'] = $this->input->post('email_address') == '' ? $member->email_address : $this->input->post('email_address');
+		$qr_url = '';
+		$secretDB = $this->Membership_model->google_auth_get_secret($_SESSION['member_id']);
+		$secret = $this->input->post('google_auth_secret') == '' ? $secretDB : $this->input->post('google_auth_secret');
+		if ($secretDB == '')
+		{
+			$data['google_auth_enabled'] = false;
+			if ($secret == '')	// only get a new secret if one hasn't already been generated
+			{	
+				$secret = $this->Membership_model->google_auth_get_new_secret();
+			}
+		}
+		else
+		{
+			$data['google_auth_enabled'] = true;
+		}
+		$_SESSION['google_auth_secret'] = $secret;
+		$data['google_auth_secret'] = $secret;
+		$data['qr_url'] = $this->Membership_model->google_auth_get_qr_url($secret);
+		
 		$data['main_content'] = 'profile_view';
 		$this->load->view('includes/template', $data);
 	}
@@ -69,6 +88,7 @@ class Site extends MY_Controller {
 		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email|max_length[50]|callback_check_if_email_exists');
 		$this->form_validation->set_rules('password', 'Password', 'matches[passconf]');
 		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|min_length[4]|max_length[32]');
+		$this->form_validation->set_rules('google_auth_code', 'Google verification code', 'callback_check_google_auth_code');
 		
 		if($this->form_validation->run() == TRUE)
 		{
@@ -77,17 +97,36 @@ class Site extends MY_Controller {
 			$password = $this->input->post('password');
 			$first_name = $this->input->post('first_name');
 			$last_name = $this->input->post('last_name');
+			$google_auth_secret = $this->input->post('google_auth_secret');
+			$google_auth_code = $this->input->post('google_auth_code');
+			$google_auth_enabled = $this->input->post('chkGoogleAuthEnabled') != '';
+						
+			$result = $this->membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 			
-			$this->membership_model->update_member($email_address, $password, $first_name, $last_name);
-			
+			$this->profile('Details Updated');
 		}
-		$this->profile('Details Updated');
+		else
+			$this->profile('');
 	}
 	
 	function check_if_email_exists($requested_email)	// custom callback function
 	{
-		$this->load->model('membership_model');
-		return !$this->membership_model->check_if_email_exists($requested_email);
+		$this->load->model('Membership_model');
+		return !$this->Membership_model->check_if_email_exists($requested_email) or $requested_email == $_SESSION['email_address'];
+	}
+	
+	function check_google_auth_code($google_auth_code)
+	{
+		if ($google_auth_code == '')
+		{
+			return true;
+		}
+		else 
+		{
+			require_once APPPATH.'models/crypto/GoogleAuthenticator.php';
+			$ga = new PHPGangsta_GoogleAuthenticator();
+			return $ga->verifyCode($_SESSION['google_auth_secret'], $google_auth_code, 2);
+		}
 	}
 	
 	function logout()
@@ -120,6 +159,10 @@ class Site extends MY_Controller {
 	
 	function insert_account() {
 		$this->load->library('table');
+		
+		// get default date format
+		$this->load->model('Settings_model');
+		$data['date_format'] = $this->Settings_model->date_format_get(); 
 		
 		$this->load->model('Accounts_model');
 		$data['main_content'] = 'edit_account';

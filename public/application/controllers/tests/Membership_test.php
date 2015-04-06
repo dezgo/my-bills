@@ -25,6 +25,7 @@ class Membership_test extends MY_Controller {
 		$this->testGetMember();
 		$this->testGetMembers();
 		$this->testCreatePasswordResetToken();
+		$this->testCheckIfEmailExists();
 		
 		echo $this->unit->report();
 	}
@@ -51,30 +52,32 @@ class Membership_test extends MY_Controller {
 	
 	function testGoogleAuth()
 	{
-		$this->Membership_model->google_auth_disable();		
-
-		$test = true;
-		$expected_result = true;
-		$test_name = 'Disable google authentication';
-		$this->unit->run($test, $expected_result, $test_name);
-
-		$this->Membership_model->google_auth_enable($secret);		
-		$test_name = 'Enable google authentication';
-		$notes = 'Secret is '.$secret;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
-		
-		$secret = $this->Membership_model->google_auth_get_secret();
+		$secret = $this->Membership_model->google_auth_get_new_secret();
 		$test = $secret != '';
-		$test_name = 'Get secret, check it\'s not empty';
+		$expected_result = true;
+		$test_name = 'Get google auth secret and check it\'s not empty';
 		$notes = 'Secret is '.$secret;
 		$this->unit->run($test, $expected_result, $test_name, $notes);
 		
-		$test = !$this->Membership_model->google_auth_check_code('asdf');
-		$test_name = 'Validate QR code';
+		$qr_url = $this->Membership_model->google_auth_get_qr_url($secret);
+		$test = $qr_url != '';
+		$expected_result = true;
+		$test_name = 'Get google auth qr code url and check it\'s not empty';
+		$notes = 'URL is '.$qr_url;
+		$this->unit->run($test, $expected_result, $test_name, $notes);
+
+		$secret = $this->Membership_model->google_auth_get_secret(1);
+		$test = $secret == '';
+		$expected_result = true;
+		$test_name = 'Get google auth secret for user 1, should be empty';
 		$notes = '';
 		$this->unit->run($test, $expected_result, $test_name, $notes);
 
-		$this->Membership_model->google_auth_disable();			
+		$test = !$this->Membership_model->google_auth_check_code('asdf', 1);
+		$expected_result = true;
+		$test_name = 'Validate QR code';
+		$notes = '';
+		$this->unit->run($test, $expected_result, $test_name, $notes);
 	}
 	
 	function testCreateMember()
@@ -95,8 +98,11 @@ class Membership_test extends MY_Controller {
 		$password = 'newpassword';
 		$first_name = 'Joe';
 		$last_name = 'Bloe';
+		$google_auth_enabled = false;
+		$google_auth_secret = '';
+		$google_auth_code = '';
 
-		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name);
+		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 		$test = true;
 		$expected_result = true;
 		$test_name = 'Update member';
@@ -104,7 +110,7 @@ class Membership_test extends MY_Controller {
 
 		$email_address = 'mybills@derekgillett.com';
 		$password = 'password';
-		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name);
+		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 	}
 	
 	function testGetMember()
@@ -135,5 +141,22 @@ class Membership_test extends MY_Controller {
 		$test_name = 'Create password reset token';
 		$notes = print_r($this->Membership_model->get_member(),true);
 		$this->unit->run($test, $expected_result, $test_name, $notes);
+	}
+	
+	function testCheckIfEmailExists()
+	{
+		$email_address = 'mybills@derekgillett.com';
+		$test = $this->Membership_model->check_if_email_exists($email_address);
+		
+		$expected_result = true;
+		$test_name = 'Check if email exists - true';
+		$this->unit->run($test, $expected_result, $test_name);
+		
+		$email_address = 'mybills@derekgillettt.com';
+		$test = $this->Membership_model->check_if_email_exists($email_address);
+		
+		$expected_result = false;
+		$test_name = 'Check if email exists - false';
+		$this->unit->run($test, $expected_result, $test_name);
 	}
 }

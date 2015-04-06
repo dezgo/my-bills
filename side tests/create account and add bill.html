@@ -4,32 +4,26 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://192.168.33.10/" />
-<title>Pay bills / view history</title>
+<title>create account and add bill</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Pay bills / view history</td></tr>
+<tr><td rowspan="1" colspan="3">create account and add bill</td></tr>
 </thead><tbody>
-<!--Setup-->
 <tr>
 	<td>open</td>
-	<td>index.php/Setup/create/wer34345ertgdffjERDFG/false</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Home</td>
+	<td>index.php/Setup/create/wer34345ertgdffjERDFG</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>index.php/Home</td>
+	<td>/index.php/Home</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Sign In</td>
+	<td>name=signup</td>
 	<td></td>
 </tr>
 <tr>
@@ -49,49 +43,37 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>css=td[name=&quot;payButton&quot;] &gt; button[name=&quot;name&quot;]</td>
+	<td>name=btnAddAccount</td>
 	<td></td>
 </tr>
-<!--Pay two accounts-->
-<tr>
-	<td>answerOnNextPrompt</td>
-	<td>30</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=td[name=&quot;payButton&quot;] &gt; button[name=&quot;name&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertPrompt</td>
-	<td>Enter the amount to pay</td>
-	<td></td>
-</tr>
-<tr>
-	<td>answerOnNextPrompt</td>
-	<td>30</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=td[name=&quot;payButton&quot;] &gt; button[name=&quot;name&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertPrompt</td>
-	<td>Enter the amount to pay</td>
-	<td></td>
-</tr>
-<!--Ensure payments show up in history-->
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Payments</td>
+	<td>name=btnAddAccount</td>
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
+	<td>type</td>
+	<td>name=account</td>
+	<td>Mobile</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=last_due</td>
+	<td>04-01-2015</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=times_per_year</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=amount</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
 	<td></td>
 </tr>
 <tr>
@@ -99,6 +81,7 @@
 	<td>link=Logout</td>
 	<td></td>
 </tr>
+
 </tbody></table>
 </body>
 </html>

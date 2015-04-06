@@ -20,34 +20,28 @@ class Membership_model extends CI_Model {
 			return 0;
 	}
 	
-	function google_auth_disable()
-	{
-		$this->db->where('id',$_SESSION['member_id']);
-		$data['google_auth_secret'] = '';
-		$this->db->update('membership',$data);
-	}
-	
-	// returns the url to the QR code, and populates pass-by-reference variable $secret
-	function google_auth_enable(&$secret)
+	function google_auth_get_new_secret()
 	{
 		// get new instance of google auth class
 		require_once 'crypto/GoogleAuthenticator.php';
 		$ga = new PHPGangsta_GoogleAuthenticator();
 
-		// generate a new secret and store in database
-		$secret = $ga->createSecret();
-		$this->db->where('id',$_SESSION['member_id']);
-		$data['google_auth_secret'] = $secret;
-		$this->db->update('membership',$data);
-
-		// return url of QRCode
+		return $ga->createSecret();
+	}
+	
+	function google_auth_get_qr_url($secret)
+	{
+		// get new instance of google auth class
+		require_once 'crypto/GoogleAuthenticator.php';
+		$ga = new PHPGangsta_GoogleAuthenticator();
+		
 		return $ga->getQRCodeGoogleUrl( 'remember-my-bills' , $secret );
 	}
-
+	
 	// get user's google auth secret
-	function google_auth_get_secret()
+	function google_auth_get_secret($member_id)
 	{
-		$this->db->where('id',$_SESSION['member_id']);
+		$this->db->where('id',$member_id);
 		$query = $this->db->get('membership');
 		$row = $query->row();
 		if ($query->num_rows() > 0) {
@@ -57,13 +51,13 @@ class Membership_model extends CI_Model {
 		}
 	}
 	
-	function google_auth_check_code($OneCode)
+	function google_auth_check_code($OneCode, $member_id)
 	{
 		// get new instance of google auth class
-		require_once 'crypto/PasswordHash.php';
+		require_once APPPATH.'models/crypto/GoogleAuthenticator.php';
 		$ga = new PHPGangsta_GoogleAuthenticator();
 		
-		$checkResult  = $ga->verifyCode( $this->google_auth_get_secret() , $OneCode , 2);     // 2 = 2 * 30sec clock tolerance
+		$checkResult  = $ga->verifyCode( $this->google_auth_get_secret($member_id) , $OneCode , 2);     // 2 = 2 * 30sec clock tolerance
 		return $checkResult;
 	}
 	
@@ -87,7 +81,7 @@ class Membership_model extends CI_Model {
 		}
 	}
 	
-	function update_member($email_address, $password = '', $first_name, $last_name)
+	function update_member($email_address, $password = '', $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code)
 	{
 		$data['email_address'] = $email_address;
 		if ($password != '')
@@ -97,6 +91,16 @@ class Membership_model extends CI_Model {
 		}
 		$data['first_name'] = $first_name;
 		$data['last_name'] = $last_name;
+		if ($google_auth_code != '')
+		{
+			$data['google_auth_secret'] = $google_auth_secret;
+		}
+		elseif (!$google_auth_enabled)
+		{
+			$data['google_auth_secret'] = '';
+			$this->load->helper('cookie');
+			delete_cookie('google_auth_remember');	// do this so if they re-enable, it'll prompt for the google token again
+		}
 		
 		$this->db->where('id',$_SESSION['member_id']);
 		$this->db->update('membership', $data);
