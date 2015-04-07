@@ -1,3 +1,23 @@
+DROP TABLE IF EXISTS `activity_audit`;
+
+CREATE TABLE `activity_audit` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `member_id` int(11) NULL,
+ `activity_date` datetime,
+ `activity_type` varchar(20),
+ `remote_addr` varchar(40),
+ `notes` varchar(256),
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1; 
+ 
+DELIMITER |
+CREATE TRIGGER trigger_activity_auditDatetimeInsert BEFORE INSERT ON `activity_audit` FOR EACH ROW 
+BEGIN
+    SET NEW.activity_date = NOW();
+END; 
+|
+DELIMITER ;
+
 DROP TABLE IF EXISTS `membership`;
 
 CREATE TABLE `membership` (

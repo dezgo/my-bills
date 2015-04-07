@@ -54,18 +54,23 @@
 
 	   	<div class="row">    		            
 <?php 
-function addCurrent($class, $pagename)
+
+if ( ! function_exists('addCurrent'))
 {
-	if ($pagename == $class)
-		return ' class="current"';
-	else
-		return '';
+	function addCurrent($class, $pagename)
+	{
+		if ($pagename == $class)
+			return ' class="current"';
+		else
+			return '';
+	}
 }
 ?>
 			   	<ul id="nav" class="nav">
 			      	<?php 
 			      	echo "<li" . addCurrent($this->router->class, "home") .">". anchor('Site',$this->lang->line('menu_home')) . '</li>';
 			      	echo "<li" . addCurrent($this->router->class, "contact") .">". anchor('Contact',$this->lang->line('menu_contact_us')) . '</li>';
+			      	echo "<li" . addCurrent($this->router->class, "pricing") .">". anchor('Pricing',$this->lang->line('menu_pricing')) . '</li>';
 			      	
 			      	if (is_logged_in()) {
 				      	echo '<li' . addCurrent($this->router->class, "site") .">". anchor('Site/members_area',$this->lang->line('menu_accounts')) . '</li>';

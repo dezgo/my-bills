@@ -43,6 +43,16 @@
 </tr>
 <!--type google authenticator code here-->
 <tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Please enter your Google Authenticator code&quot;)</td>
+	<td>GoogleAuthCode</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=google_auth_code</td>
+	<td>${GoogleAuthCode}</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>name=submit</td>
 	<td></td>
@@ -84,6 +94,16 @@
 </tr>
 <!--type google authenticator code here-->
 <tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Please enter your Google Authenticator code&quot;)</td>
+	<td>GoogleAuthCode</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=google_auth_code</td>
+	<td>${GoogleAuthCode}</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>name=submit</td>
 	<td></td>
@@ -114,6 +134,16 @@
 	<td></td>
 </tr>
 <!--type google authenticator code here-->
+<tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Please enter your Google Authenticator code&quot;)</td>
+	<td>GoogleAuthCode</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=google_auth_code</td>
+	<td>${GoogleAuthCode}</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=myonoffswitch</td>

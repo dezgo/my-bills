@@ -29,13 +29,13 @@ class Membership_model extends CI_Model {
 		return $ga->createSecret();
 	}
 	
-	function google_auth_get_qr_url($secret)
+	function google_auth_get_qr_url($secret, $email_address)
 	{
 		// get new instance of google auth class
 		require_once 'crypto/GoogleAuthenticator.php';
 		$ga = new PHPGangsta_GoogleAuthenticator();
 		
-		return $ga->getQRCodeGoogleUrl( 'remember-my-bills' , $secret );
+		return $ga->getQRCodeGoogleUrl($email_address, $secret , 'remember-my-bills');
 	}
 	
 	// get user's google auth secret
@@ -152,6 +152,13 @@ class Membership_model extends CI_Model {
 		$_SESSION['email_address'] = $email_address;
 		$_SESSION['timezone'] = $this->Settings_model->timezone_get();
 		$_SESSION['dst'] = $this->Settings_model->dst_get();
+	}
+	
+	function count_members()
+	{
+		$query = $this->db->query('SELECT Count(*) as count_members FROM membership');
+		$row = $query->row();
+		return $row->count_members;
 	}
 }
 

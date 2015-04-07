@@ -22,6 +22,8 @@
             ensure you never forget a bill again. Add a bill, enter when it's next due, and how many times per year it comes up
             Once entered, remember-my-bills will send a reminder
             email when the bill is next due. You then pay the bill, and the next bill will be automatically scheduled.</p>
+            <?php echo $_SESSION['count_members']?>&nbsp;bill payers are already being reminded. Get started now!
+            <p>
          </div>
 
          <div class="four columns">

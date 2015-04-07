@@ -26,6 +26,7 @@ class Membership_test extends MY_Controller {
 		$this->testGetMembers();
 		$this->testCreatePasswordResetToken();
 		$this->testCheckIfEmailExists();
+		$this->testCountMembers();
 		
 		echo $this->unit->report();
 	}
@@ -59,7 +60,7 @@ class Membership_test extends MY_Controller {
 		$notes = 'Secret is '.$secret;
 		$this->unit->run($test, $expected_result, $test_name, $notes);
 		
-		$qr_url = $this->Membership_model->google_auth_get_qr_url($secret);
+		$qr_url = $this->Membership_model->google_auth_get_qr_url($secret, 'mybills@derekgillett.com');
 		$test = $qr_url != '';
 		$expected_result = true;
 		$test_name = 'Get google auth qr code url and check it\'s not empty';
@@ -158,5 +159,15 @@ class Membership_test extends MY_Controller {
 		$expected_result = false;
 		$test_name = 'Check if email exists - false';
 		$this->unit->run($test, $expected_result, $test_name);
+	}
+	
+	function testCountMembers()
+	{
+		$num_members = $this->Membership_model->count_members();
+		$test = $num_members > 0;
+		$expected_result = true;
+		$test_name = 'Test count members function, should return > 0';
+		$notes = 'Number of members: '.$num_members;
+		$this->unit->run($test, $expected_result, $test_name, $notes);
 	}
 }

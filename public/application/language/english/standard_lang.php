@@ -4,6 +4,7 @@ $lang['subtitle']                       = "No more surprises!";
 
 $lang['menu_home']			            = "Home";
 $lang['menu_contact_us']			    = "Contact Us";
+$lang['menu_pricing']			    	= "Pricing";
 $lang['menu_accounts']			        = "Accounts";
 $lang['menu_payments']			        = "Payments";
 $lang['menu_settings']			        = "Settings";

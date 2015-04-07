@@ -6,6 +6,10 @@ class Site extends MY_Controller {
 	{
 		parent::__construct();
 		
+		//set num members for footer
+		$this->load->model('Membership_model');
+		$_SESSION['count_members'] = $this->Membership_model->count_members();
+		
 		$this->load->helper('cookie');
 		$member_id = get_cookie('stay_logged_in');
 //		echo $_SESSION['member_id'];
@@ -93,7 +97,7 @@ class Site extends MY_Controller {
 		}
 		$_SESSION['google_auth_secret'] = $secret;
 		$data['google_auth_secret'] = $secret;
-		$data['qr_url'] = $this->Membership_model->google_auth_get_qr_url($secret);
+		$data['qr_url'] = $this->Membership_model->google_auth_get_qr_url($secret, $data['email_address']);
 		
 		$data['main_content'] = 'profile_view';
 		$this->load->view('includes/template', $data);

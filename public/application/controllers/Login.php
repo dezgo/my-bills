@@ -1,15 +1,15 @@
 <?php
-
 class Login extends MY_Controller {
-	
-	private $data;
-	
+
+    private $data;
+
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Activity_audit_model');
 		$this->data['failed'] = 0;
 	}
-	
+
 	function index()
 	{
 		$this->load->helper('cookie');
@@ -38,6 +38,7 @@ class Login extends MY_Controller {
 		
 		if($member_id != 0) // if the user's credentials validated...
 		{
+			$this->Activity_audit_model->login_success($member_id);
 			// remember the password if user wants to
 			if ($stay_logged_in)
 			{
@@ -69,6 +70,7 @@ class Login extends MY_Controller {
 		
 		else
 		{
+			$this->Activity_audit_model->login_fail($email_address);
 			$this->data['failed']++;
 			$this->index();
 		}
@@ -83,6 +85,7 @@ class Login extends MY_Controller {
 		$this->load->model('Membership_model');
 		if ($this->Membership_model->google_auth_check_code($google_auth_code,$member_id))
 		{
+			$this->Activity_audit_model->google_auth_success($member_id);
 			if ($google_auth_remember)
 			{
 				$this->load->helper('cookie');
@@ -91,11 +94,12 @@ class Login extends MY_Controller {
 				else
 					set_cookie('google_auth_remember', 'yesplease', 30 * 24 * 60 * 60);	// remember for 30 days
 			}
-			$this->Membership_model->initial_login_setup($member_id, $email_address);
+			$this->Membership_model->initial_login_setup($member_id);
 			$this->data['main_content'] = 'home_view';
 		}
 		else
 		{
+			$this->Activity_audit_model->google_auth_fail($member_id);
 			$this->data['message'] = 'Invalid verification code.';
 			$this->data['member_id'] = $member_id;
 			$this->data['main_content'] = 'login_form_google_auth';
@@ -129,6 +133,7 @@ class Login extends MY_Controller {
 			if($query = $this->Membership_model->create_member($email_address, $password))
 			{
 				$this->validate_credentials();
+				$this->Activity_audit_model->signup($email_address);
 			}
 			else
 			{
