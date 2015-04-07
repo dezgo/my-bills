@@ -88,7 +88,7 @@ if ( ! function_exists('addCurrent'))
 	                  <ul>
 			      		 <li><?php echo anchor('Setup/create/true', 'Create DB with data'); ?></li>
 						 <li><?php echo anchor('Setup/create', 'Create empty DB'); ?></li>
-						 <li><?php echo anchor('Email', 'Send Email'); ?></li>
+						 <li><?php echo anchor('Email', 'Send Reminder Email'); ?></li>
 	                  </ul>
 	               </li>
 	               <?php } ?>

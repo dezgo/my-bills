@@ -79,6 +79,7 @@ class Accounts_model extends CI_Model {
 	{
 		$this->load->model('Settings_model');
 		$days = $this->Settings_model->email_reminder_days_get_by_member($member_id);
+//		$this->db->order_by('adddate(last_due,365/times_per_year)','asc');
 		$query = $this->db->select('account, last_due, amount, adddate(last_due,365/times_per_year) as next_due', FALSE)
 				->from('accounts')
 				->where('adddate(last_due,365/times_per_year) < adddate(now(),'.-$days.')')

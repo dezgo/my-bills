@@ -21,25 +21,4 @@
 		</div>
 
 	</div> <!-- end row -->
-   
-<script type="text/javascript">
-$('#submit').click(function() {
-	var form_data = {
-		name: $('#name').val(),
-		email: $('#email').val(),
-		message: $('#message').val(),
-		ajax: '1'
-	};	
-
-	$.ajax({
-		url: "<?php echo site_url('Contact/submit'); ?>",
-		type: 'POST',
-		data: form_data,
-		success: function(msg) {
-			$('#content-wrap').html(msg);
-		}
-	});
-	return false;
-});
-   
-</script>
+ 

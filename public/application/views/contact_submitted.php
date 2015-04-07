@@ -2,7 +2,7 @@
 
       	<div class="twelve columns">
 
-	<h1>Thank You!</h1>
+	<h3>Thanks for contacting us. We'll get back to you ASAP</h3>
 
 	  		</div> <!-- end login form -->
 

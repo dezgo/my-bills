@@ -124,7 +124,7 @@ class Membership_model extends CI_Model {
 	
 	function get_members()
 	{
-		$this->db->select('id,email_address');
+		$this->db->select('id,email_address,first_name');
 		$query = $this->db->get('membership');
 		return $query->result();
 	}

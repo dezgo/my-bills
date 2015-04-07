@@ -9,18 +9,15 @@ class Contact extends MY_Controller
 
 	function submit()
 	{
-		$name = $this->input->post('name');
+		$contact_name = $this->input->post('name');
+		$email_address = $this->input->post('email');
+		$message = $this->input->post('message');
+		
+		$this->load->model('Email_model');
+		$this->Email_model->send_contact_us_email($contact_name, $email_address, $message);
 		
 		$data['main_content'] = 'contact_submitted';
-		
-		if ($this->input->post('ajax'))
-		{
-			$this->load->view($data['main_content']);
-		}
-		else
-		{
-			$this->load->view('includes/template', $data);		
-		}
+		$this->load->view('includes/template', $data);		
 	} 
 }
 ?>
