@@ -14,7 +14,8 @@ class Login extends MY_Controller {
 	{
 		$this->load->helper('cookie');
 		$member_id = get_cookie('stay_logged_in');
-		if ($member_id != '') 
+		if ($member_id == '' and isset($_SESSION['member_id'])) $member_id = $_SESSION['member_id'];
+		if ($member_id != '')
 		{
 			$this->Membership_model->initial_login_setup($member_id);			
 			$this->data['main_content'] = 'home_view';

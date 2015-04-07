@@ -7,9 +7,13 @@ class Site extends MY_Controller {
 		parent::__construct();
 		
 		$this->load->helper('cookie');
-		if (get_cookie('stay_logged_in') != '') {
-			$data['main_content'] = 'login_form';
-			$this->load->view('includes/template.php', $data);
+		$member_id = get_cookie('stay_logged_in');
+//		echo $_SESSION['member_id'];
+	//	die();
+		if ($member_id != '') 
+		{
+			$this->load->model('Membership_model');
+			$this->Membership_model->initial_login_setup($member_id);
 		} 
 
 		// only allow members to get to anything but the index function
@@ -19,8 +23,8 @@ class Site extends MY_Controller {
 	
 	function index()
 	{
-		$data['main_content'] = 'home_view';
-		$this->load->view('includes/template.php', $data);
+		$this->data['main_content'] = 'home_view';
+		$this->load->view('includes/template', $this->data);
 	}
 	
 	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
