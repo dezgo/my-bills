@@ -29,6 +29,7 @@ CREATE TABLE `membership` (
  `retrieve_token` varchar(40) NULL,
  `retrieve_expiration` datetime NULL,
  `google_auth_secret` varchar(16) NULL,
+ `premium` tinyint(1) NOT NULL DEFAULT 0,
  `update_date` datetime,
  `create_date` datetime,
  PRIMARY KEY (`id`)

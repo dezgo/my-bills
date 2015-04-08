@@ -61,6 +61,41 @@ class Settings_model extends CI_Model {
 	function date_format_get_by_member($member_id) {
 		return $this->setting_get_by_member('date_format',$member_id);
 	}
+	private function date_format_convert($date_format)
+	{
+		// expecting everything lowercase
+		$date_format = strtolower($date_format);
+		
+		// convert to intermediary format, should now be all uppercase
+		$date_format_new = str_replace('dd', '2D', $date_format);
+		if ($date_format == $date_format_new) $date_format = str_replace('d', '1D', $date_format); else $date_format = $date_format_new;
+		$date_format_new = str_replace('mm', '2M', $date_format_new);
+		$date_format_new = str_replace('m', '1M', $date_format_new);
+		$date_format_new = str_replace('yyyy', 'yy', $date_format_new); // just in case they use yyyy, change to yy
+		$date_format_new = str_replace('yy', '2Y', $date_format_new);
+		$date_format_new = str_replace('y', '1Y', $date_format_new);
+		
+		return $date_format_new;
+	}
+	function date_format_to_PHP($date_format)
+	{
+		$php_date_format = $this->date_format_convert($date_format);
+		$php_date_format = str_replace('1D', 'j', $php_date_format);
+		$php_date_format = str_replace('2D', 'd', $php_date_format);
+		$php_date_format = str_replace('1M', 'n', $php_date_format);
+		$php_date_format = str_replace('2M', 'm', $php_date_format);
+		$php_date_format = str_replace('1Y', 'y', $php_date_format);
+		$php_date_format = str_replace('2Y', 'Y', $php_date_format);
+		
+		return $php_date_format;
+	}
+	// check if date format string is valid
+	// looks for d,m,y and separators dot, dash, slash, or space
+	// no month at end or year in middle
+	function date_format_check($date_format)
+	{
+		return preg_match("/^(d|m|y){1,2}(\.| |-|\/)(d|m){1,2}(\.| |-|\/)(d|y){1,2}$/", strtolower($date_format));
+	}
 	
 	function email_reminder_days_set($value) {
 		$this->setting_set('email_reminder_days', $value);

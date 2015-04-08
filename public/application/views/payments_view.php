@@ -43,7 +43,7 @@ function import_csv()
 				<td>
 					<?php 
 					if ($field_name == 'payment_date') {
-						echo date($date_format, gmt_to_local(strtotime($record->$field_name)));
+						echo date($date_format_php, gmt_to_local(strtotime($record->$field_name)));
 					}
 					else
 						echo $record->$field_name; 

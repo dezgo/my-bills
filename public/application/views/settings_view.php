@@ -10,8 +10,7 @@
       	// date format
       	echo form_label("Date format","date_format");
       	echo form_input("date_format",$date_format);
-      	echo 'e.g. j M Y - 9 Feb 2015, d/m/Y - 09/02/2015. ';
-      	echo 'See '.anchor('http://php.net/manual/en/function.date.php','this link').' for a detailed description<br>';
+      	echo 'e.g. d/mm/yy - 5/02/2015, d-m-y - 5-2-15, dd.mm.yyyy - 05.02.2015 ';
 
       	// email reminder days
       	echo form_label("Email Reminder days","email_reminder_days");

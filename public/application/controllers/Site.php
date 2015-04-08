@@ -168,6 +168,7 @@ class Site extends MY_Controller {
 		// used to get default date format
 		$this->load->model('Settings_model');
 		$data['date_format'] = $this->Settings_model->date_format_get(); 
+		$data['date_format_php'] = $this->Settings_model->date_format_to_php($data['date_format']);
 		
 		$this->load->model('Accounts_model');
 		$row = $this->Accounts_model->load($id);

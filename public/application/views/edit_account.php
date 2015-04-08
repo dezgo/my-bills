@@ -18,7 +18,7 @@ $this->table->add_row(
 	form_input('account',$account));
 $this->table->add_row(
 	form_label('Last Due', 'last_due'),
-	form_input('last_due',date($date_format, strtotime($last_due)),"id='last_due'"));
+	form_input('last_due',date($date_format_php, strtotime($last_due)),"id='last_due'"));
 $this->table->add_row(
 	form_label('Times/year', 'times_per_year'),
 	form_input('times_per_year',$times_per_year));
@@ -39,7 +39,9 @@ echo form_close();
 
   <script>
   $(function() {
-    $( "#last_due" ).datepicker();
+    $( "#last_due" ).datepicker({
+		dateFormat: '<?php echo $date_format?>'
+	});
   });
   </script>
       	

@@ -63,7 +63,8 @@ class Email_model extends CI_Model {
 					$recipient['message'] .= 
 						$account->account." bill for ".
 						$account->amount." is due by ".
-						date($this->Settings_model->date_format_get_by_member($member->id), strtotime($account->next_due))."<br>";
+						$date_format = $this->Settings_model->date_format_get_by_member($member->id);
+						date($this->Settings_model->date_format_to_php($date_format), strtotime($account->next_due))."<br>";
 				}
 				$recipient['message'] .= "<Br><br>Go to <a href='http://rememberthebills.com'>http://rememberthebills.com</a> to pay them.";
 				$recipient['message'] .= "<Br><br>Enjoy your day!<br><br>The remember-the-bills team.";

@@ -11,7 +11,8 @@ if(!function_exists('get_local_date'))
 		// used to get default date format
 		$CI->load->model('Settings_model');
 		$date_format = $CI->Settings_model->date_format_get();		
-
-		return date($date_format, gmt_to_local(mysql_to_unix($date),$timezone,$dst));
+		$date_format_php = $CI->Settings_model->date_format_to_php($date_format);
+		
+		return date($date_format_php, gmt_to_local(mysql_to_unix($date),$timezone,$dst));
 	}
 }
