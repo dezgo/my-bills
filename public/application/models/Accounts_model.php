@@ -46,11 +46,10 @@ class Accounts_model extends CI_Model {
 		return $query->get()->row();
 	}
 	
-	function update($id, $member_id, $account, $last_due, $times_per_year, $amount) {
+	function update($id, $account, $last_due, $times_per_year, $amount) {
 		$data = array(
-			'member_id' => $member_id,
 			'account' => $account,
-			'last_due' => $last_due,
+			'last_due' => date_mysql($last_due),
 			'times_per_year' => $times_per_year,
 			'amount' => $amount
 		);
@@ -67,7 +66,7 @@ class Accounts_model extends CI_Model {
 		$data = array(
 			'member_id' => $member_id,
 			'account' => $account,
-			'last_due' => $last_due,
+			'last_due' => $last_due->format('Y-m-d'),
 			'times_per_year' => $times_per_year,
 			'amount' => $amount
 		);

@@ -11,11 +11,11 @@ class Settings extends MY_Controller
 	{
 		$this->load->model('Settings_model');
 		
-		$date_format = $this->Settings_model->date_format_get();
-		$email_reminder_days = $this->Settings_model->email_reminder_days_get();
-		$items_per_page = $this->Settings_model->items_per_page_get();
-		$timezone = $this->Settings_model->timezone_get();
-		$dst = $this->Settings_model->dst_get();
+		$date_format = $this->Settings_model->date_format_get($_SESSION['member_id']);
+		$email_reminder_days = $this->Settings_model->email_reminder_days_get($_SESSION['member_id']);
+		$items_per_page = $this->Settings_model->items_per_page_get($_SESSION['member_id']);
+		$timezone = $this->Settings_model->timezone_get($_SESSION['member_id']);
+		$dst = $this->Settings_model->dst_get($_SESSION['member_id']);
 		
 		$data['date_format'] = $date_format;
 		$data['email_reminder_days'] = $email_reminder_days;

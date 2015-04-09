@@ -10,6 +10,13 @@ class MY_Controller extends CI_Controller {
 		// load and run sql to create database if required (when no tables in db)
 		$this->load->model('Setup_model');
 		$this->Setup_model->checkDB();
+
+		//set num members for footer
+		if (!isset($_SESSION['count_members']))
+		{
+			$this->load->model('Membership_model');
+			$_SESSION['count_members'] = $this->Membership_model->count_members();
+		}		
 	}
 }
 ?>

@@ -107,7 +107,6 @@ One moment while we get your timezone....
 				echo "</th>";
 			endforeach; 
 
-			$this->load->helper('gmt');
 			?>
 			
 		</thead>
@@ -119,7 +118,8 @@ One moment while we get your timezone....
 				<td>
 					<?php 
 					if ($field_name == 'last_due' | $field_name == 'next_due') {
-						echo get_local_date($record->$field_name);
+						echo $record->$field_name;
+						die();
 					}
 					else
 						echo $record->$field_name; 

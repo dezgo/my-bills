@@ -84,6 +84,7 @@ class Membership_model extends CI_Model {
 	function update_member($member_id, $email_address, $password = '', $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code)
 	{
 		$data['email_address'] = $email_address;
+		$_SESSION['email_address'] = $email_address;	// updating session var here at the point where it changes
 		if ($password != '')
 		{
 			require_once 'crypto/PasswordHash.php';

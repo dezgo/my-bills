@@ -6,14 +6,8 @@ class Site extends MY_Controller {
 	{
 		parent::__construct();
 		
-		//set num members for footer
-		$this->load->model('Membership_model');
-		$_SESSION['count_members'] = $this->Membership_model->count_members();
-		
 		$this->load->helper('cookie');
 		$member_id = get_cookie('stay_logged_in');
-//		echo $_SESSION['member_id'];
-	//	die();
 		if ($member_id != '') 
 		{
 			$this->load->model('Membership_model');
@@ -191,13 +185,14 @@ class Site extends MY_Controller {
 		$data['date_format_php'] = $_SESSION['date_format_php']; 
 				
 		$this->load->model('Accounts_model');
-		$data['main_content'] = 'edit_account';
 		
 		$data['id'] = 0;
 		$data['account'] = "";
 		$data['last_due'] = "";
 		$data['times_per_year'] = "";
 		$data['amount'] = "";
+		
+		$data['main_content'] = 'edit_account';
 		$this->load->view('includes/template', $data);
 	}
 	
@@ -209,22 +204,19 @@ class Site extends MY_Controller {
 		$this->members_area();
 	}
 
-	// includes adding a new account - do this if id == 0
+	// includes adding a new account - do this if id = 0
 	function update_account()
 	{
-		$this->load->helper('date');
-		
 		$id = $this->input->post('id'); 
 		$account = $this->input->post('account'); 
-		$last_due = date('Y-m-d', strtotime($this->input->post('last_due')));
+		$last_due = date_input($this->input->post('last_due'));
 		$times_per_year = $this->input->post('times_per_year');
 		$amount = $this->input->post('amount');
-		
 		$this->load->model('Accounts_model');
 		if ($id == 0) {
 			$row = $this->Accounts_model->insert($_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
 		} else {
-			$row = $this->Accounts_model->update($id, $_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
+			$row = $this->Accounts_model->update($id, $account, $last_due, $times_per_year, $amount);
 		}
 		
 		// and back to the list
