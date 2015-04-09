@@ -21,8 +21,10 @@ class Settings_test extends MY_Controller {
 	function testDateFormat()
 	{
 		$date_format = 'd.mm.y';
+		$this->Settings_model->date_format_set($_SESSION['member_id'], $date_format);
+
+		$test = $_SESSION['date_format_php'];
 		$expected_result = 'j.m.y';
-		$test = $this->Settings_model->date_format_to_PHP($date_format);
 		$test_name = 'Date format to PHP';
 		$notes = 'Standard format of '.$date_format.' should be '.$expected_result.' in PHP. Function returned '.$test;
 		$this->unit->run($test, $expected_result, $test_name, $notes);

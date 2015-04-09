@@ -81,7 +81,7 @@ class Membership_model extends CI_Model {
 		}
 	}
 	
-	function update_member($email_address, $password = '', $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code)
+	function update_member($member_id, $email_address, $password = '', $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code)
 	{
 		$data['email_address'] = $email_address;
 		if ($password != '')
@@ -102,7 +102,7 @@ class Membership_model extends CI_Model {
 			delete_cookie('google_auth_remember');	// do this so if they re-enable, it'll prompt for the google token again
 		}
 		
-		$this->db->where('id',$_SESSION['member_id']);
+		$this->db->where('id',$member_id);
 		$this->db->update('membership', $data);
 	}
 	
@@ -150,8 +150,9 @@ class Membership_model extends CI_Model {
 		$this->load->model('Settings_model');
 		$_SESSION['member_id'] = $member_id;
 		$_SESSION['email_address'] = $email_address;
-		$_SESSION['timezone'] = $this->Settings_model->timezone_get();
-		$_SESSION['dst'] = $this->Settings_model->dst_get();
+		$_SESSION['timezone'] = $this->Settings_model->timezone_get($member_id);
+		$_SESSION['dst'] = $this->Settings_model->dst_get($member_id);
+		$_SESSION['date_format'] = $this->Settings_model->date_format_get($member_id);
 	}
 	
 	function count_members()

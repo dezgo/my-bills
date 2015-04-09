@@ -31,16 +31,12 @@ class Payments_model extends CI_Model {
 	}
 	
 	// note payment date defaults to today via mysql trigger
-	function insert($account, $amount, $payment_date)
+	function insert($member_id, $account, $amount, $payment_date)
 	{
-		$data['member_id'] = $_SESSION['member_id'];
+		$data['member_id'] = $member_id;
 		$data['amount'] = $amount;
 		$data['account'] = $account;
 		$data['payment_date'] = date('Y-m-d H:i:s', local_to_gmt($payment_date));
-		//echo $data['payment_date']."<BR>";
-		//$data['payment_date'] = date('Y-m-d H:i:s', $payment_date);
-		//echo $data['payment_date'];
-			//die();
 		$this->db->insert('payments', $data);
 	}
 	

@@ -15,7 +15,7 @@ class Payments extends MY_Controller {
 	function show_list($sort_by = 'account', $sort_order = 'asc', $offset = 0)
 	{
 		$this->load->model('Settings_model');
-		$limit =  $this->Settings_model->items_per_page_get();
+		$limit =  $this->Settings_model->items_per_page_get($_SESSION['member_id']);
 		$data['fields'] = array(
 				'account' => 'Account',
 				'payment_date' => 'Payment Date',
@@ -45,9 +45,8 @@ class Payments extends MY_Controller {
 		$data['sort_order'] = $sort_order;
 	
 		// used to get default date format
-		$this->load->model('Settings_model');
-		$data['date_format'] = $this->Settings_model->date_format_get();
-		$data['date_format_php'] = $this->Settings_model->date_format_to_php($data['date_format']);
+		$data['date_format'] = $_SESSION['date_format'];
+		$data['date_format_php'] = $_SESSION['date_format_php'];
 		
 		// import csv errors
 		$data['error'] = '';

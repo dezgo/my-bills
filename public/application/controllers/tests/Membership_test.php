@@ -103,7 +103,7 @@ class Membership_test extends MY_Controller {
 		$google_auth_secret = '';
 		$google_auth_code = '';
 
-		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
+		$this->Membership_model->update_member($_SESSION['member_id'], $email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 		$test = true;
 		$expected_result = true;
 		$test_name = 'Update member';
@@ -111,7 +111,7 @@ class Membership_test extends MY_Controller {
 
 		$email_address = 'mybills@derekgillett.com';
 		$password = 'password';
-		$this->Membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
+		$this->Membership_model->update_member($_SESSION['member_id'], $email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 	}
 	
 	function testGetMember()

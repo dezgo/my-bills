@@ -34,7 +34,7 @@ class Site extends MY_Controller {
 	function members_area($sort_by = 'days', $sort_order = 'asc', $offset = 0)
 	{
 		$this->load->model('Settings_model');
-		$limit =  $this->Settings_model->items_per_page_get();
+		$limit =  $this->Settings_model->items_per_page_get($_SESSION['member_id']);
 		$data['fields'] = array(
 			'account' => 'Account',
 			'last_due' => 'Last Due',
@@ -124,7 +124,7 @@ class Site extends MY_Controller {
 			$google_auth_code = $this->input->post('google_auth_code');
 			$google_auth_enabled = $this->input->post('chkGoogleAuthEnabled') != '';
 						
-			$result = $this->membership_model->update_member($email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
+			$result = $this->membership_model->update_member($_SESSION['member_id'], $email_address, $password, $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code);
 			
 			$this->profile('Details Updated');
 		}
@@ -166,9 +166,8 @@ class Site extends MY_Controller {
 		$this->load->library('table');
 		
 		// used to get default date format
-		$this->load->model('Settings_model');
-		$data['date_format'] = $this->Settings_model->date_format_get(); 
-		$data['date_format_php'] = $this->Settings_model->date_format_to_php($data['date_format']);
+		$data['date_format'] = $_SESSION['date_format']; 
+		$data['date_format_php'] = $_SESSION['date_format_php']; 
 		
 		$this->load->model('Accounts_model');
 		$row = $this->Accounts_model->load($id);
@@ -188,16 +187,15 @@ class Site extends MY_Controller {
 		$this->load->library('table');
 		
 		// get default date format
-		$this->load->model('Settings_model');
-		$data['date_format'] = $this->Settings_model->date_format_get(); 
-		
+		$data['date_format'] = $_SESSION['date_format']; 
+		$data['date_format_php'] = $_SESSION['date_format_php']; 
+				
 		$this->load->model('Accounts_model');
 		$data['main_content'] = 'edit_account';
 		
 		$data['id'] = 0;
 		$data['account'] = "";
 		$data['last_due'] = "";
-		//$data['last_due_formatted'] = "";
 		$data['times_per_year'] = "";
 		$data['amount'] = "";
 		$this->load->view('includes/template', $data);
@@ -212,22 +210,21 @@ class Site extends MY_Controller {
 	}
 
 	// includes adding a new account - do this if id == 0
-	function update_account() {
+	function update_account()
+	{
 		$this->load->helper('date');
 		
 		$id = $this->input->post('id'); 
-		$data = array(
-			'account' => $this->input->post('account'), 
-			'last_due' => date('Y-m-d', strtotime($this->input->post('last_due'))),
-			'times_per_year' => $this->input->post('times_per_year'), 
-			'amount' => $this->input->post('amount')
-		);
+		$account = $this->input->post('account'); 
+		$last_due = date('Y-m-d', strtotime($this->input->post('last_due')));
+		$times_per_year = $this->input->post('times_per_year');
+		$amount = $this->input->post('amount');
 		
 		$this->load->model('Accounts_model');
 		if ($id == 0) {
-			$row = $this->Accounts_model->insert($data);
+			$row = $this->Accounts_model->insert($_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
 		} else {
-			$row = $this->Accounts_model->update($id, $data);
+			$row = $this->Accounts_model->update($id, $_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
 		}
 		
 		// and back to the list
@@ -235,9 +232,10 @@ class Site extends MY_Controller {
 	}
 	
 	// mark account as paid and reschedule
-	function pay_account($id,$amount) {
+	function pay_account($account_id, $amount)
+	{
 		$this->load->model('Accounts_model');
-		$this->Accounts_model->pay($id,$amount);		
+		$this->Accounts_model->pay($_SESSION['member_id'], $account_id, $amount);
 
 		// and back to the list
 		$this->members_area();

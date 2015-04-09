@@ -2,17 +2,17 @@
 
 class Settings_model extends CI_Model {
 
-	private function setting_exists($name) {
+	private function setting_exists($member_id, $name) {
 		// pre-condition - member_id session variable set
-		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
+		assert($member_id != '', 'Check member_id session variable not empty') or die();
 				
 		$this->db->where('setting_name', $name);
-		$this->db->where('member_id', $_SESSION['member_id']);
+		$this->db->where('member_id', $member_id);
 		$query = $this->db->get('settings');
 		return $query->num_rows() > 0;
 	}
 	
-	private function setting_get_by_member($name, $member_id) {
+	private function setting_get($member_id, $name) {
 		$this->db->where('setting_name', $name);
 		$this->db->where('member_id', $member_id);
 		$query = $this->db->get('settings');
@@ -25,25 +25,18 @@ class Settings_model extends CI_Model {
 		}
 	}
 
-	private function setting_get($name) {
+	private function setting_set($member_id, $name, $value) {
 		// pre-condition - member_id session variable set
-		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
-
-		return $this->setting_get_by_member($name, $_SESSION['member_id']);
-	}
-	
-	private function setting_set($name, $value) {
-		// pre-condition - member_id session variable set
-		assert($_SESSION['member_id'] != '', 'Check member_id session variable not empty') or die();
+		assert($member_id != '', 'Check member_id session variable not empty') or die();
 				
-		if ($this->setting_exists($name)) {
+		if ($this->setting_exists($member_id, $name)) {
 			$this->db->where('setting_name', $name);
-			$this->db->where('member_id', $_SESSION['member_id']);
+			$this->db->where('member_id', $member_id);
 			$this->db->update('settings', array('setting_value' => $value));
 		}
 		else {
 			$data = array(
-				'member_id' => $_SESSION['member_id'],
+				'member_id' => $member_id,
 				'setting_name' => $name,
 				'setting_value' => $value
 			);
@@ -52,14 +45,23 @@ class Settings_model extends CI_Model {
 		}
 	}
 	
-	function date_format_set($value) {
-		$this->setting_set('date_format', $value);
+	function date_format_set($member_id, $value) {
+		$this->setting_set($member_id, 'date_format', $value);
+		$_SESSION['date_format'] = $value;
+		$_SESSION['date_format_php'] = $this->date_format_to_PHP($value);
 	}
-	function date_format_get() {
-		return $this->setting_get('date_format');
+	function date_format_get($member_id) {
+		$value = $this->setting_get($member_id, 'date_format');
+		$_SESSION['date_format'] = $value;
+		$_SESSION['date_format_php'] = $this->date_format_to_PHP($value);
+		return $value;
 	}
-	function date_format_get_by_member($member_id) {
-		return $this->setting_get_by_member('date_format',$member_id);
+	function date_format_get_php($member_id) {
+		$value = $this->setting_get($member_id, 'date_format');
+		$value_php = $this->date_format_to_PHP($value);
+		$_SESSION['date_format'] = $value;
+		$_SESSION['date_format_php'] = $value_php;
+		return $value_php;
 	}
 	private function date_format_convert($date_format)
 	{
@@ -68,7 +70,7 @@ class Settings_model extends CI_Model {
 		
 		// convert to intermediary format, should now be all uppercase
 		$date_format_new = str_replace('dd', '2D', $date_format);
-		if ($date_format == $date_format_new) $date_format = str_replace('d', '1D', $date_format); else $date_format = $date_format_new;
+		if ($date_format == $date_format_new) $date_format_new = str_replace('d', '1D', $date_format); else $date_format_new = $date_format_new;
 		$date_format_new = str_replace('mm', '2M', $date_format_new);
 		$date_format_new = str_replace('m', '1M', $date_format_new);
 		$date_format_new = str_replace('yyyy', 'yy', $date_format_new); // just in case they use yyyy, change to yy
@@ -77,7 +79,7 @@ class Settings_model extends CI_Model {
 		
 		return $date_format_new;
 	}
-	function date_format_to_PHP($date_format)
+	private function date_format_to_PHP($date_format)
 	{
 		$php_date_format = $this->date_format_convert($date_format);
 		$php_date_format = str_replace('1D', 'j', $php_date_format);
@@ -97,21 +99,18 @@ class Settings_model extends CI_Model {
 		return preg_match("/^(d|m|y){1,2}(\.| |-|\/)(d|m){1,2}(\.| |-|\/)(d|y){1,2}$/", strtolower($date_format));
 	}
 	
-	function email_reminder_days_set($value) {
-		$this->setting_set('email_reminder_days', $value);
+	function email_reminder_days_set($member_id, $value) {
+		$this->setting_set($member_id, 'email_reminder_days', $value);
 	}
-	function email_reminder_days_get() {
-		return $this->setting_get('email_reminder_days');
-	}
-	function email_reminder_days_get_by_member($member_id) {
-		return $this->setting_get_by_member('email_reminder_days',$member_id);
+	function email_reminder_days_get($member_id) {
+		return $this->setting_get($member_id, 'email_reminder_days');
 	}
 	
-	function items_per_page_set($value) {
-		$this->setting_set('items_per_page', $value);
+	function items_per_page_set($member_id, $value) {
+		$this->setting_set($member_id, 'items_per_page', $value);
 	}
-	function items_per_page_get() {
-		return $this->setting_get('items_per_page');
+	function items_per_page_get($member_id) {
+		return $this->setting_get($member_id, 'items_per_page');
 	}
 	
 	function timezone_getCode($value) {
@@ -129,19 +128,19 @@ class Settings_model extends CI_Model {
 			return 'UTC';
 		}
 	}
-	function timezone_set($value) {
-		$this->setting_set('timezone', $value);
+	function timezone_set($member_id, $value) {
+		$this->setting_set($member_id, 'timezone', $value);
 		$_SESSION['timezone'] = $value;
 	}
-	function timezone_get() {
-		return $this->setting_get('timezone');
+	function timezone_get($member_id) {
+		return $this->setting_get($member_id, 'timezone');
 	}
-	function dst_set($value) {
-		$this->setting_set('dst', $value);
+	function dst_set($member_id, $value) {
+		$this->setting_set($member_id, 'dst', $value);
 		$_SESSION['dst'] = $value;
 	}
-	function dst_get() {
-		return $this->setting_get('dst');
+	function dst_get($member_id) {
+		return $this->setting_get($member_id, 'dst');
 	}
 		
 	

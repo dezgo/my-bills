@@ -46,7 +46,14 @@ class Accounts_model extends CI_Model {
 		return $query->get()->row();
 	}
 	
-	function update($id, $data) {
+	function update($id, $member_id, $account, $last_due, $times_per_year, $amount) {
+		$data = array(
+			'member_id' => $member_id,
+			'account' => $account,
+			'last_due' => $last_due,
+			'times_per_year' => $times_per_year,
+			'amount' => $amount
+		);
 		$this->db->where('id',$id);
 		$this->db->update('accounts', $data);
 	}
@@ -56,23 +63,29 @@ class Accounts_model extends CI_Model {
 		$this->db->delete('accounts');
 	}
 	
-	function insert($data) {
-		$data['member_id'] = $_SESSION['member_id'];
+	function insert($member_id, $account, $last_due, $times_per_year, $amount) {
+		$data = array(
+			'member_id' => $member_id,
+			'account' => $account,
+			'last_due' => $last_due,
+			'times_per_year' => $times_per_year,
+			'amount' => $amount
+		);
 		$this->db->insert('accounts', $data);
 	}
 	
-	function pay($id,$amount) {
+	function pay($account_id,$member_id,$amount) {
 		$query = $this->db->select('adddate(last_due,365/times_per_year) as next_due, account', FALSE)
 				->from('accounts')
-				->where('id',$id);
+				->where('id',$account_id);
 		$row = $query->get()->row();
 
-		$this->db->where('id',$id);
+		$this->db->where('id',$account_id);
 		$this->db->update('accounts', array('last_due' => $row->next_due));
 		
 		// and record this payment
 		$this->load->model('Payments_model');
-		$this->Payments_model->insert($row->account, $amount, now());
+		$this->Payments_model->insert($member_id, $row->account, $amount, now());
 	}
 
 	function get_accounts_due_by_member($member_id)

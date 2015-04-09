@@ -49,12 +49,12 @@ class Email_model extends CI_Model {
 		$result = $this->Membership_model->get_members();
 		foreach ($result as $member)
 		{
-			$days = $this->Settings_model->email_reminder_days_get_by_member($member->id);
+			$days = $this->Settings_model->email_reminder_days_get($member->id);
 			if ($days > 0) // only do this if they want email reminders 
 			{
 				$recipient['email_address'] = $member->email_address;
 				$billcount = 0;
-				$accounts_due = $this->Accounts_model->get_accounts_due_by_member($member->id);
+				$accounts_due = $this->Accounts_model->get_accounts_due($member->id);
 				$recipient['message'] = "G'day";
 				if ($member->first_name != '') $recipient['message'] .= "&nbsp;".$member->first_name;
 				$recipient['message'] .= ",<br><br>Derek from remember-my-bills here. As promised, here's a list of bills due in the next ".$days." days<hr>";
@@ -63,8 +63,7 @@ class Email_model extends CI_Model {
 					$recipient['message'] .= 
 						$account->account." bill for ".
 						$account->amount." is due by ".
-						$date_format = $this->Settings_model->date_format_get_by_member($member->id);
-						date($this->Settings_model->date_format_to_php($date_format), strtotime($account->next_due))."<br>";
+						date($this->Settings_model->date_format_get_php($member->id), strtotime($account->next_due))."<br>";
 				}
 				$recipient['message'] .= "<Br><br>Go to <a href='http://rememberthebills.com'>http://rememberthebills.com</a> to pay them.";
 				$recipient['message'] .= "<Br><br>Enjoy your day!<br><br>The remember-the-bills team.";

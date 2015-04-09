@@ -38,11 +38,11 @@ class Settings extends MY_Controller
 		$timezone = $this->input->post('cmbTimezone');
 		$dst = $this->input->post('chkDst') == 'true';
 		
-		$this->Settings_model->date_format_set($date_format);
-		$this->Settings_model->email_reminder_days_set($email_reminder_days);
-		$this->Settings_model->items_per_page_set($items_per_page);
-		$this->Settings_model->timezone_set($timezone);
-		$this->Settings_model->dst_set($dst);
+		$this->Settings_model->date_format_set($_SESSION['member_id'], $date_format);
+		$this->Settings_model->email_reminder_days_set($_SESSION['member_id'], $email_reminder_days);
+		$this->Settings_model->items_per_page_set($_SESSION['member_id'], $items_per_page);
+		$this->Settings_model->timezone_set($_SESSION['member_id'], $timezone);
+		$this->Settings_model->dst_set($_SESSION['member_id'], $dst);
 		
 		$data['date_format'] = $date_format;
 		$data['email_reminder_days'] = $email_reminder_days;
@@ -61,10 +61,10 @@ class Settings extends MY_Controller
 	function timezone($time, $dst)
 	{
 		$this->load->model('Settings_model');
-    	$_SESSION['timezone'] = $this->Settings_model->timezone_getCode($time);
+    	$_SESSION['timezone'] = $this->Settings_model->timezone_getCode($_SESSION['member_id'], $time);
     	$_SESSION['dst'] = $dst == 'true';
-    	$this->Settings_model->timezone_set($_SESSION['timezone']);
-    	$this->Settings_model->dst_set($_SESSION['dst']);
+    	$this->Settings_model->timezone_set($_SESSION['member_id'], $_SESSION['timezone']);
+    	$this->Settings_model->dst_set($_SESSION['member_id'], $_SESSION['dst']);
     	
     	// this is called via ajax so below echo'ing is just to debug by calling directly
     	echo 'Timezone is '.$_SESSION['timezone'].'<br>';
