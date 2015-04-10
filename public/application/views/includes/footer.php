@@ -62,6 +62,17 @@
       </div> <!-- End row -->
 
       <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+      
+      <?php 
+      if (ENVIRONMENT == 'development') { 
+      	echo '<hr><h3>Debugging info only shown in development</h3>';
+      	echo 'Session vars: <Br>';
+      	foreach($_SESSION as $key => $value)
+      	{
+      		echo $key.': '.$value.'<br>';
+      	}
+      }
+      ?>
 
    </footer> <!-- End Footer-->
 

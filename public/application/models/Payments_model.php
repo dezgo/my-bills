@@ -5,13 +5,13 @@ class Payments_model extends CI_Model {
 	{
 	
 		$sort_order = ($sort_order =='desc') ? 'desc' : 'asc';
-		$sort_columns = array('account', 'payment_date', 'amount');
+		$sort_columns = array('account', 'payment_date_u', 'amount');
 	
 		// if the sort_by column is in the columns array, return it, other return default value
 		$sort_by = (in_array($sort_by, $sort_columns)) ? $sort_by : 'account';
 	
 		// results query
-		$query = $this->db->select('id, account, amount, payment_date, ')
+		$query = $this->db->select('id, account, amount, unix_timestamp(payment_date) as payment_date_u, ')
 				->from('payments')
 				->where('member_id', $member_id)
 				->limit($limit, $offset)
@@ -36,11 +36,11 @@ class Payments_model extends CI_Model {
 		$data['member_id'] = $member_id;
 		$data['amount'] = $amount;
 		$data['account'] = $account;
-		$data['payment_date'] = date('Y-m-d H:i:s', local_to_gmt($payment_date));
+		$data['payment_date'] = md_unix_to_mysql($payment_date);
 		$this->db->insert('payments', $data);
 	}
 	
-	function insertArray($array, $overwrite)
+	function insertArray($array, $overwrite, $date_format, $timezone, $dst)
 	{
 		// if user wants to overwrite, then clear out records first
 		if ($overwrite != '')
@@ -48,11 +48,11 @@ class Payments_model extends CI_Model {
 			$this->db->empty_table('payments');
 		}
 		
+		// load codeigniter date helpe to use now() function
+		$this->load->helper('date');
+	
 		foreach ($array as $payment)
 		{
-			// load codeigniter date helpe to use now() function
-			$this->load->helper('date');
-			
 			// initialise variables, use these defaults if not present in import file
 			$account = ''; 
 			$amount = 0; 
@@ -69,7 +69,7 @@ class Payments_model extends CI_Model {
 			}
 			if (array_key_exists('payment_date', $payment)) 
 			{
-				$payment_date = strtotime($payment['payment_date']);
+				$payment_date = md_local_to_unix($payment['payment_date'], $date_format, $timezone, $dst);
 			}
 			
 			// and assuming account is not still empty, insert record

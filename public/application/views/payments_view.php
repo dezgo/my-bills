@@ -24,7 +24,7 @@ function import_csv()
 		$this->load->helper('date');
 		?>
 
-	<table>
+	<table cellpadding="5">
 		<thead>
 			<?php foreach($fields as $field_name => $field_display): ?>
 			<th <?php if ($sort_by == $field_name) echo "class='sort_$sort_order'"; ?>>
@@ -42,8 +42,8 @@ function import_csv()
 				<?php foreach($fields as $field_name => $field_display): ?>
 				<td>
 					<?php 
-					if ($field_name == 'payment_date') {
-						echo date($date_format_php, gmt_to_local(strtotime($record->$field_name)));
+					if ($field_name == 'payment_date_u') {
+						echo md_unix_to_local($record->$field_name, $date_format_php, $timezone, $dst);
 					}
 					else
 						echo $record->$field_name; 

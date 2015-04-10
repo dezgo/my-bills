@@ -8,8 +8,9 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <?php 
+echo validation_errors();
 
-echo form_open('Site/update_account');
+echo form_open('Site/edit_account');
 echo form_hidden('id',$id);
 //$tmpl = array ( 'table_open'  => '<table border="1" cellpadding="2" cellspacing="1" class="mytable">' );
 //$this->table->set_template($tmpl);
@@ -18,7 +19,7 @@ $this->table->add_row(
 	form_input('account',$account));
 $this->table->add_row(
 	form_label('Last Due', 'last_due'),
-	form_input('last_due',date($date_format_php, strtotime($last_due)),"id='last_due'"));
+	form_input('last_due',md_unix_to_local($last_due, $date_format_php, $timezone, $dst),"id='last_due'"));
 $this->table->add_row(
 	form_label('Times/year', 'times_per_year'),
 	form_input('times_per_year',$times_per_year));

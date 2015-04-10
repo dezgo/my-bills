@@ -717,5 +717,7 @@ footer .copyright {
 #go-top a:hover { background: #7BA857; }
 
 
-
-
+// add some extra ones of my own
+.padded_table {
+	padding: 5px;
+}

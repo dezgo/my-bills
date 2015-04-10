@@ -29,6 +29,6 @@ $lang['check_if_email_exists']          = "Sorry, that email address has already
 $lang['check_if_email_exists_to_reset'] = "Sorry, that email address is not registered.";
 $lang['captcha_is_correct']             = "Incorrect captcha text.";
 $lang['check_google_auth_code']         = "Google authenticator verifiation code is incorrect.";
-
+$lang['validate_date']					= "Please enter a valid date in the format as specified in settings.";
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/english/form_validation_lang.php */

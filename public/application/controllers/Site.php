@@ -31,10 +31,10 @@ class Site extends MY_Controller {
 		$limit =  $this->Settings_model->items_per_page_get($_SESSION['member_id']);
 		$data['fields'] = array(
 			'account' => 'Account',
-			'last_due' => 'Last Due',
+			'last_due_u' => 'Last Due',
 			'amount' => 'Amount',
 			'times_per_year' => 'Times p/a',
-			'next_due' => 'Next Due',
+			'next_due_u' => 'Next Due',
 			'days' => 'Days'
 		);
 		
@@ -59,6 +59,10 @@ class Site extends MY_Controller {
 		
 		$data['sort_by'] = $sort_by;
 		$data['sort_order'] = $sort_order;
+		
+		$data['date_format_php'] = $_SESSION['date_format_php'];
+		$data['timezone'] = $_SESSION['timezone'];
+		$data['dst'] = $_SESSION['dst'];
 		
 		$data['main_content'] = 'accounts_list';
 		$this->load->view('includes/template', $data);
@@ -154,27 +158,73 @@ class Site extends MY_Controller {
 		delete_cookie('stay_logged_in');
 		redirect('');
 	}
-	
-	function edit_account($id) {
+
+	function validate_date($date)
+	{
+		$valid = md_validate_local($date, $_SESSION['date_format_php']);
+		return $valid;
+	}
+
+	function edit_account($id = 0) {
+		// get data, either from post or database
+		$this->load->model('Accounts_model');
+		if ($id != 0)
+		{
+			$row = $this->Accounts_model->load($id);
+			$account = $row->account;
+			$last_due = $row->last_due_u;
+			$times_per_year = $row->times_per_year;
+			$amount = $row->amount;
+		}
+		else
+		{
+			$id = $this->input->post('id');
+			$account = $this->input->post('account');
+			$last_due = md_local_to_unix($this->input->post('last_due'), $_SESSION['date_format_php'], $_SESSION['timezone'], $_SESSION['dst']);
+			$times_per_year = $this->input->post('times_per_year');
+			$amount = $this->input->post('amount');				
+		}
+
 		// will be used in view to create table
 		$this->load->library('table');
 		
-		// used to get default date format
-		$data['date_format'] = $_SESSION['date_format']; 
-		$data['date_format_php'] = $_SESSION['date_format_php']; 
+		$this->load->library('form_validation');
+		$this->load->helper('form','url');
 		
-		$this->load->model('Accounts_model');
-		$row = $this->Accounts_model->load($id);
-		$data['main_content'] = 'edit_account';
+		$this->form_validation->set_rules('account', 'Account', 'required');
+		$this->form_validation->set_rules('last_due', 'Last Due', 'required|callback_validate_date');
+		$this->form_validation->set_rules('times_per_year', 'Times/year', 'required|numeric');
+		$this->form_validation->set_rules('amount', 'Amount', 'required|numeric');
 		
-		$data['id'] = $id;
-		$data['account'] = $row->account;
-		$data['last_due'] = $row->last_due;
-
-		//$data['last_due_formatted'] = $row->last_due_formatted;// unix_to_human($row->last_due, FALSE, 'euro');
-		$data['times_per_year'] = $row->times_per_year;
-		$data['amount'] = $row->amount;
-		$this->load->view('includes/template', $data);
+		if ($this->form_validation->run() == FALSE)
+		{
+			
+			// used to get default date format
+			$data['date_format'] = $_SESSION['date_format']; 
+			$data['date_format_php'] = $_SESSION['date_format_php'];
+			$data['timezone'] = $_SESSION['timezone'];
+			$data['dst'] = $_SESSION['dst'];
+					
+			$data['id'] = $id;
+			$data['account'] = $account;
+			$data['last_due'] = $last_due;
+			$data['times_per_year'] = $times_per_year;
+			$data['amount'] = $amount;
+	
+			$data['main_content'] = 'edit_account';
+			$this->load->view('includes/template', $data);
+		}
+		else
+		{
+			if ($id == 0) {
+				$row = $this->Accounts_model->insert($_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
+			} else {
+				$row = $this->Accounts_model->update($id, $account, $last_due, $times_per_year, $amount);
+			}
+			
+			// and back to the list
+			$this->members_area();
+		}
 	}
 	
 	function insert_account() {
@@ -182,8 +232,10 @@ class Site extends MY_Controller {
 		
 		// get default date format
 		$data['date_format'] = $_SESSION['date_format']; 
-		$data['date_format_php'] = $_SESSION['date_format_php']; 
-				
+		$data['date_format_php'] = $_SESSION['date_format_php'];
+		$data['timezone'] = $_SESSION['timezone'];
+		$data['dst'] = $_SESSION['dst'];
+
 		$this->load->model('Accounts_model');
 		
 		$data['id'] = 0;
@@ -204,25 +256,6 @@ class Site extends MY_Controller {
 		$this->members_area();
 	}
 
-	// includes adding a new account - do this if id = 0
-	function update_account()
-	{
-		$id = $this->input->post('id'); 
-		$account = $this->input->post('account'); 
-		$last_due = date_input($this->input->post('last_due'));
-		$times_per_year = $this->input->post('times_per_year');
-		$amount = $this->input->post('amount');
-		$this->load->model('Accounts_model');
-		if ($id == 0) {
-			$row = $this->Accounts_model->insert($_SESSION['member_id'], $account, $last_due, $times_per_year, $amount);
-		} else {
-			$row = $this->Accounts_model->update($id, $account, $last_due, $times_per_year, $amount);
-		}
-		
-		// and back to the list
-		$this->members_area();
-	}
-	
 	// mark account as paid and reschedule
 	function pay_account($account_id, $amount)
 	{

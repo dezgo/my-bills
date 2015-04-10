@@ -16,7 +16,17 @@ class MY_Controller extends CI_Controller {
 		{
 			$this->load->model('Membership_model');
 			$_SESSION['count_members'] = $this->Membership_model->count_members();
-		}		
+		}
+
+		//echo 'uri: '.$_SERVER['REQUEST_URI'];
+		//echo 'URI: '.uri_string();
+		//die();
+		if ((!isset($_SESSION['date_format']) or $_SESSION['date_format'] == '') 
+				and $this->uri->segment(1) == 'Site'
+				and $this->uri->segment(2) != 'logout')
+		{
+			redirect('Settings');
+		}
 	}
 }
 ?>

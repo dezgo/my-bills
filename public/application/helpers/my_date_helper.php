@@ -1,43 +1,118 @@
 <?php
-if(!function_exists('md_date_to_local'))
+if(!function_exists('md_timezone_to_mysql'))
 {
-// $date is a gmt date passed as unix timestamp
-	// returns local date string formatted as per user date format setting
-	function md_date_to_local($date)
+	// $timezone is the codeigniter timezone code
+	// returns mysql timezone code
+	function md_timezone_to_mysql($timezone)
 	{
-		$date_local = gmt_to_local($date, $_SESSION['timezone'], $_SESSION['dst']);
-		return date($_SESSION['date_format_php'], $date_local);
-	}
-}
-	
-if(!function_exists('md_local_to_date'))
-{
-// $date is date entered by user in user specified format
-	// returns gmt date as unix timestamp
-	function md_local_to_date($date)
-	{
-		$date_ts = DateTime::createFromFormat($_SESSION['date_format_php'], $date);
-		return local_to_gmt(date_timestamp_get($date_ts));
+		$value = timezones($timezone);
+//		echo ($value > 0 ? '+' : '-').date('H:i',abs($value*3600));
+	//	die();
+		if ($value == 0)
+			return '00:00';
+		else
+			return ($value > 0 ? '+' : '-').date('H:i',abs($value*3600));
 	}
 }
 
-if(!function_exists('md_date_to_mysql'))
+if(!function_exists('md_validate_local'))
 {
-	// $date is a gmt date passed as unix timestamp
-	// returns date formatted to be used in mysql query
-	function md_date_to_mysql($date)
+	// $date is a local date formatted as per user spec
+	// returns unix timestamp
+	function md_validate_local($date, $date_format_php)
 	{
-		return date('Y-m-d', $date);
+		$time = DateTime::createFromFormat($date_format_php, $date);
+		if (is_object($time))
+		{
+			$date_back = date($date_format_php, $time->getTimestamp());
+			return $date_back == $date;
+		}
+		else
+			return false;
 	}
 }
 
-if(!function_exists('md_mysql_to_date'))
+if(!function_exists('md_local_to_unix'))
 {
-	// $date is a gmt date passed as unix timestamp
-	// returns date formatted to be used in mysql query
-	function md_mysql_to_date($date)
+	// $date is a local date formatted as per user spec
+	// returns unix timestamp
+	function md_local_to_unix($date, $date_format, $timezone, $dst)
 	{
-		$date_ts = DateTime::createFromFormat('Y-m-d', $date);
-		return date_timestamp_get($date_ts);
+		if ($date == '')
+		{
+			return 0;
+		}
+		elseif (md_validate_local($date, $date_format))
+		{
+			$time = DateTime::createFromFormat($date_format, $date)->getTimestamp();
+			$time -= timezones($timezone) * 3600;
+
+			return ($dst === TRUE) ? $time - 3600 : $time;
+		}
+		else return 0;
 	}
 }
+
+if(!function_exists('md_unix_to_local'))
+{
+	// $date is a unix timestamp
+	// returns a local date formatted as per user spec
+	function md_unix_to_local($date, $date_format, $timezone, $dst)
+	{
+		if ($date == '')
+		{
+			return '';
+		}
+		else 
+		{
+			$time = gmt_to_local($date, $timezone, $dst);
+			return date($date_format,$time);
+		}
+	}
+}
+
+if(!function_exists('md_unix_to_mysql'))
+{
+	// $date is a unix timestamp
+	// returns date formatted to be used in mysql query
+	function md_unix_to_mysql($date)
+	{
+		return date('Y-m-d H:i:s', $date);
+	}
+}
+
+if(!function_exists('md_mysql_to_unix'))
+{
+	// $date is a date returned by mysql
+	// returns unix timestamp
+	function md_mysql_to_unix($date)
+	{
+		return DateTime::createFromFormat('Y-m-d H:i:s', $date)->getTimestamp();
+	}
+}
+
+/*
+ * don't use these functions as they create tightly coupled code by going straight from
+ * mysql to local and back. the idea is to pass all dates around as unix and only convert
+ * at the end points
+
+if(!function_exists('md_mysql_to_local'))
+{
+	// $date is a date returned by mysql
+	// returns unix timestamp
+	function md_mysql_to_local($date)
+	{
+		return md_unix_to_local(md_mysql_to_unix($date));
+	}
+}
+
+if(!function_exists('md_local_to_mysql'))
+{
+	// $date is a date returned by mysql
+	// returns unix timestamp
+	function md_local_to_mysql($date)
+	{
+		return md_unix_to_mysql(md_local_to_unix($date));
+	}
+}
+*/

@@ -133,7 +133,7 @@ class Membership_model extends CI_Model {
 	function create_password_reset_token($email_address)
 	{
 		$data['retrieve_token'] = bin2hex(openssl_random_pseudo_bytes(20));
-		$data['retrieve_expiration'] =  date('Y-m-d H:i:s', local_to_gmt(time() + 60*15));	// expire in 15 minutes
+		$data['retrieve_expiration'] = md_unix_to_mysql(time() + 60*15);	// expire in 15 minutes
 
 		$this->db->where('email_address',$email_address);
 		$this->db->update('membership', $data);

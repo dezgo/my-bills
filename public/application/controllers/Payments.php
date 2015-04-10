@@ -18,7 +18,7 @@ class Payments extends MY_Controller {
 		$limit =  $this->Settings_model->items_per_page_get($_SESSION['member_id']);
 		$data['fields'] = array(
 				'account' => 'Account',
-				'payment_date' => 'Payment Date',
+				'payment_date_u' => 'Payment Date',
 				'amount' => 'Amount'
 		);
 	
@@ -44,12 +44,12 @@ class Payments extends MY_Controller {
 		$data['sort_by'] = $sort_by;
 		$data['sort_order'] = $sort_order;
 	
-		// used to get default date format
-		$data['date_format'] = $_SESSION['date_format'];
-		$data['date_format_php'] = $_SESSION['date_format_php'];
-		
 		// import csv errors
 		$data['error'] = '';
+		
+		$data['date_format_php'] = $_SESSION['date_format_php'];
+		$data['timezone'] = $_SESSION['timezone'];
+		$data['dst'] = $_SESSION['dst'];
 		
 		$data['main_content'] = 'payments_view';
 		$this->load->view('includes/template', $data);
@@ -64,7 +64,10 @@ class Payments extends MY_Controller {
 	
 	function export_csv()
 	{
+		$mysql_tz = md_timezone_to_mysql($_SESSION['timezone']);
 		$this->load->helper('csv');
+		$this->db->select('id, account, convert_tz(payment_date,\'+00:00\',\''.$mysql_tz.'\') as payment_date, amount');
+		$this->db->where('member_id', $_SESSION['member_id']);
 		$quer = $this->db->get('payments');
 		query_to_csv($quer,TRUE,'payments_'.date('dMy').'.csv');
 	}
@@ -95,7 +98,7 @@ class Payments extends MY_Controller {
 			$this->load->model('Payments_model');
 			$array = $this->Csvimport->get_array('uploads/'.$data['upload_data']['file_name']);
 			$overwrite = $this->input->post('chkOverwrite');
-			$this->Payments_model->insertArray($array, $overwrite);
+			$this->Payments_model->insertArray($array, $overwrite, $_SESSION['date_format_php'], $_SESSION['timezone'], $_SESSION['dst']);
 		}
 		$this->load->view('includes/template', $data);
 	}

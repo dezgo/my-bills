@@ -94,7 +94,7 @@ One moment while we get your timezone....
 		
 	<?php } else { ?>
 
-	<table>
+	<table cellpadding="5">
 		<thead>
 			<?php 
 			foreach($fields as $field_name => $field_display):
@@ -117,9 +117,8 @@ One moment while we get your timezone....
 				<?php foreach($fields as $field_name => $field_display): ?>
 				<td>
 					<?php 
-					if ($field_name == 'last_due' | $field_name == 'next_due') {
-						echo $record->$field_name;
-						die();
+					if ($field_name == 'last_due_u' or $field_name == 'next_due_u') {
+						echo md_unix_to_local($record->$field_name, $date_format_php, $timezone, $dst);
 					}
 					else
 						echo $record->$field_name; 
