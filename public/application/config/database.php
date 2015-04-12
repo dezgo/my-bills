@@ -61,6 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 switch (ENVIRONMENT) {
 	case 'development':
+	case 'phpunit':
 		$active_group = 'development';
 		break;
 	case 'testing':

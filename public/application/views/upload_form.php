@@ -6,7 +6,7 @@
 
 <?php echo $error;?>
 
-<?php echo form_open_multipart(base_url().'index.php/Payments/do_upload');?>
+<?php echo form_open_multipart(base_url().'index.php/Payments/import_csv');?>
 
 <input type="file" name="userfile" size="20" /><br>
 Overwrite existing data? <?php echo form_checkbox('chkOverwrite','yes')?>

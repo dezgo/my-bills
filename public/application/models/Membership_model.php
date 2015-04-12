@@ -65,7 +65,7 @@ class Membership_model extends CI_Model {
 	{
 		if ($this->check_if_email_exists($email_address))
 		{
-			return false;
+			return null;
 		}
 		else
 		{
@@ -76,9 +76,31 @@ class Membership_model extends CI_Model {
 				'params' => create_hash($password)
 			);
 			
-			$insert = $this->db->insert('membership', $new_member_insert_data);
-			return $insert;
+			$this->db->trans_start();
+			if (!$this->db->insert('membership', $new_member_insert_data)) 
+			{
+				$this->db->trans_complete();				
+				return null;
+			}
+			else
+			{
+				$member_id = $this->db->insert_id();
+				$this->db->trans_complete();				
+				return $this->get_member($member_id);
+			}
 		}
+	}
+	
+	function delete_member($member_id)
+	{
+		$this->db->where('member_id',$member_id);
+		$this->db->delete('payments');
+
+		$this->db->where('member_id',$member_id);
+		$this->db->delete('accounts');
+		
+		$this->db->where('id',$member_id);
+		$this->db->delete('membership');
 	}
 	
 	function update_member($member_id, $email_address, $password = '', $first_name, $last_name, $google_auth_enabled, $google_auth_secret, $google_auth_code)
@@ -161,6 +183,18 @@ class Membership_model extends CI_Model {
 		$query = $this->db->query('SELECT Count(*) as count_members FROM membership');
 		$row = $query->row();
 		return $row->count_members;
+	}
+	
+	function member_id_is_valid($member_id)
+	{
+		if (!is_numeric($member_id))
+			return false;
+		else
+		{
+			$this->db->where('id', $member_id);
+			$query = $this->db->get('membership');
+			return $query->num_rows() > 0;
+		}		
 	}
 }
 

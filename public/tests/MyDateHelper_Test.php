@@ -1,30 +1,23 @@
 <?php
 
-class MyDateHelper_test extends MY_Controller {
-
+class MyDateHelper_Test extends PHPUnit_Framework_TestCase
+{
+	private $CI;
 	private $ret;
 	
 	function __construct()
 	{
+		ob_start();
 		parent::__construct();
-		
-		// put any startup stuff here
-		$this->load->library('unit_test');
-		$this->load->helper('date');
 	}
 	
-	function index()
-	{
-		$this->testUnixToLocal();
-		$this->testLocalToUnix();
-		$this->testUnixToMySQL();
-		$this->testMySQLToUnix();
-		$this->testValidateLocal();
-		$this->testTimezoneToMySQL();
-		
-		echo $this->unit->report();
+    function setUp()
+    {
+      	// Load CI instance normally
+    	$this->CI = &get_instance();
+		$this->CI->load->helper('date');
 	}
-
+	
 	function testUnixToLocal()
 	{
 		$date = DateTime::createFromFormat('d-m-Y H:i:s', '02-03-2015 0:00:00')->getTimestamp();
@@ -32,9 +25,9 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = '02-03-2015 10:00:00';
 		$test_name = 'unix to local';
 		$notes = 'Input date: '.date('d-m-Y H:i:s',$date).', Returned date: '.$test;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 	}
-
+	
 	function testLocalToUnix()
 	{
 		$date = '02-03-2015 4:00:00';
@@ -42,7 +35,7 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = DateTime::createFromFormat('d-m-Y H:i:s', '02-03-2015 0:00:00')->getTimestamp();
 		$test_name = 'local to unix';
 		$notes = 'Input date: '.$date.', Returned date: '.date('d-m-Y H:i:s',$test);
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 	}
 
 	function testUnixToMySQL()
@@ -52,7 +45,7 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = '2015-03-02 00:00:00';
 		$test_name = 'unix to mysql';
 		$notes = 'Input date: '.date('d-m-Y H:i:s',$date).', Returned date: '.$test;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 	}
 
 	function testMySQLToUnix()
@@ -62,7 +55,7 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = DateTime::createFromFormat('d-m-Y H:i:s', '02-03-2015 0:00:00')->getTimestamp();
 		$test_name = 'mysql to unix';
 		$notes = 'Input date: '.$date.', Returned date: '.date('d-m-Y H:i:s',$test);
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 	}
 	
 	function testValidateLocal()
@@ -72,21 +65,21 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = true;
 		$test_name = 'validate date';
 		$notes = 'Input date: '.$date.' has format '.$date_format;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 
 		$date = '2/03/2015'; $date_format = 'j/m/Y';
 		$test = md_validate_local($date,$date_format);
 		$expected_result = true;
 		$test_name = 'validate date';
 		$notes = 'Input date: '.$date.' has format '.$date_format;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 
 		$date = '3.04.2015'; $date_format = 'j.m.Y';
 		$test = md_validate_local($date,$date_format);
 		$expected_result = true;
 		$test_name = 'validate date';
 		$notes = 'Input date: '.$date.' has format '.$date_format;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 
 	}
 
@@ -97,7 +90,7 @@ class MyDateHelper_test extends MY_Controller {
 		$expected_result = "-01:00";
 		$test_name = 'convert to mysql timezone';
 		$notes = 'Input timezone: '.$timezone.' - in mysql it\'s '.$test;
-		$this->unit->run($test, $expected_result, $test_name, $notes);
+		$this->assertEquals($expected_result, $test, $test_name.' '.$notes);
 	}
 }
 ?>

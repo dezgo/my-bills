@@ -55,24 +55,20 @@ class Payments extends MY_Controller {
 		$this->load->view('includes/template', $data);
 	}
 	
-	function import_csv()
-	{
-		$this->load->library('Csvimport');
-		$array = $this->Csvimport->get_array('test.csv');		
-		print_r($array);
-	}
-	
 	function export_csv()
 	{
+		// get all payments for current member, remembering to convert dates to their local timezone
 		$mysql_tz = md_timezone_to_mysql($_SESSION['timezone']);
-		$this->load->helper('csv');
 		$this->db->select('id, account, convert_tz(payment_date,\'+00:00\',\''.$mysql_tz.'\') as payment_date, amount');
 		$this->db->where('member_id', $_SESSION['member_id']);
 		$quer = $this->db->get('payments');
+
+		// generate csv
+		$this->load->helper('csv');
 		query_to_csv($quer,TRUE,'payments_'.date('dMy').'.csv');
 	}
 	
-	function do_upload()
+	function import_csv()
 	{
 		$config['upload_path'] = './uploads/';
 		$config['allowed_types'] = 'csv';
@@ -98,7 +94,7 @@ class Payments extends MY_Controller {
 			$this->load->model('Payments_model');
 			$array = $this->Csvimport->get_array('uploads/'.$data['upload_data']['file_name']);
 			$overwrite = $this->input->post('chkOverwrite');
-			$this->Payments_model->insertArray($array, $overwrite, $_SESSION['date_format_php'], $_SESSION['timezone'], $_SESSION['dst']);
+			$this->Payments_model->insertArray($_SESSION['member_id'], $array, $overwrite, $_SESSION['date_format_php'], $_SESSION['timezone'], $_SESSION['dst']);
 		}
 		$this->load->view('includes/template', $data);
 	}

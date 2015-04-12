@@ -46,6 +46,9 @@ class Settings_model extends CI_Model {
 	}
 	
 	function date_format_set($member_id, $value) {
+		// if date format isn't valid, go with a defaut format
+		if (!$this->date_format_check($value)) $value = 'd.mm.yy';
+		
 		$this->setting_set($member_id, 'date_format', $value);
 		$_SESSION['date_format'] = $value;
 		$_SESSION['date_format_php'] = $this->date_format_to_PHP($value);
@@ -96,7 +99,7 @@ class Settings_model extends CI_Model {
 	// no month at end or year in middle
 	function date_format_check($date_format)
 	{
-		return preg_match("/^(d|m|y){1,2}(\.| |-|\/)(d|m){1,2}(\.| |-|\/)(d|y){1,2}$/", strtolower($date_format));
+		return preg_match("/^(d|m|y){1,2}(\.| |-|\/)(d|m){1,2}(\.| |-|\/)(d|y){1,2}$/", strtolower($date_format)) > 0;
 	}
 	
 	function email_reminder_days_set($member_id, $value) {

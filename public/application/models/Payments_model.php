@@ -30,22 +30,47 @@ class Payments_model extends CI_Model {
 		return $ret;
 	}
 	
-	// note payment date defaults to today via mysql trigger
+	function get_payment($payment_id)
+	{
+		$this->db->where('id', $payment_id);
+		$query = $this->db->get('payments');
+		if ($query->num_rows() > 0)
+			return $query->row();
+		else
+			return null;
+	}
+	
+	// note: payment date defaults to today via mysql trigger
 	function insert($member_id, $account, $amount, $payment_date)
 	{
+		
+		
 		$data['member_id'] = $member_id;
 		$data['amount'] = $amount;
 		$data['account'] = $account;
 		$data['payment_date'] = md_unix_to_mysql($payment_date);
-		$this->db->insert('payments', $data);
+		$this->db->trans_start();
+		if ($this->db->insert('payments', $data))
+		{
+			$id = $this->db->insert_id();
+			$this->db->trans_complete();				
+			return $this->get_payment($id);
+		}
+		else
+		{	
+			$this->db->trans_complete();				
+			return null;
+		}
 	}
 	
-	function insertArray($array, $overwrite, $date_format, $timezone, $dst)
+	// used when uploading via csv
+	function insertArray($member_id, $array, $overwrite, $date_format_php, $timezone, $dst)
 	{
 		// if user wants to overwrite, then clear out records first
 		if ($overwrite != '')
 		{
-			$this->db->empty_table('payments');
+			$this->db->where('member_id',$member_id);
+			$this->db->delete('payments');
 		}
 		
 		// load codeigniter date helpe to use now() function
@@ -61,21 +86,22 @@ class Payments_model extends CI_Model {
 			// now update to what's in array - if found
 			if (array_key_exists('account', $payment)) 
 			{
-				$account = $payment['account'];
+				$account = $this->db->escape_str($payment['account']);
 			}
-			if (array_key_exists('amount', $payment)) 
+			if (array_key_exists('amount', $payment) and is_numeric($payment['amount'])) 
 			{
 				$amount = $payment['amount'];
 			}
 			if (array_key_exists('payment_date', $payment)) 
 			{
-				$payment_date = md_local_to_unix($payment['payment_date'], $date_format, $timezone, $dst);
+				if (md_validate_local($payment['payment_date'], $date_format_php))
+					$payment_date = md_local_to_unix($payment['payment_date'], $date_format_php, $timezone, $dst);
 			}
 			
 			// and assuming account is not still empty, insert record
 			if ($account != '') 
 			{
-				$this->insert($account, $amount, $payment_date);
+				$this->insert($member_id, $account, $amount, $payment_date);
 			}
 		}
 	}
