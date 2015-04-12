@@ -98,11 +98,16 @@ class Membership_Test extends PHPUnit_Framework_TestCase
 		$this->assertInternalType('array', $members);
 	}
 	
-	function testCreatePasswordResetToken()
+	function testPasswordResetToken()
 	{
-		$email_address = 'mybills@derekgillett.com';
-		$token = $this->CI->Membership_model->create_password_reset_token($email_address);
-		$this->assertInternalType('string', $token);
+		$token = $this->CI->Membership_model->create_password_reset_token($this->member->id);
+		$this->assertNotEmpty($token);
+
+		$token = $this->CI->Membership_model->retrieve_password_reset_token($this->member->id);
+		$this->assertNotEmpty($token);
+		
+		$token = $this->CI->Membership_model->retrieve_password_reset_token(23564);
+		$this->assertEmpty($token);
 	}
 	
 	function testCheckIfEmailExists()

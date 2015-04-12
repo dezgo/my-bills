@@ -20,8 +20,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 switch (ENVIRONMENT) {
 	case 'development':
 	case 'phpunit':
-		$config['base_url']	= 'https://scotchbox/';
-		//$config['base_url']	= 'http://192.168.33.10/';
+		//$config['base_url']	= 'https://scotchbox/';
+		$config['base_url']	= 'http://192.168.33.10/';
 		break;
 	//case 'testing':
 	//	$config['base_url']	= 'http://mybills.site90.net/';

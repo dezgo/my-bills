@@ -9,16 +9,23 @@ class Email_model extends CI_Model {
 	
 	private function init()
 	{
-		$config['protocol'] = 'mail';
+		$config['protocol'] = 'sendmail';
+		$config['mailpath'] = '/usr/sbin/sendmail';
 		$config['charset'] = 'iso-8859-1';
 		$config['wordwrap'] = TRUE;
 		$config['mailtype'] = 'html';
-		
+		$config['useragent'] = 'remember-my-bills';
+		$config['smtp_host'] = '192.168.1.102';
+				
 		$this->email->initialize($config);
+		$this->email->reply_to('info@remembermybills.com', 'remember-my-bills');
 	}
 	
 	private function send_emails($recipients, $fromEmail = 'info@remembermybills.com', $fromName = 'remember-my-bills')
 	{
+		// assume emails sent ok
+		$outcome = true;
+		
 		$this->init();
 		$this->email->from($fromEmail, $fromName);
 		foreach ($recipients as $recipient)
@@ -28,11 +35,15 @@ class Email_model extends CI_Model {
 			$this->email->subject($recipient['subject']);
 			$this->email->message($recipient['message']);
 			
-			$this->email->send();
+			// send, and return false if any errors
+			if (!$this->email->send()) $outcome = false;
 			
-			if (ENVIRONMENT == 'development')
-				echo $this->email->print_debugger();
+			echo ENVIRONMENT;
+			
+			if (ENVIRONMENT == 'development' || ENVIRONMENT == 'phpunit')
+				echo 'Email debug info: '.$this->email->print_debugger();
 		}
+		return $outcome;
 	}
 	
 /*
@@ -84,16 +95,25 @@ class Email_model extends CI_Model {
 		$this->send_emails($this->upcoming_bills_reminder());		
 	}
 	
-	function send_password_reset_email($email_address, $token)
+	function send_password_reset_email($email_address)
 	{
+		$this->load->model('Membership_model');
+		$member = $this->Membership_model->get_member_by_email($email_address);
+		$token = $this->Membership_model->create_password_reset_token($member->id);
 		$recipient = array();
 		$recipients = array();
-		$recipient['email_address'] = $email_address;
+		$recipient['email_address'] = $member->email_address;
 		$recipient['subject'] = $this->lang->line('password_reset_email_subject');
 		$recipient['message'] = "Here's that password reset email you wanted<br><br>Token is ".$token;
 		array_push($recipients, $recipient);
 		
-		$this->send_emails($recipients);
+		$result = $this->send_emails($recipients);
+		
+		if (ENVIRONMENT == 'development')
+			echo $this->email->print_debugger();
+			
+		return $result;
+		
 	}
 	
 	function send_contact_us_email($contact_name, $email_address, $message)

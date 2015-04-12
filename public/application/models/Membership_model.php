@@ -138,6 +138,12 @@ class Membership_model extends CI_Model {
 		return $result->num_rows() > 0;
 	}
 	
+	function get_member_by_email($email_address)
+	{
+		$this->db->where('email_address', $email_address);
+		return $this->db->get('membership')->row();
+	}
+	
 	// return details for a given member
 	function get_member($member_id)
 	{
@@ -152,12 +158,45 @@ class Membership_model extends CI_Model {
 		return $query->result();
 	}
 	
-	function create_password_reset_token($email_address)
+	// get password reset token if exists and hasn't expired
+	// then clear info out - token is single use only
+	function retrieve_password_reset_token($member_id)
+	{
+		$this->db->where('id',$member_id);
+		$this->db->select('retrieve_token, unix_timestamp(retrieve_expiration) as retrieve_expiration');
+		$query = $this->db->get('membership');
+
+		if ($query->num_rows() == 0)
+		{
+			$token = '';
+		}
+		else
+		{
+			$row = $query->row();
+			if ($row->retrieve_expiration >= time())
+			{
+				$token = $row->retrieve_token;
+			}
+			else
+			{ 
+				$token = '';
+			}
+			
+			$data['retrieve_token'] = '';
+			$data['retrieve_expiration'] = null;
+	
+			$this->db->where('id',$member_id);
+			$this->db->update('membership', $data);
+		}
+		return $token;
+	}
+	
+	function create_password_reset_token($member_id)
 	{
 		$data['retrieve_token'] = bin2hex(openssl_random_pseudo_bytes(20));
 		$data['retrieve_expiration'] = md_unix_to_mysql(time() + 60*15);	// expire in 15 minutes
 
-		$this->db->where('email_address',$email_address);
+		$this->db->where('id',$member_id);
 		$this->db->update('membership', $data);
 		
 		return $data['retrieve_token'];

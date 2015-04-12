@@ -186,10 +186,9 @@ class Login extends MY_Controller {
 
 			// create the reset token
 			$email_address = $this->input->post('email_address');
-			$token = $this->Membership_model->create_password_reset_token($email_address);
 
 			// send off password reset email
-			$this->Email_model->send_password_reset_email($email_address, $token);
+			$this->Email_model->send_password_reset_email($email_address);
 
 			$this->data['main_content'] = 'reset_password_form_success';
 			$this->load->view('includes/template', $this->data);
